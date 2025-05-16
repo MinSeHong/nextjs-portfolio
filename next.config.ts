@@ -12,12 +12,10 @@ const nextConfig: NextConfig = {
     images: {
       unoptimized: true
     },
-    basePath: "/MinSeHong.github.io",
-    output : 'export',
-      assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "https://minsehong.github.io/MinSeHong.github.io/"
-      : "",
+    basePath: "/NextJS-Portfolio",
+    assetPrefix: '/NextJS-Portfolio/', // GitHub 리포지토리 이름
+    exportTrailingSlash: true,
+    output : 'export'
 };
 
 export default nextConfig;

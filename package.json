@@ -2,11 +2,9 @@
   "name": "minsehong.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://minsehong.github.io/MinSeHong.github.io/",
   "scripts": {
-    "build": "next build && next export",
-    "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "build": "next build",
+    "deploy": "gh-pages -d out",
     "dev": "next dev --turbopack",
     "start": "next start",
     "lint": "next lint",

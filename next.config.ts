@@ -8,13 +8,7 @@ const nextConfig: NextConfig = {
     eslint: {
       ignoreDuringBuilds: true, // 빌드 중 ESLint 오류를 무시
     },
-    // next 이미지 최적화 옵션 off
-    images: {
-      unoptimized: true
-    },
-    basePath: "/NextJS-Portfolio",
-    assetPrefix: '/NextJS-Portfolio/', // GitHub 리포지토리 이름
-    exportTrailingSlash: true
+    assetPrefix: 'https://minsehong.github.io/NextJS-Portfolio/'
 };
 
 export default nextConfig;

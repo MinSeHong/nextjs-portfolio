@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
-import styles from "./introduce.module.scss";
+import stylesIntroduce from "./introduce.module.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import ScrollSmoother from "gsap/src/ScrollSmoother";
@@ -79,21 +79,21 @@ export default function Introduce() {
             
             if(SKILLS_VARIABLES[subject]['hashtag']=="Front-end"){
                 hastag.push(
-                    <div key="hastag" className={`${styles.skillHashtag} ${styles.orange}`}>
+                    <div key="hastag" className={`${stylesIntroduce.skillHashtag} ${stylesIntroduce.orange}`}>
                         {SKILLS_VARIABLES[subject]['hashtag']}
                     </div>
                 )
             }
             else if(SKILLS_VARIABLES[subject]['hashtag']=="Back-end"){
                 hastag.push(
-                    <div key="hastag" className={`${styles.skillHashtag} ${styles.red}`}>
+                    <div key="hastag" className={`${stylesIntroduce.skillHashtag} ${stylesIntroduce.red}`}>
                         {SKILLS_VARIABLES[subject]['hashtag']}
                     </div>
                 )
             }
             else if(SKILLS_VARIABLES[subject]['hashtag']=="Library"){
                 hastag.push(
-                    <div key="hastag" className={`${styles.skillHashtag} ${styles.green}`}>
+                    <div key="hastag" className={`${stylesIntroduce.skillHashtag} ${stylesIntroduce.green}`}>
                         {SKILLS_VARIABLES[subject]['hashtag']}
                     </div>
                 )
@@ -101,16 +101,16 @@ export default function Introduce() {
 
             skillsView.current.push(
                 <div className="skillAnimation" key={subject}>
-                    <div className={styles.skillBox}>
-                        <div className={styles.skillicon}>
+                    <div className={stylesIntroduce.skillBox}>
+                        <div className={stylesIntroduce.skillicon}>
                             <img src={SKILLS_VARIABLES[subject]['skillIcon']}/>
                         </div>
-                        <div className={styles.skillSubject}>
+                        <div className={stylesIntroduce.skillSubject}>
                             {subject}
                         </div>
                         {hastag}
                     </div>
-                    <div className={styles.skilldescription}>
+                    <div className={stylesIntroduce.skilldescription}>
                         {descriptions}
                     </div>
                 </div>
@@ -136,23 +136,23 @@ export default function Introduce() {
             );
             
             hastag.push(
-                <div key="hastag" className={`${styles.hobbyHashtag} ${styles.orange}`}>
+                <div key="hastag" className={`${stylesIntroduce.hobbyHashtag} ${stylesIntroduce.orange}`}>
                     {HOBBYS_VARIABLE[subject]['hashtag']}
                 </div>
             )
 
             hobbysView.current.push(
                 <div className="hobbyAnimation" key={subject}>
-                    <div className={styles.hobbyBox}>
-                        <div className={styles.hobbyicon}>
+                    <div className={stylesIntroduce.hobbyBox}>
+                        <div className={stylesIntroduce.hobbyicon}>
                             <img src={HOBBYS_VARIABLE[subject]['skillIcon']}/>
                         </div>
-                        <div className={styles.hobbySubject}>
+                        <div className={stylesIntroduce.hobbySubject}>
                             {subject}
                         </div>
                         {hastag}
                     </div>
-                    <div className={styles.hobbydescription}>
+                    <div className={stylesIntroduce.hobbydescription}>
                         {descriptions}
                     </div>
                 </div>
@@ -248,7 +248,7 @@ export default function Introduce() {
                 ease: "bounce"
             });
 
-            cardTimeLine.from(`.${styles.card}`, {
+            cardTimeLine.from(`.${stylesIntroduce.card}`, {
                 opacity: 0,
                 duration: 0.4,
                 scale:0,
@@ -345,14 +345,14 @@ export default function Introduce() {
 
                 if(GRID_CARD_ID_VARIABLES[index]['projectCardLink'][key]['url'] != ""){
                     projectCardLink.current.push(
-                        <div className={styles.projectCardLinkBox} key={indexNumber}>
+                        <div className={stylesIntroduce.projectCardLinkBox} key={indexNumber}>
                             <a href={`${GRID_CARD_ID_VARIABLES[index]['projectCardLink'][key]['url']}`} target="_target"><img src={GRID_CARD_ID_VARIABLES[index]['projectCardLink'][key]['icon']}/></a>
                         </div>
                     )
                 }
                 else{
                     projectCardLink.current.push(
-                        <div className={styles.projectCardLinkBox} key={indexNumber}>
+                        <div className={stylesIntroduce.projectCardLinkBox} key={indexNumber}>
                             <img src={GRID_CARD_ID_VARIABLES[index]['projectCardLink'][key]['icon']}/>
                         </div>
                     )
@@ -364,9 +364,9 @@ export default function Introduce() {
             for(let key in GRID_CARD_ID_VARIABLES[index]['descriptionTitleSkillStack']){
                 indexNumber++;
                 descriptionTitleSkillStack.current.push(
-                    <div className={styles.descriptionTitleSkillStackIcon} key={indexNumber}>
-                        <img className={styles.descriptionTitleSkillStackIconImage} src={GRID_CARD_ID_VARIABLES[index]['descriptionTitleSkillStack'][key]['icon']}/>
-                        <div className={styles.descriptionTitleSkillStackIconName}>{GRID_CARD_ID_VARIABLES[index]['descriptionTitleSkillStack'][key]['name']}</div>
+                    <div className={stylesIntroduce.descriptionTitleSkillStackIcon} key={indexNumber}>
+                        <img className={stylesIntroduce.descriptionTitleSkillStackIconImage} src={GRID_CARD_ID_VARIABLES[index]['descriptionTitleSkillStack'][key]['icon']}/>
+                        <div className={stylesIntroduce.descriptionTitleSkillStackIconName}>{GRID_CARD_ID_VARIABLES[index]['descriptionTitleSkillStack'][key]['name']}</div>
                     </div>
                 )
             };
@@ -377,7 +377,7 @@ export default function Introduce() {
             for(const key in GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle']){
                 indexNumber++;
                 descriptionViewTitle.current.push(
-                    <div className={styles.descriptionFeatureStickyNote} key={indexNumber}>
+                    <div className={stylesIntroduce.descriptionFeatureStickyNote} key={indexNumber}>
                         <img src={`./icons/post-it-green.png`}/>
                         <div onClick={(e)=>handlerScrollView(e,"normal",GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewTitleName'])}>
                             {GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewTitleName']}
@@ -394,7 +394,7 @@ export default function Introduce() {
 
                 /* GSAP을 이용한 기능 이름 가져옴. */
                 descriptionViewList.current.push(
-                    <div className={styles.descriptionViewTitle} data-feature={`${GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewTitleName']}`} key={indexNumber}>
+                    <div className={stylesIntroduce.descriptionViewTitle} data-feature={`${GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewTitleName']}`} key={indexNumber}>
                         {GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewTitleName']}
                     </div>
                 );
@@ -404,15 +404,15 @@ export default function Introduce() {
                     indexNumber++;
 
                     descriptionViewBoxDescription.current.push(
-                        <div className={styles.descriptionViewBox} key={indexNumber}>
-                            <div className={styles.descriptionViewBoxImage}>
+                        <div className={stylesIntroduce.descriptionViewBox} key={indexNumber}>
+                            <div className={stylesIntroduce.descriptionViewBoxImage}>
                                 <img src={GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewBoxDescription'][subKey]['descriptionViewBoxImage']}/>
                             </div>
-                            <div className={styles.descriptionViewBoxDescription}>
-                                <div className={styles.descriptionViewBoxDescriptionSubtitle}>
+                            <div className={stylesIntroduce.descriptionViewBoxDescription}>
+                                <div className={stylesIntroduce.descriptionViewBoxDescriptionSubtitle}>
                                     <span>&lt;</span>{GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewBoxDescription'][subKey]['descriptionViewBoxDescriptionSubtitle']}<span>/&gt;</span>
                                 </div>
-                                <div className={styles.descriptionViewBoxDescriptionTitleDescription}>
+                                <div className={stylesIntroduce.descriptionViewBoxDescriptionTitleDescription}>
                                     {GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle'][key]['descriptionViewBoxDescription'][subKey]['descriptionViewBoxDescriptionTitleDescription']}
                                 </div>
                             </div>
@@ -425,69 +425,69 @@ export default function Introduce() {
 
 
             projectView.current.push(
-                <div className={`${styles.gridCard} cardFilp${index}`} key={index} onClick={()=>{handlerFlipFit(index,"open")}} data-grid-card-group={GRID_CARD_ID_VARIABLES[index]['gridCardGroup']} data-view="true">
-                    <img className={styles.gridCardImage} src={GRID_CARD_ID_VARIABLES[index]['gridCardImage']}/>
-                    <div className={styles.gridCardTitle}>{GRID_CARD_ID_VARIABLES[index]['gridCardTitle']}</div>
-                    <div className={styles.gridCardDescription}>
+                <div className={`${stylesIntroduce.gridCard} cardFilp${index}`} key={index} onClick={()=>{handlerFlipFit(index,"open")}} data-grid-card-group={GRID_CARD_ID_VARIABLES[index]['gridCardGroup']} data-view="true">
+                    <img className={stylesIntroduce.gridCardImage} src={GRID_CARD_ID_VARIABLES[index]['gridCardImage']}/>
+                    <div className={stylesIntroduce.gridCardTitle}>{GRID_CARD_ID_VARIABLES[index]['gridCardTitle']}</div>
+                    <div className={stylesIntroduce.gridCardDescription}>
                         {
                             GRID_CARD_ID_VARIABLES[index]['gridCardTitleSummary']
                         }
                     </div>
-                    <div className={styles.gridCardDate}>{GRID_CARD_ID_VARIABLES[index]['gridCardDate'].split(' ~ ')[1]}</div>
-                    <div className={styles.gridCardGroup}>{GRID_CARD_ID_VARIABLES[index]['gridCardGroup']}</div>
+                    <div className={stylesIntroduce.gridCardDate}>{GRID_CARD_ID_VARIABLES[index]['gridCardDate'].split(' ~ ')[1]}</div>
+                    <div className={stylesIntroduce.gridCardGroup}>{GRID_CARD_ID_VARIABLES[index]['gridCardGroup']}</div>
                     {/* 프로젝트 설명용 생성 */}
-                    <div className={styles.projectBrowserStart}>
-                        <div className={styles.projectCard}>
-                            <img className={styles.projectCardImage} src={GRID_CARD_ID_VARIABLES[index]['gridCardImage']}/>
-                            <div className={styles.projectCardTitle}>
+                    <div className={stylesIntroduce.projectBrowserStart}>
+                        <div className={stylesIntroduce.projectCard}>
+                            <img className={stylesIntroduce.projectCardImage} src={GRID_CARD_ID_VARIABLES[index]['gridCardImage']}/>
+                            <div className={stylesIntroduce.projectCardTitle}>
                                 {GRID_CARD_ID_VARIABLES[index]['gridCardTitle']}
                             </div>
-                            <div className={styles.projectCardDescription}>
+                            <div className={stylesIntroduce.projectCardDescription}>
                                 {
                                     GRID_CARD_ID_VARIABLES[index]['gridCardDescription']
                                 }                                       
                             </div>
-                            <div className={styles.projectCardLink}>
+                            <div className={stylesIntroduce.projectCardLink}>
                                 {projectCardLink.current}
                             </div>       
                               
-                            <div className={styles.projectCardDate}>
+                            <div className={stylesIntroduce.projectCardDate}>
                                 {GRID_CARD_ID_VARIABLES[index]['gridCardDate']}
                             </div>
                         </div>
-                        <div className={styles.container}>
-                            <div className={styles.description} data-scrollgroup="description">
+                        <div className={stylesIntroduce.container}>
+                            <div className={stylesIntroduce.description} data-scrollgroup="description">
 
-                                <div className={styles.descriptionTitle} data-scroll="skill-stack">
-                                    <span className={styles.green}>&lt;</span>SKILL STACKS<span className={styles.green}>/&gt;</span>
+                                <div className={stylesIntroduce.descriptionTitle} data-scroll="skill-stack">
+                                    <span className={stylesIntroduce.green}>&lt;</span>SKILL STACKS<span className={stylesIntroduce.green}>/&gt;</span>
                                 </div>
-                                <div className={styles.descriptionTitleSkillStack}>
+                                <div className={stylesIntroduce.descriptionTitleSkillStack}>
                                     {descriptionTitleSkillStack.current}
                                 </div>
 
-                                <div className={styles.descriptionTitle} data-scroll="review">
-                                    <span className={styles.green}>&lt;</span>REVIEW<span className={styles.green}>/&gt;</span>
+                                <div className={stylesIntroduce.descriptionTitle} data-scroll="review">
+                                    <span className={stylesIntroduce.green}>&lt;</span>REVIEW<span className={stylesIntroduce.green}>/&gt;</span>
                                 </div>
-                                <div className={styles.descriptionReview}>
+                                <div className={stylesIntroduce.descriptionReview}>
                                    {GRID_CARD_ID_VARIABLES[index]['descriptionReview']}
                                 </div>
 
-                                <div className={styles.descriptionTitle} data-scroll="feature">
-                                    <span className={styles.green}>&lt;</span>FEATURES<span className={styles.green}>/&gt;</span>
+                                <div className={stylesIntroduce.descriptionTitle} data-scroll="feature">
+                                    <span className={stylesIntroduce.green}>&lt;</span>FEATURES<span className={stylesIntroduce.green}>/&gt;</span>
                                 </div>
-                                <div className={styles.descriptionFeature}>
+                                <div className={stylesIntroduce.descriptionFeature}>
                                     {descriptionViewTitle.current}
                                 </div>
 
-                                <div className={styles.descriptionTitle} data-scroll="view">
-                                    <span className={styles.green}>&lt;</span>VIEWS<span className={styles.green}>/&gt;</span>
+                                <div className={stylesIntroduce.descriptionTitle} data-scroll="view">
+                                    <span className={stylesIntroduce.green}>&lt;</span>VIEWS<span className={stylesIntroduce.green}>/&gt;</span>
                                 </div>
 
-                                <div className={styles.descriptionView}>
+                                <div className={stylesIntroduce.descriptionView}>
                                     {descriptionViewList.current}
                                 </div>
                             </div>
-                            <div className={styles.descriptionSliderButton}>
+                            <div className={stylesIntroduce.descriptionSliderButton}>
                                 <button onClick={(e)=>handlerScrollView(e,"skill-stack","")}>
                                     <div>
                                         SKILL STACK
@@ -512,8 +512,8 @@ export default function Introduce() {
                         </div>
                     </div>
 
-                    <div className={styles.gridCardButton} onClick={()=>{handlerFlipFit(index,"close")}}>
-                        <img className={styles.gridCardButtonImage} src="./icons/close-button.svg"
+                    <div className={stylesIntroduce.gridCardButton} onClick={()=>{handlerFlipFit(index,"close")}}>
+                        <img className={stylesIntroduce.gridCardButtonImage} src="./icons/close-button.svg"
                         />
                     </div>
                 </div>
@@ -590,21 +590,21 @@ export default function Introduce() {
                 containerSecondBrowserRef.current.style.pointerEvents="none";
             }
             clickDelay.current = true;
-            ((document.querySelectorAll(`.cardFilp${index} .${styles.projectBrowserStart}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
+            ((document.querySelectorAll(`.cardFilp${index} .${stylesIntroduce.projectBrowserStart}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
                 element.style.opacity = "0";
             });
 
-            filpOpenTimeLine.to(`.cardFilp${index} .${styles.gridCardButton}`,{
+            filpOpenTimeLine.to(`.cardFilp${index} .${stylesIntroduce.gridCardButton}`,{
                 opacity:0,
                 duration:0.2,
                 onComplete:()=>{
-                    ((document.querySelectorAll(`.cardFilp${index} .${styles.gridCardButton}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
+                    ((document.querySelectorAll(`.cardFilp${index} .${stylesIntroduce.gridCardButton}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
                         element.style.display="none";
                     });
                 }
             });
 
-            filpOpenTimeLine.to([`.cardFilp${index} .${styles.gridCardImage}`,`.cardFilp${index} .${styles.gridCardTitle}`,`.cardFilp${index} .${styles.gridCardDescription}`,`.cardFilp${index} .${styles.gridCardDate}`],{
+            filpOpenTimeLine.to([`.cardFilp${index} .${stylesIntroduce.gridCardImage}`,`.cardFilp${index} .${stylesIntroduce.gridCardTitle}`,`.cardFilp${index} .${stylesIntroduce.gridCardDescription}`,`.cardFilp${index} .${stylesIntroduce.gridCardDate}`],{
                     delay:1,
                     opacity:1,
                     duration:0.8,
@@ -641,18 +641,18 @@ export default function Introduce() {
   
     /* Card Gsap Filp 애니메이션 다음 후처리 세팅 */
     function handlerFlipFitAfter(index:string){
-        ((document.querySelectorAll(`.cardFilp${index} .${styles.projectBrowserStart}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
+        ((document.querySelectorAll(`.cardFilp${index} .${stylesIntroduce.projectBrowserStart}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
             element.style.opacity = "1";
             element.style.pointerEvents="auto";
         });
-        filpOpenTimeLine.to([`.cardFilp${index} .${styles.gridCardImage}`,`.cardFilp${index} .${styles.gridCardTitle}`,`.cardFilp${index} .${styles.gridCardDescription}`,`.cardFilp${index} .${styles.gridCardDate}`],{
+        filpOpenTimeLine.to([`.cardFilp${index} .${stylesIntroduce.gridCardImage}`,`.cardFilp${index} .${stylesIntroduce.gridCardTitle}`,`.cardFilp${index} .${stylesIntroduce.gridCardDescription}`,`.cardFilp${index} .${stylesIntroduce.gridCardDate}`],{
                 opacity:0,
                 duration:1,
                 stagger:0.3
             }
         );
 
-        filpOpenTimeLine.from([`.cardFilp${index} .${styles.projectCardImage}`,`.cardFilp${index} .${styles.projectCardTitle}`, `.cardFilp${index} .${styles.projectCardDescription}`],{
+        filpOpenTimeLine.from([`.cardFilp${index} .${stylesIntroduce.projectCardImage}`,`.cardFilp${index} .${stylesIntroduce.projectCardTitle}`, `.cardFilp${index} .${stylesIntroduce.projectCardDescription}`],{
                 opacity:0,
                 duration:1,
                 stagger:0.3,
@@ -660,7 +660,7 @@ export default function Introduce() {
             }
         );
 
-        filpOpenTimeLine.from(`.cardFilp${index} .${styles.projectCardLinkBox}`,{
+        filpOpenTimeLine.from(`.cardFilp${index} .${stylesIntroduce.projectCardLinkBox}`,{
                 opacity:0,
                 scale:0,
                 duration:0.1,
@@ -668,14 +668,14 @@ export default function Introduce() {
                 ease:"bounce.out"
             }
         );
-        filpOpenTimeLine.from([`.cardFilp${index} .${styles.projectCardDate}`],{
+        filpOpenTimeLine.from([`.cardFilp${index} .${stylesIntroduce.projectCardDate}`],{
                 opacity:0,
                 duration:0.1,
                 ease:"ease"
             }
         );    
 
-        filpOpenTimeLine.from([`.cardFilp${index} .${styles.container}`],{
+        filpOpenTimeLine.from([`.cardFilp${index} .${stylesIntroduce.container}`],{
                 delay:1,
                 opacity:0,
                 duration:0.3,
@@ -683,13 +683,13 @@ export default function Introduce() {
             }
         );
 
-        filpOpenTimeLine.to([`.cardFilp${index} .${styles.gridCardButton}`],{
+        filpOpenTimeLine.to([`.cardFilp${index} .${stylesIntroduce.gridCardButton}`],{
                 delay:1,
                 opacity:1,
                 duration:0.3,
                 ease:"ease",
                 onComplete:()=>{
-                    ((document.querySelectorAll(`.cardFilp${index} .${styles.gridCardButton}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
+                    ((document.querySelectorAll(`.cardFilp${index} .${stylesIntroduce.gridCardButton}`)) as NodeListOf<HTMLElement>).forEach((element)=>{
                         element.style.display="";
                         element.style.pointerEvents="auto";
                     }); 
@@ -700,8 +700,8 @@ export default function Introduce() {
 
 
         if(filpOpenTimeLineScrollInitialSetting.current == false){
-            document.querySelectorAll(`.${styles.description}`).forEach((description)=>{
-                description.querySelectorAll(`.${styles.descriptionViewBox}`).forEach((element)=>{
+            document.querySelectorAll(`.${stylesIntroduce.description}`).forEach((description)=>{
+                description.querySelectorAll(`.${stylesIntroduce.descriptionViewBox}`).forEach((element)=>{
                     gsap.from(element,{
                         opacity:0,
                         duration:0.4,
@@ -802,8 +802,8 @@ export default function Introduce() {
 
     /* Rotation 카드 애니메이션 설정 */
     useEffect(()=>{
-        const axis:any = document.querySelector(`.${styles.cardRotationAxis}`);
-        const card:HTMLDivElement[] = gsap.utils.toArray(`.${styles.cardRotationSubAxis}`);
+        const axis:any = document.querySelector(`.${stylesIntroduce.cardRotationAxis}`);
+        const card:HTMLDivElement[] = gsap.utils.toArray(`.${stylesIntroduce.cardRotationSubAxis}`);
 
         function setup() {
             if(axis && card){
@@ -830,7 +830,7 @@ export default function Introduce() {
         setup();
 
         
-        gsap.to(`.${styles.cardRotationAxis}`, {
+        gsap.to(`.${stylesIntroduce.cardRotationAxis}`, {
             rotate: "+=360",
             ease: "none",
             repeat:-1,
@@ -895,20 +895,20 @@ export default function Introduce() {
 
 
     return (
-        <div className={styles.layout}>
+        <div className={stylesIntroduce.layout}>
             {/* Project 소개용 창 */}
-            <span className={styles.mainTitle}>INTRODUCE</span>
-            <div className={styles.containerFirst} ref={containerFirstRef}>
-                <div className={styles.statusbar}>
+            <span className={stylesIntroduce.mainTitle}>INTRODUCE</span>
+            <div className={stylesIntroduce.containerFirst} ref={containerFirstRef}>
+                <div className={stylesIntroduce.statusbar}>
                     <div/>
                     <div/>
                     <div/>
                     <span>INTRODUCE.EXE</span>
                 </div>
 
-                <div className={styles.profile} ref={profileRef}>
+                <div className={stylesIntroduce.profile} ref={profileRef}>
                     <img src="./images/profile/profile.jpg" ref={profileImageRef}/>
-                    <div className={styles.link}>
+                    <div className={stylesIntroduce.link}>
                         <a href="https://github.com/minsehong" target="_blank"><img src="./icons/github-icon.svg" ref={profileGithubIconRef}/></a> 
                         <a href="mailto:rebellia@naver.com" target="_blank"><img src="./icons/mail-icon.svg" ref={profileMailIconRef}/></a> 
                     </div>
@@ -923,43 +923,43 @@ export default function Introduce() {
                     </div>
                 </div>
 
-                <div className={styles.introduction} ref={introductionRef}>   
-                    <div className={styles.card}>
-                        <img src="./images/backgrounds/education.jpg" className={styles.cardImage}/>
-                        <div className={styles.title} ref={cardFirstTitleRef}>
+                <div className={stylesIntroduce.introduction} ref={introductionRef}>   
+                    <div className={stylesIntroduce.card}>
+                        <img src="./images/backgrounds/education.jpg" className={stylesIntroduce.cardImage}/>
+                        <div className={stylesIntroduce.title} ref={cardFirstTitleRef}>
                             TIMELINE
                         </div>
-                        <div className={styles.descriptionTimeline}>
-                            <div className={styles.box}>
-                                <span className={styles.timeline}>2016.03</span><br/>
-                                수원대학교 입학<span className={styles.sub}>미디어SW학과</span>
+                        <div className={stylesIntroduce.descriptionTimeline}>
+                            <div className={stylesIntroduce.box}>
+                                <span className={stylesIntroduce.timeline}>2016.03</span><br/>
+                                수원대학교 입학<span className={stylesIntroduce.sub}>미디어SW학과</span>
                             </div>
-                            <div className={styles.box}>
-                                <span className={styles.timeline}>2018.04 ~ 2020.01</span><br/>
-                                해군 입대<span className={styles.sub}>전산병</span>
+                            <div className={stylesIntroduce.box}>
+                                <span className={stylesIntroduce.timeline}>2018.04 ~ 2020.01</span><br/>
+                                해군 입대<span className={stylesIntroduce.sub}>전산병</span>
                             </div>
-                            <div className={styles.box}>
-                                <span className={styles.timeline}>2023.08</span><br/>
-                                수원대학교 졸업<span className={styles.sub}>미디어SW학과</span>
+                            <div className={stylesIntroduce.box}>
+                                <span className={stylesIntroduce.timeline}>2023.08</span><br/>
+                                수원대학교 졸업<span className={stylesIntroduce.sub}>미디어SW학과</span>
                             </div>
-                            <div className={styles.box}>
-                                <span className={styles.timeline}>2023.08 ~ 2024.04</span><br/>
-                                웹서비스 개발자 교육 수료<span className={styles.sub}>한국ICT기술협회</span>
+                            <div className={stylesIntroduce.box}>
+                                <span className={stylesIntroduce.timeline}>2023.08 ~ 2024.04</span><br/>
+                                웹서비스 개발자 교육 수료<span className={stylesIntroduce.sub}>한국ICT기술협회</span>
                             </div>
-                            <div className={styles.box}>
-                                <span className={styles.timeline}>2024.06 ~ 2024.12</span><br/>
-                                작당연구소<span className={styles.sub}>웹 개발 인턴</span>
+                            <div className={stylesIntroduce.box}>
+                                <span className={stylesIntroduce.timeline}>2024.06 ~ 2024.12</span><br/>
+                                작당연구소<span className={stylesIntroduce.sub}>웹 개발 인턴</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.card}>
-                        <img src="./images/backgrounds/skills.jpg" className={styles.cardImage}/>
-                        <div className={styles.title} ref={cardSecondTitleRef}>
+                    <div className={stylesIntroduce.card}>
+                        <img src="./images/backgrounds/skills.jpg" className={stylesIntroduce.cardImage}/>
+                        <div className={stylesIntroduce.title} ref={cardSecondTitleRef}>
                             SKILLS
                         </div>
 
-                        <div className={styles.descriptionSkillsButton}>
+                        <div className={stylesIntroduce.descriptionSkillsButton}>
                             <button onClick={()=>{skillsLibraryActive("FRONTEND");}}>
                                 FRONTEND
                             </button>
@@ -971,27 +971,27 @@ export default function Introduce() {
                             </button>
                         </div>
 
-                        <div className={styles.descriptionSkills}>
-                            <div className={styles.container}>
+                        <div className={stylesIntroduce.descriptionSkills}>
+                            <div className={stylesIntroduce.container}>
                                 {skillsViewState}
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.card}>
-                        <img src="./images/backgrounds/hobby.jpg" className={styles.cardImage}/>
-                        <div className={styles.title} ref={cardThirdTitleRef}>
+                    <div className={stylesIntroduce.card}>
+                        <img src="./images/backgrounds/hobby.jpg" className={stylesIntroduce.cardImage}/>
+                        <div className={stylesIntroduce.title} ref={cardThirdTitleRef}>
                             HOBBY
                         </div>
-                        <div className={styles.descriptionHobbys}>
-                            <div className={styles.container}>
+                        <div className={stylesIntroduce.descriptionHobbys}>
+                            <div className={stylesIntroduce.container}>
                                 {hobbysView.current}
                             </div>
                         </div>
                     </div>
-                    <div className={styles.card}>
-                        <div className={styles.title} ref={cardFourthTitleRef}>
-                        <img src="./images/backgrounds/null.jpg" className={styles.cardImage}/>
+                    <div className={stylesIntroduce.card}>
+                        <div className={stylesIntroduce.title} ref={cardFourthTitleRef}>
+                        <img src="./images/backgrounds/null.jpg" className={stylesIntroduce.cardImage}/>
                             PLANS
                         </div>
                     </div>
@@ -1001,16 +1001,16 @@ export default function Introduce() {
             </div>
 
             {/* Project 창 */}
-            <span className={styles.mainTitle}>PROJECTS</span>
-            <div className={styles.containerSecond} ref={containerSecondRef}>
-                <div className={styles.statusbar}>
+            <span className={stylesIntroduce.mainTitle}>PROJECTS</span>
+            <div className={stylesIntroduce.containerSecond} ref={containerSecondRef}>
+                <div className={stylesIntroduce.statusbar}>
                     <div/>
                     <div/>
                     <div/>
                     <span>PROJECTS.EXE</span>
                 </div>
 
-                <div className={styles.containerSecondBrowserButton}>
+                <div className={stylesIntroduce.containerSecondBrowserButton}>
                     <div onClick={()=>gridFilp("NORMAL")}>
                         전체 보기
                     </div>
@@ -1022,29 +1022,29 @@ export default function Introduce() {
                     </div>
                 </div>
 
-                <div className={styles.containerSecondBrowser} ref={containerSecondBrowserRef}>
+                <div className={stylesIntroduce.containerSecondBrowser} ref={containerSecondBrowserRef}>
                     {projectViewState}
                 </div>
             </div>
         
-            <div className={styles.containerThird}>
-                <div className={styles.containerThirdContainer}>
-                    <span className={styles.subTitle}>PERSONALITY</span>
+            <div className={stylesIntroduce.containerThird}>
+                <div className={stylesIntroduce.containerThirdContainer}>
+                    <span className={stylesIntroduce.subTitle}>PERSONALITY</span>
                     
-                    <div className={styles.subTitleSubject} ref={subTitleSubjectRef}>
+                    <div className={stylesIntroduce.subTitleSubject} ref={subTitleSubjectRef}>
                         MY PERSONALITY
                     </div>
-                    <div className={styles.subTitleDescription} ref={subTitleDescriptionRef}>
+                    <div className={stylesIntroduce.subTitleDescription} ref={subTitleDescriptionRef}>
                         카드를 클릭하면 해당 성격에 대해서 설명이 나옵니다.
                     </div>
 
-                    <div className={styles.cardRotationAxis}>
+                    <div className={stylesIntroduce.cardRotationAxis}>
                         {
                             Object.entries(PERSONALITY_VARIABLE).map(([id, {title, image}])=>(
-                                <div className={styles.cardRotationSubAxis} key={id} onClick={()=>personalityHandler(id)}>
-                                    <div className={styles.cardRotationSubAxisBox}>
+                                <div className={stylesIntroduce.cardRotationSubAxis} key={id} onClick={()=>personalityHandler(id)}>
+                                    <div className={stylesIntroduce.cardRotationSubAxisBox}>
                                         <img src={`./images/personality/${image}`}/>
-                                        <div className={styles.certificationTitle}>
+                                        <div className={stylesIntroduce.certificationTitle}>
                                             {title}
                                         </div>
                                     </div>

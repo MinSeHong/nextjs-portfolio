@@ -6,9 +6,9 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build && next export",
-    "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "build": "next build",
+    "export": "next export",
+    "gh-deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "dependencies": {
     "gsap": "^3.13.0",

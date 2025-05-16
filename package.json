@@ -2,16 +2,18 @@
 {
   "version": "0.1.0",
   "private": true,
+  "hompage":"https://minsehong.github.io/NextJS-Portfolio/",
   "scripts": {
     "build": "next build",
-    "deploy": "next build && touch out/.nojekyll && git add -f out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
-    "dev": "next dev --turbopack",
-    "start": "next start",
-    "lint": "next lint",
+
     "preexport": "rimraf out",
     "export": "next export",
     "touch": "touch out/.nojekyll",
-    "posttouch": "touch out/_next/.nojekyll"
+    "posttouch": "touch out/_next/.nojekyll",
+
+    "dev": "next dev --turbopack",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "gsap": "^3.13.0",

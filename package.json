@@ -3,12 +3,13 @@
   "private": true,
   "hompage": "https://minsehong.github.io/NextJS-Portfolio/",
   "scripts": {
-    "build": "next build",
-    "predeploy":"npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "gsap": "^3.13.0",

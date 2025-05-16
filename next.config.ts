@@ -8,7 +8,10 @@ const nextConfig: NextConfig = {
     eslint: {
       ignoreDuringBuilds: true, // 빌드 중 ESLint 오류를 무시
     },
-    basePath: '/NextJS-Portfolio',
+    assetPrefix:
+      process.env.NODE_ENV === "production"
+        ? "https://minsehong.github.io/NextJS-Portfolio/"
+        : "",
     output:'export'
 };
 

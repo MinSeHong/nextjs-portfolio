@@ -14,8 +14,7 @@ const nextConfig: NextConfig = {
     },
     basePath: "/NextJS-Portfolio",
     assetPrefix: '/NextJS-Portfolio/', // GitHub 리포지토리 이름
-    exportTrailingSlash: true,
-    output : 'export'
+    exportTrailingSlash: true
 };
 
 export default nextConfig;

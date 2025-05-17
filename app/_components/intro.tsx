@@ -265,7 +265,7 @@ export default function Intro() {
             </div>
 
             <div className={stylesInrto.titleSecondLine} ref={titleSecondLineRef}>
-                ㅇㅅㅇ 안녕하세요. 저는 <span>민세홍</span>입니다.
+                안녕하세요. 저는 <span>민세홍</span>입니다.
             </div>
 
             <div className={stylesInrto.titleThirdLine} ref={titleThirdLineRef}>

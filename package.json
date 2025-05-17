@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://minsehong.github.io/MinSeHong.github.io/",
+  "homepage": "https://minsehong.github.io/MinSeHong.github.io",
   "scripts": {
     "dev": "next dev --turbopack",
     "start": "next start",

@@ -5,7 +5,7 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "build": "next build",
-    "gh-deploy": "npm run build && gh-pages -d out"
+    "export": "next export"
   },
   "dependencies": {
     "gsap": "^3.13.0",

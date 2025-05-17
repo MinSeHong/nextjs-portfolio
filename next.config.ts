@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+const isProd = process.env.NODE_ENV === 'production';
+
 
 const nextConfig: NextConfig = {
     typescript: {
@@ -8,7 +10,6 @@ const nextConfig: NextConfig = {
     eslint: {
       ignoreDuringBuilds: true, // 빌드 중 ESLint 오류를 무시
     },
-    basePath: '/MinSeHong.github.io',
     output: 'export'
 };
 

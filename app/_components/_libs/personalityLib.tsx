@@ -28,7 +28,7 @@ export const PERSONALITY_VARIABLE:PersonalityCardId={
                 `사용자에게 최고의 경험을 선사하기 위해,
                 CSS와 JAVASCRIPT를 활용한 여러가지 기능을 공부 중 입니다.`,
                 `물리 엔진을 구현하기 위한 Matter.js, 인터렉티브를 색다르게 표현 할 수 있는
-                GSAP 그리고 더 나아가 3D를 표현하는 Three.js를 공부하고 있습니다.`
+                GSAP 그리고 3D 표현하는 Three.js를 공부하고 있습니다.`
             ]
     },
 

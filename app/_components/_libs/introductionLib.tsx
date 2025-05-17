@@ -55,7 +55,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         gridCardGroup:"개인 프로젝트",
         gridCardDescription:
             `공부한 지식을 이용하여 깃허브 포토폴리오를 제작했습니다.
-            추가 정보를 넣을 수 있도록 모듈 라이브러리 제작을 했고, Router기능을 이용하여 깃허브 블로그를 제작해 나아갈 예정입니다.`
+            추가 정보를 넣을 수 있도록 모듈 라이브러리 제작을 했고, AppRouter기능을 이용하여 깃허브 블로그를 제작해 나아갈 예정입니다.`
         ,
         gridCardImage:path0+"main.gif"
         ,
@@ -66,11 +66,11 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/people-icon.png"
             },
             {
-                url:"깃허브 링크용",
+                url:"https://github.com/MinSeHong/NextJS-Portfolio",
                 icon:"./icons/github-icon.svg"
             },
             {
-                url:"사이트 링크용",
+                url:"https://minsehong.github.io/",
                 icon:"./icons/page-icon.png"
             },
         ],
@@ -109,16 +109,115 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         ,
         descriptionViewTitle:[
             {
-                descriptionViewTitleName:"GSAP을 이용한 기능들",
+                descriptionViewTitleName:"설계 계획",
                 descriptionViewBoxDescription:[
                     {   
-                        descriptionViewBoxImage:"./images/backgrounds/null.jpg",
-                        descriptionViewBoxDescriptionSubtitle:"FILP 애니메이션",
-                        descriptionViewBoxDescriptionTitleDescription:"안녕하다냥. 안녕하다냥. 안녕하다냥. 안녕하다냥. 안녕하다냥. 안녕하다냥."
+                        descriptionViewBoxImage:path0+"1.png",
+                        descriptionViewBoxDescriptionSubtitle:"디렉토리 설계",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        여러 페이지를 생성하기 위해 다음과 같이 디렉토리를 설계 했습니다.
+                        Public 폴더에는 정적 이미지와 폰트를 저장하는 용도,
+                        값을 저장하기 위한 객체 라이브러리, 컴포넌트, css는 app에 넣기로 했습니다.
+                        `
                     },
 
+                    {   
+                        descriptionViewBoxImage:path0+"1_1.png",
+                        descriptionViewBoxDescriptionSubtitle:"임시 라이브러리 제작",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        TypeScript를 이용해 객체를 생성하고 수정, 추가, 삭제를 쉽게 하도록 했습니다.
+                        그리고 객체를 이용해 DOM을 생성합니다.
+                        `
+                    },
+
+                    {   
+                        descriptionViewBoxImage:path0+"1_2.gif",
+                        descriptionViewBoxDescriptionSubtitle:"저장된 데이터",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        프로젝트에 관련된 데이터를 저장한 모습입니다.
+                        `
+                    }
                 ]
-            }
+            },
+            {
+                descriptionViewTitleName:"시작 화면",
+                descriptionViewBoxDescription:[
+                    {   
+                        descriptionViewBoxImage:path0+"2.gif",
+                        descriptionViewBoxDescriptionSubtitle:"진행 설명",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        GSAP의 SplitText를 이용하여 글자 애니메이션 효과를 주었습니다.
+                        `
+                    },
+                    {   
+                        descriptionViewBoxImage:path0+"2_1.gif",
+                        descriptionViewBoxDescriptionSubtitle:"마우스 위치에 따른 배경 이동",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        시작 화면에 마우스가 있을 시 마우스의 위치를 계산하고
+                        마우스의 위치의 변화에 따라 배경이 움직이도록 제작했습니다.
+                        `
+                    },
+                ]
+            },
+            {
+                descriptionViewTitleName:"소개 화면",
+                descriptionViewBoxDescription:[
+                    {   
+                        descriptionViewBoxImage:path0+"3.gif",
+                        descriptionViewBoxDescriptionSubtitle:"진행 설명",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        Gsap의 ScrollTriger와 Timeline을 이용하여 소개화면을 제작했습니다.
+                        소개 부분은 창 형태로 제작했습니다.
+                        `
+                    },
+                    {   
+                        descriptionViewBoxImage:path0+"3_1.gif",
+                        descriptionViewBoxDescriptionSubtitle:"CSS, JS를 사용한 애니메이션",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        CSS, JS를 이용하여 플립 형태의 애니메이션 기능을 넣었습니다.
+
+                        `
+                    },
+                ]
+            },
+            {
+                descriptionViewTitleName:"프로젝트 화면",
+                descriptionViewBoxDescription:[
+                    {   
+                        descriptionViewBoxImage:path0+"4.gif",
+                        descriptionViewBoxDescriptionSubtitle:"진행 설명",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        프로젝트 목록은 카드 형태로 볼 수 있게 했습니다.
+                        Gsap을 이용해서 특정 부분만 분류하는 애니메이션을 제작했습니다.
+                        `
+                    },
+                    {   
+                        descriptionViewBoxImage:path0+"4_1.gif",
+                        descriptionViewBoxDescriptionSubtitle:"플립",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        프로젝트를 선택하면, 카드가 확대되면서 전체 화면을 감싸도록 제작했습니다. 
+                        `
+                    },
+                    {   
+                        descriptionViewBoxImage:path0+"4_2.gif",
+                        descriptionViewBoxDescriptionSubtitle:"프로젝트 상세 화면",
+                        descriptionViewBoxDescriptionTitleDescription:
+                        `
+                        각 주제를 클릭하면 해당 주제로 이동하도록 scrollTo를 사용했습니다.
+                        그리고 Gsap을 이용하여 스크롤하면 설명이 나오도록 제작했습니다.
+                        `
+                    },
+                ]
+            },
         ]
     },
     2:{
@@ -155,7 +254,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         ],
         descriptionTitleSkillStack:[
             {
-                icon:"./icons/React-icon.png",
+                icon:"./icons/react-icon.png",
                 name:"react",
                 group:"frontend"
             },

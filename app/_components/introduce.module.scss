@@ -22,7 +22,7 @@
         margin-top:50px;
         display: flex;
 
-        width: 1350px;
+        width: 1400px;
         height: 700px;
         box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
         background-color: whitesmoke;
@@ -776,7 +776,7 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        border-right: 1px dashed rgba(0, 0, 0, 0.8);
+                        border-right: 3px solid rgba(0, 0, 0, 0.2);
                         width: 400px;
                         height: 600px;
                         .projectCardImage{

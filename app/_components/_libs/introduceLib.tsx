@@ -45,7 +45,7 @@ export const SKILLS_VARIABLE:SkillSubject={
         skillDescription:[
             "● CSS 라이브러리 GSAP을 사용할 줄 압니다.",
             "● GSAP을 이용하여 인터렉티브를 만들 수 있습니다.",
-            "● 이 뿐만 아니라 물리엔진을 공부하고 있습니다.",
+            "● Matter.js 물리엔진을 공부하고 있습니다.",
             "● GSAP을 이용한 웹 크롤링 프로젝트를 제작했습니다."
         ]
     },
@@ -66,7 +66,7 @@ export const SKILLS_VARIABLE:SkillSubject={
             "● JAVA를 이용한 파일 입출력이 가능합니다.",
             "● SPRING BOOT와 RESTAPI에 대해 공부했습니다.",
             "● JSP로 서버 구축을 할 줄 압니다.",
-            "● 데이터베이스 연결을 할 줄 압니다."
+            "● 메이븐을 활용한 데이터베이스 연결을 할 줄 압니다."
         ]
     },
     Python:{
@@ -92,7 +92,8 @@ export const SKILLS_VARIABLE:SkillSubject={
         hashtag:"Back-end",
         skillDescription:[
             "● Spring boot를 이용한 팀 프로젝트를 제작해보았습니다.",
-            "● Spring Boot를 이용한 어노테이션 개발이 가능합니다."
+            "● Spring Boot를 이용한 어노테이션 개발이 가능합니다.",
+            "● MyBatis를 이용한 데이터베이스 연결을 해보았습니다."
         ]
     },
 
@@ -129,7 +130,7 @@ export const HOBBYS_VARIABLE:SkillSubject={
         skillIcon:"./icons/paint-icon.png",
         hashtag:"Drawing",
         skillDescription:[
-            "● 그리는 것을 좋아합니다.",
+            "● 그림 그리는 것을 좋아합니다.",
             "● illustrator, ClipStudio를 사용할 줄 압니다."
         ]
     },

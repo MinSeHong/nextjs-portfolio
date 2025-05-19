@@ -1386,11 +1386,11 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
     sample:{
         gridCardTitle:"카드 제목",
         gridCardTitleSummary:
-            `카드 설명 요약
+            `
             `
         ,
         gridCardDescription:
-            `카드 설명
+            `
             `
         ,
         gridCardImage:path1+"/main.png"
@@ -1402,8 +1402,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/people-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/Board_Homepage",
-                icon:"./icons/github-icon.svg"
+                url:"",
+                icon:""
             }
         ],
         descriptionTitleSkillStack:[
@@ -1414,22 +1414,20 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
             }
         ],
         descriptionReview:
-            `웹 프로그래밍 언어를 깊게 이해하고 싶어, 직접 만들 수 있는 기능들은 API 사용하지 않고
-            만들어 보았습니다. 사용자의 상호작용에 따라 발생할 수 있는 예외를 최소화 하려고 했으며,
-            게시판 CRUD를 제작하면서 여러가지 디테일을 적용해 보았습니다.
+            `
+            사후강평평
             `
         ,
         descriptionViewTitle:[
             {
-                descriptionViewTitleName:"회원가입/탈퇴 기능",
+                descriptionViewTitleName:"주제",
                 descriptionViewBoxDescription:[
                     {   
                         descriptionViewBoxImage:path+"1.png",
-                        descriptionViewBoxDescriptionSubtitle:"회원 로그인",
+                        descriptionViewBoxDescriptionSubtitle:"제목",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            회원 로그인을 할 때, 이메일, 비밀번호 형식에 맞는지 유효성 검사를 넣었습니다.
-                            회원 정보가 맞는지 서버에서 판단을 한 후 로그인 또는 에러 문구를 표시하도록 제작했습니다.
+                            설명명
                             `
                     }
                 ]

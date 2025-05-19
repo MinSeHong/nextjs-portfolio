@@ -8,7 +8,7 @@ import { SplitText } from "gsap/SplitText";
 import { Flip } from "gsap/all";
 
 /* INTRODUCE 라이브러리 */
-import { SKILLS_VARIABLE, HOBBYS_VARIABLE } from "./_libs/introduceLib";
+import { SKILLS_VARIABLE, HOBBYS_VARIABLE, PLANS_VARIABLE } from "./_libs/introduceLib";
 /* 프로젝트 카드 라이브러리 */
 import { GRID_CARD_ID_VARIABLE} from "./_libs/introductionLib";
 /* PERSONALITY 라이브러리 */
@@ -165,6 +165,45 @@ export default function Introduce() {
     const [skillsViewState, setSkillsViewState] = useState<any[]>([]);
 
 
+    const plansView = useRef<any[]>([]);
+
+    function plansLibraryActive(){
+        plansView.current = [];
+
+        for(const subject in PLANS_VARIABLE){
+            const descriptions:any[] = [];
+            const hastag:any[] = [];
+
+            PLANS_VARIABLE[subject]['skillDescription'].map((item:string, index:number)=>(
+                    descriptions.push(<div key={index}>{item}<br/></div>)
+                )
+            );
+            
+            hastag.push(
+                <div key="hastag" className={`${stylesIntroduce.planHashtag} ${stylesIntroduce.orange}`}>
+                    {PLANS_VARIABLE[subject]['hashtag']}
+                </div>
+            )
+
+            plansView.current.push(
+                <div className="planAnimation" key={subject}>
+                    <div className={stylesIntroduce.planBox}>
+                        <div className={stylesIntroduce.planIcon}>
+                            <img src={PLANS_VARIABLE[subject]['skillIcon']}/>
+                        </div>
+                        <div className={stylesIntroduce.planSubject}>
+                            {subject}
+                        </div>
+                        {hastag}
+                    </div>
+                    <div className={stylesIntroduce.plandescription}>
+                        {descriptions}
+                    </div>
+                </div>
+            )
+        }
+    };
+
     useEffect(()=>{
         gsap.from(".skillAnimation", {
             opacity: 0,
@@ -181,6 +220,7 @@ export default function Introduce() {
     useEffect(()=>{
         skillsLibraryActive("NORMAL");
         hobbysLibraryActive();
+        plansLibraryActive();
     },[]);
 
     /* Skills Start: Gsap cardTimeLine 애니메이션 시작 */
@@ -993,6 +1033,11 @@ export default function Introduce() {
                         <div className={stylesIntroduce.title} ref={cardFourthTitleRef}>
                         <img src="./images/backgrounds/null.jpg" className={stylesIntroduce.cardImage}/>
                             PLANS
+                        </div>
+                        <div className={stylesIntroduce.descriptionPlans}>
+                            <div className={stylesIntroduce.container}>
+                                {plansView.current}
+                            </div>
                         </div>
                     </div>
 

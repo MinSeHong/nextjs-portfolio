@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-$titleNumberLineRight: 0;
-$titleNumberLineBottom: 50;
-$breakpoint-mobile: 480px;
+$breakpoint-mobile-medium: 800px;
+$breakpoint-mobile-small: 720px;
 $breakpoint-tablet: 1280px;
 $breakpoint-desktop: 1480px;
 
-
-
 .layout {
+    $titleNumberLineRight: 0;
+    $titleNumberLineBottom: 50;
+
     position: relative;
     user-select: none;
     width: 100%;
@@ -21,6 +21,7 @@ $breakpoint-desktop: 1480px;
     background-attachment: fixed;
     background-size: 300px 300px;
     overflow: hidden;
+
 
     .canvas {
         position: absolute;
@@ -42,11 +43,23 @@ $breakpoint-desktop: 1480px;
         color:black;
         background-color: white;
         
-        //■■■■ 반응형 설정 ■■■■//
         @media (max-width: $breakpoint-tablet) {
             font-size:60px;
             border: 6px solid black;
             margin: auto;
+        }
+        @media (max-width: $breakpoint-mobile-medium) {
+            position: absolute;
+            text-align: center;
+            left:0px;
+            right: 0px;
+            margin: auto;
+            width: 62vw;
+            font-size: 7vw;
+        }
+        @media (max-width: $breakpoint-mobile-small) {
+            font-size: 7vw;
+            width: 55vw;
         }
 
         span{
@@ -63,9 +76,18 @@ $breakpoint-desktop: 1480px;
             height: 130px;
             z-index: 1;
 
-            //■■■■ 반응형 설정 ■■■■//
             @media (max-width: $breakpoint-tablet) {
                 top:-70px;
+            }
+            @media (max-width: $breakpoint-mobile-medium) {
+                top:-60px;
+                left:-120px;
+            }
+            @media (max-width: $breakpoint-mobile-small) {
+                top:-50px;
+                left:-110px;
+                width: 110px;
+                height: 110px;
             }
 
             img{
@@ -76,7 +98,6 @@ $breakpoint-desktop: 1480px;
                 scale: 1.6;
                 animation: rotate 12s ease-in 3s infinite normal both;
               
-                //■■■■ 반응형 설정 ■■■■//
                 @media (max-width: $breakpoint-tablet) {
                     scale: 1.1;
                 }
@@ -98,7 +119,6 @@ $breakpoint-desktop: 1480px;
         100%{transform: rotate(360deg);}
     }
 
-
     .titleSecondLine{
         position: relative;
         top:80px;
@@ -107,12 +127,24 @@ $breakpoint-desktop: 1480px;
         font-size:30px;
         color:black;
 
-        //■■■■ 반응형 설정 ■■■■//
         @media (max-width: $breakpoint-tablet) {
             left: 220px;
             top:85px;
             font-size:23px;
         }
+
+        @media (max-width: $breakpoint-mobile-medium) {
+            position: absolute;
+            top:180px;
+            left:0px;
+            right: 0px;
+            text-align: center;
+            font-size: 4vw;
+        }
+        @media (max-width: $breakpoint-mobile-small) {
+            top:160px;
+        }
+
 
         span:hover{
             transition: all 0.3s;
@@ -131,18 +163,23 @@ $breakpoint-desktop: 1480px;
         font-weight: bold;
         color: rgb(0, 0, 0);
 
-        //■■■■ 반응형 설정 ■■■■//
         @media (max-width: $breakpoint-tablet) {
             bottom:($titleNumberLineBottom+230+px);
             right:($titleNumberLineRight+120+px);
             font-size:20px;
+        }
+
+        @media (max-width: $breakpoint-mobile-medium) {
+            right:0px;
+            left:0px;
+            text-align: center;
         }
     }
 
 
     .titleThirdLineDescription{
         position: absolute;
-        bottom:($titleNumberLineBottom+150+px);
+        bottom:($titleNumberLineBottom+210+px);
         right:($titleNumberLineRight+180+px);
 
         font-size:15px;
@@ -150,11 +187,18 @@ $breakpoint-desktop: 1480px;
         color: rgb(0, 0, 0);
         font-weight: bold;
 
-        //■■■■ 반응형 설정 ■■■■//
         @media (max-width: $breakpoint-tablet) {
             bottom:($titleNumberLineBottom+170+px);
             right:($titleNumberLineRight+120+px);
             font-size:13px;
+        }
+        @media (max-width: $breakpoint-mobile-medium) {
+            right:0px;
+            left:0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size:12px;
         }
 
         .yellow{
@@ -177,17 +221,21 @@ $breakpoint-desktop: 1480px;
         font-weight: bold;
         color: rgb(0, 0, 0);
 
-        //■■■■ 반응형 설정 ■■■■//
         @media (max-width: $breakpoint-tablet) {
             bottom:($titleNumberLineBottom+100+px);
             right:($titleNumberLineRight+80+px);
             font-size:20px;
         }
+        @media (max-width: $breakpoint-mobile-medium) {
+            right:0px;
+            left:0px;
+            text-align: center;
+        }
     }
 
     .titleFourthLineDescription{
         position: absolute;
-        bottom:($titleNumberLineBottom+10+px);
+        bottom:($titleNumberLineBottom+20+px);
         right:($titleNumberLineRight+90+px);
         font-size:15px;
         line-height: 1.7;
@@ -199,6 +247,14 @@ $breakpoint-desktop: 1480px;
             bottom:($titleNumberLineBottom+20+px);
             right:($titleNumberLineRight+40+px);
             font-size:13px;
+        }
+        @media (max-width: $breakpoint-mobile-medium) {
+            right:0px;
+            left:0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size:12px;
         }
     }
 

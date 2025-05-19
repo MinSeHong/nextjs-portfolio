@@ -4,65 +4,65 @@
 
 $titleNumberLineRight: 0;
 $titleNumberLineBottom: 50;
-$breakpoint-tablet: 1200px;
+$breakpoint-mobile-medium: 800px;
+$breakpoint-mobile-small: 720px;
 
-$breakpoint-browser-medium: 1200px;
 
+$breakpoint-tablet-high: 1480px;
+$breakpoint-tablet-medium: 1280px;
+$breakpoint-tablet-small: 1000px;
 
 .layout {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     background-color: #E6E1FB;
-
     align-items: center;
+    
     .mainTitle{
         color:black;
         font-size: 50px;
         font-family: "Alfa Slab One";
         margin-top: 450px;
     }
-
     .containerFirst{
         position: relative;
         margin-top:50px;
         display: flex;
-
         width: 1400px;
         height: 700px;
         box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
         background-color: whitesmoke;
         border-radius: 10px;
-
         pointer-events: none;
-        
         align-items: center;
 
-        //■■■■ 창 반응형 설정 ■■■■//
-        @media (max-width: 1480px) {
-            width: 95vw;
+        @media (max-width: $breakpoint-tablet-high) {
+            width: 88vw;
             height: 700px;
+            background-color: yellow;
         }
 
+        @media (max-width: $breakpoint-tablet-medium) {
+            width: 88vw;
+            height: 700px;
+            background-color: green;
+        }
 
-        @media (max-width: $breakpoint-browser-medium) {
-            width: 95vw;
+        @media (max-width: $breakpoint-mobile-medium) {
+            width: 85vw;
             flex-direction: column;
-            height: 1950px;
+            height: 1350px;
             align-items: center;
+            background-color: red;
         }
 
-        @media (max-width: 1000px) {
-            height: 1850px;
+        @media (max-width: $breakpoint-mobile-small) {
+            flex-direction: column;
+            width: 80vw;
+            background-color: blue;
         }
-
-        @media (max-width: 800px) {
-            height: 1650px;
-        }
-        
-        
-
+    
 
         .statusbar{
             display: flex;
@@ -79,7 +79,6 @@ $breakpoint-browser-medium: 1200px;
             font-family: "Kalam";
             color: white;
 
-            
             span{
                 display: block;
                 position: absolute;
@@ -122,19 +121,12 @@ $breakpoint-browser-medium: 1200px;
             border-radius: 10px;
             font-family: "Kalam";
 
-
-            @media (max-width: $breakpoint-browser-medium) {
-                margin-left: 0px;
-            }
-
             img{
                 margin-top: 10px;
                 width: 250px;
                 border-radius: 5px;
-
-                @media (max-width: $breakpoint-browser-medium) {
-                    margin-top: 5vw;
-                    width: 60vw;
+                @media (max-width: $breakpoint-mobile-medium) {
+                    margin-top: 40px;
                 }
             }
 
@@ -152,6 +144,7 @@ $breakpoint-browser-medium: 1200px;
                         transform: translateY(-5);
                     }
                 }
+                
             }
 
             div{
@@ -162,26 +155,13 @@ $breakpoint-browser-medium: 1200px;
                 }
             }
 
-            //■■■■ 창 반응형 설정 ■■■■//
-            @media (max-width: 1480px) {
-                width: 20vw;
+            @media (max-width: $breakpoint-tablet-high) {
+                width: 24%;
             }
-
-            @media (max-width: $breakpoint-browser-medium) {
-                width: 95vw;
-                height: 1200px;
+            @media (max-width: $breakpoint-mobile-medium) {
+                width: 100%;
+                margin-left: 0px;
             }
-
-            @media (max-width: 1000px) {
-                width: 95vw;
-                height: 1100px;
-            }
-
-            @media (max-width: 800px) {
-                width: 95vw;
-                height: 930px;
-            }
-
         }
 
 
@@ -196,21 +176,23 @@ $breakpoint-browser-medium: 1200px;
             height: 600px;
             border-radius: 20px;
 
-            //■■■■ 창 반응형 설정 ■■■■//
-            @media (max-width: 1480px) {
-                width: 60vw;
-                height: 580px;
-            }
-
-            
-            @media (max-width: $breakpoint-browser-medium) {
-                width: 80vw;
-                margin-left:0px;
+            @media (max-width: $breakpoint-tablet-high) {
+                width: 53vw;
                 flex-direction: column;
-                height: 1000px;
-                margin-bottom: 20px;
             }
 
+            @media (max-width: $breakpoint-tablet-medium) {
+                width: 51vw;
+            }
+
+            @media (max-width: $breakpoint-tablet-small) {
+                width: 48vw;
+            }
+            @media (max-width: $breakpoint-mobile-medium) {
+                width: 90%;
+                margin-left:0px;
+                margin-top: 60px;
+            }
 
 
             .card{
@@ -225,10 +207,11 @@ $breakpoint-browser-medium: 1200px;
                 width: 25%;
                 transition: flex 1s ease-in-out;
 
-
-                @media (max-width: $breakpoint-browser-medium) {
+                @media (max-width: $breakpoint-tablet-high) {
                     width: 100%;
+                    flex-direction: column;
                 }
+
 
                 cursor: pointer;
                 img{
@@ -237,14 +220,18 @@ $breakpoint-browser-medium: 1200px;
                     left:-5%;
                     height: 110%;
                     transition: filter 1s;
-                    @media (max-width: $breakpoint-browser-medium) {
-                        width: 1100px;
-                        height: 800px;
-                    }
 
+                    @media (max-width: $breakpoint-tablet-high) {
+                        width: 1000px;
+                        height: 1000px;
+                    }
                 }
                 &:hover{
                     flex:7;
+
+                    @media (max-width: $breakpoint-tablet-high) {
+                        flex:15;
+                    }
                 }
                 &:nth-child(1):hover{
                     .descriptionTimeline{
@@ -253,12 +240,6 @@ $breakpoint-browser-medium: 1200px;
                     .cardImage{
                         filter: blur(3s);
                     }
-
-                    //■■■■ 테스트 ■■■■//
-                    @media (max-width: $breakpoint-tablet) {
-                        overflow-y: scroll;
-                    }       
-
                 }
                 &:nth-child(2):hover{
                     .descriptionSkills{
@@ -269,6 +250,9 @@ $breakpoint-browser-medium: 1200px;
                     }
                     .cardImage{
                         filter: blur(3px);
+                    }
+                    button{
+                        opacity: 1;
                     }
                 }
 
@@ -303,19 +287,17 @@ $breakpoint-browser-medium: 1200px;
                     text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
                     user-select: none;
 
-                    //■■■■ 창 반응형 설정 ■■■■//
-                    @media (max-width: 1480px) {
-                        font-size: 50px;
-                        letter-spacing: 5px;
+                    @media (max-width: $breakpoint-tablet-high) {
+                        writing-mode: horizontal-tb;
+                        letter-spacing: 10px;
+                        margin-top: 2%;
+                        margin-left: 0px;
+                        text-align: center;
                     }
 
-                    //■■■■ 테스트 ■■■■//
-                    @media (max-width: $breakpoint-tablet) {
-                        font-size: 5vw;
-                        writing-mode: horizontal-tb;
-                        padding-left: 20px;
+                    @media (max-width: $breakpoint-tablet-medium) {
+                        font-size: 45px;
                     }
-                    
                 }
 
 
@@ -325,7 +307,7 @@ $breakpoint-browser-medium: 1200px;
                     flex-direction: column;
                     gap:20px;
                     left: 90px;
-                    top:20px;
+                    top:30px;
 
                     width: 470px;
                     height: 520px;
@@ -333,25 +315,6 @@ $breakpoint-browser-medium: 1200px;
                     font-size: 15px;
                     transition: all 2s;
                     opacity: 0;
-
-
-                    
-                    //■■■■ 창 반응형 설정 ■■■■//
-                    @media (max-width: 1480px) {
-                        width: 80%;
-                        height: 520px;
-                    }
-
-                    //■■■■ 테스트 ■■■■//
-                    @media (max-width: $breakpoint-tablet) {
-                        margin-top: 80px;
-                        margin-left: -10px;
-                        left: 0px;
-                        right: 0px;
-                        margin: auto;
-                        margin-top: 75px;
-                    }                    
-
                     
                     .box{
                         background-color: rgba(245, 245, 245, 0.9);
@@ -359,6 +322,7 @@ $breakpoint-browser-medium: 1200px;
                         border-radius: 5px;
                         color:black;
                         line-height: 1.7;
+
                         .timeline{
                             font-weight: bold;
                             font-size: 18px;
@@ -368,6 +332,29 @@ $breakpoint-browser-medium: 1200px;
                             font-size:10px;
                             padding-left: 8px;
                         }
+
+                        &:nth-last-child(1){
+                            margin-bottom: 50px;
+                        }
+                    }
+
+                    @media (max-width: $breakpoint-tablet-high) {
+                        left: 0px; right: 0px;
+                        margin: auto;
+                        margin-top: 90px;
+                        height: 76%;
+                        width: 70%;
+                        overflow-y: auto;
+                        pointer-events: all;
+                        overscroll-behavior: contain;
+
+                        &::-webkit-scrollbar{
+                            display: none;
+                        }
+                    }
+
+                    @media (max-width: $breakpoint-tablet-medium) {
+                        margin-top: 60px;
                     }
                 }
 
@@ -384,17 +371,16 @@ $breakpoint-browser-medium: 1200px;
                     height: 150px;
 
                     
-                    
-                    @media (max-width: $breakpoint-browser-medium) {
-                        transition: all 0.5s;
-                        opacity: 0;
-                    }
-                    
                     &:hover{
                         button{
                             width: 150px;
                             color: black;
                         }
+                    }
+
+                    
+                    @media (max-width: $breakpoint-mobile-medium) {
+                        left:5px;
                     }
 
 
@@ -413,6 +399,7 @@ $breakpoint-browser-medium: 1200px;
                         font-family: "Kalam";
                         font-size: 13px;
                         cursor: pointer;
+                        opacity: 0;
                         
 
                         &:nth-child(1){
@@ -448,7 +435,7 @@ $breakpoint-browser-medium: 1200px;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-                    justify-items: center;
+                    align-items: center;
                     left: 110px;
                     top:20px;
                     gap:20px;
@@ -462,19 +449,19 @@ $breakpoint-browser-medium: 1200px;
                     transition: all 2s;
                     opacity: 0;
 
-                    //■■■■ 창 반응형 설정 ■■■■//
-                    @media (max-width: 1480px) {
-                        width: 32vw;
-                        height: 530px;
+                    
+                    @media (max-width: $breakpoint-tablet-high) {
+                        width: 73%;
+                        height: 75%;
+                        left:0px; right: 0px;
+                        margin: auto;
+                        margin-top: 90px;
                     }
 
-                    //■■■■ 테스트 ■■■■//
-                    @media (max-width: $breakpoint-tablet) {
-                        width: 60vw;
-                        margin-top: 80px;
-                        margin-left: 30px;
-                    }   
-
+                    @media (max-width: $breakpoint-tablet-medium) {
+                        margin-top: 60px;
+                        height: 80%;
+                    }
 
 
                     .container{
@@ -490,19 +477,12 @@ $breakpoint-browser-medium: 1200px;
                         width: 450px;
                         color: black;
 
-                        //■■■■ 창 반응형 설정 ■■■■//
-                        @media (max-width: 1480px) {
-                            width: 90%;
-                        }            
-                        
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            align-content: center;
-                            margin-left: 20px;
-                        }   
-
                         &::-webkit-scrollbar{
                             display: none;
+                        }
+
+                        @media (max-width: $breakpoint-tablet-high) {
+                            width: 90%;
                         }
                     }
 
@@ -523,6 +503,11 @@ $breakpoint-browser-medium: 1200px;
                         border-left: 2px dashed rgba(0, 0, 0, 0.5) ;
                         border-right: 2px dashed rgba(0, 0, 0, 0.5) ;
                         margin-top: 10px;
+
+                        @media (max-width: $breakpoint-tablet-high) {
+                            width: 100%;
+                            height: 37px;
+                        }
                         
 
                         .skillicon{
@@ -548,6 +533,12 @@ $breakpoint-browser-medium: 1200px;
                             font-size: 25px;
                             text-shadow: none;
                             font-weight: bold;
+                            @media (max-width: $breakpoint-tablet-high) {
+                                font-size: 20px;
+                            }
+                            @media (max-width: $breakpoint-mobile-medium) {
+                                font-size: 15px;
+                            }
                         }
 
                         .skillHashtag{
@@ -559,6 +550,13 @@ $breakpoint-browser-medium: 1200px;
                             position: absolute;
                             right: 5px;
                             font-weight: bold;
+                            @media (max-width: $breakpoint-tablet-high) {
+                                font-size: 12px;
+                            }
+                            @media (max-width: $breakpoint-mobile-medium) {
+                                font-size: 10px;
+                                padding: 3px;
+                            }
                         }
 
                         .orange{
@@ -572,11 +570,6 @@ $breakpoint-browser-medium: 1200px;
                         .red{
                             background-color: rgba(255, 0, 0, 0.356);
                         }
-
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            width: 100%;
-                        }   
                     }
 
 
@@ -596,20 +589,14 @@ $breakpoint-browser-medium: 1200px;
                         line-height: 1.6;
                         text-shadow: none;
 
-                        //■■■■ 창 반응형 설정 ■■■■//
-                        @media (max-width: 1480px) {
-                            width: 95.2%;
-                            font-size: 12;
-                            word-break: keep-all;
-                            line-height: 2;
-                        }
-
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
+                        @media (max-width: $breakpoint-tablet-high) {
                             width: 100%;
-                            padding-left:0px;
+                            padding-left: 0px;
                             text-align: center;
-                        }   
+                        }
+                        @media (max-width: $breakpoint-mobile-medium) {
+                            font-size: 10px;
+                        }
                     }
 
                 }
@@ -620,7 +607,7 @@ $breakpoint-browser-medium: 1200px;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-                    justify-items: center;
+                    align-items: center;
                     left: 110px;
                     top:20px;
                     gap:20px;
@@ -634,18 +621,17 @@ $breakpoint-browser-medium: 1200px;
                     transition: all 2s;
                     opacity: 0;
 
-                    //■■■■ 창 반응형 설정 ■■■■//
-                    @media (max-width: 1480px) {
-                        width: 32vw;
-                        height: 530px;
+                    @media (max-width: $breakpoint-tablet-high) {
+                        width: 73%;
+                        height: 75%;
+                        left:0px; right: 0px;
+                        margin: auto;
+                        margin-top: 90px;
                     }
-
-                    //■■■■ 테스트 ■■■■//
-                    @media (max-width: $breakpoint-tablet) {
-                        width: 60vw;
-                        margin-top: 80px;
-                        margin-left: 30px;
-                    }   
+                    @media (max-width: $breakpoint-tablet-medium) {
+                        margin-top: 60px;
+                        height: 80%;
+                    }
 
 
                     .container{
@@ -654,8 +640,6 @@ $breakpoint-browser-medium: 1200px;
                         overflow-y: auto;
                         
                         
-                        border:5px solid #EDEDED;
-                        box-shadow: inset 0px 0px 10px 5px #EDEDED;
                         padding: 0px 5px 5px 5px;
                         height: 100%;
                         width: 450px;
@@ -663,17 +647,9 @@ $breakpoint-browser-medium: 1200px;
                         &::-webkit-scrollbar{
                             display: none;
                         }
-
-                        //■■■■ 창 반응형 설정 ■■■■//
-                        @media (max-width: 1480px) {
+                        @media (max-width: $breakpoint-tablet-high) {
                             width: 90%;
                         }
-
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            align-content: center;
-                            margin-left: 20px;
-                        }   
                     }
 
                     .hobbyBox{
@@ -691,6 +667,11 @@ $breakpoint-browser-medium: 1200px;
                         border-left: 2px dashed rgba(0, 0, 0, 0.5) ;
                         border-right: 2px dashed rgba(0, 0, 0, 0.5) ;
                         margin-top: 10px;
+
+                        @media (max-width: $breakpoint-tablet-high) {
+                            width: 100%;
+                            height: 37px;
+                        }
 
                         .hobbyicon{
                             position: relative;
@@ -715,6 +696,12 @@ $breakpoint-browser-medium: 1200px;
                             font-size: 25px;
                             text-shadow: none;
                             font-weight: bold;
+                            @media (max-width: $breakpoint-tablet-high) {
+                                font-size: 20px;
+                            }
+                            @media (max-width: $breakpoint-mobile-medium) {
+                                font-size: 15px;
+                            }
                         }
 
                         .hobbyHashtag{
@@ -726,6 +713,13 @@ $breakpoint-browser-medium: 1200px;
                             position: absolute;
                             right: 5px;
                             font-weight: bold;
+                            @media (max-width: $breakpoint-tablet-high) {
+                                font-size: 12px;
+                            }
+                            @media (max-width: $breakpoint-mobile-medium) {
+                                font-size: 10px;
+                                padding: 3px;
+                            }
                         }
 
                         .orange{
@@ -739,11 +733,6 @@ $breakpoint-browser-medium: 1200px;
                         .red{
                             background-color: rgba(255, 0, 0, 0.356);
                         }
-
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            width: 100%;
-                        }   
                     }
 
 
@@ -763,20 +752,14 @@ $breakpoint-browser-medium: 1200px;
                         line-height: 1.6;
                         text-shadow: none;
 
-                        //■■■■ 창 반응형 설정 ■■■■//
-                        @media (max-width: 1480px) {
-                            width: 95.2%;
-                            font-size: 12;
-                            word-break: keep-all;
-                            line-height: 2;
-                        }
-
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
+                        @media (max-width: $breakpoint-tablet-high) {
                             width: 100%;
-                            padding-left:0px;
+                            padding-left: 0px;
                             text-align: center;
-                        }   
+                        }
+                        @media (max-width: $breakpoint-mobile-medium) {
+                            font-size: 10px;
+                        }
                     }
 
 
@@ -789,7 +772,7 @@ $breakpoint-browser-medium: 1200px;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-                    justify-items: center;
+                    align-items: center;
                     left: 110px;
                     top:20px;
                     gap:20px;
@@ -803,19 +786,17 @@ $breakpoint-browser-medium: 1200px;
                     transition: all 2s;
                     opacity: 0;
 
-                    //■■■■ 창 반응형 설정 ■■■■//
-                    @media (max-width: 1480px) {
-                        width: 32vw;
-                        height: 530px;
+                    @media (max-width: $breakpoint-tablet-high) {
+                        width: 73%;
+                        height: 75%;
+                        left:0px; right: 0px;
+                        margin: auto;
+                        margin-top: 90px;
                     }
-
-                    //■■■■ 테스트 ■■■■//
-                    @media (max-width: $breakpoint-tablet) {
-                        width: 60vw;
-                        margin-top: 80px;
-                        margin-left: 30px;
-                    }   
-
+                    @media (max-width: $breakpoint-tablet-medium) {
+                        margin-top: 60px;
+                        height: 80%;
+                    }
                     
 
                     .container{
@@ -833,16 +814,9 @@ $breakpoint-browser-medium: 1200px;
                         &::-webkit-scrollbar{
                             display: none;
                         }
-
-                        //■■■■ 창 반응형 설정 ■■■■//
-                        @media (max-width: 1480px) {
+                        @media (max-width: $breakpoint-tablet-high) {
                             width: 90%;
                         }
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            align-content: center;
-                            margin-left: 20px;
-                        }   
                     }
 
                     .planBox{
@@ -860,6 +834,11 @@ $breakpoint-browser-medium: 1200px;
                         border-left: 2px dashed rgba(0, 0, 0, 0.5) ;
                         border-right: 2px dashed rgba(0, 0, 0, 0.5) ;
                         margin-top: 10px;
+
+                        @media (max-width: $breakpoint-tablet-high) {
+                            width: 100%;
+                            height: 37px;
+                        }
 
                         .planIcon{
                             position: relative;
@@ -884,6 +863,12 @@ $breakpoint-browser-medium: 1200px;
                             font-size: 25px;
                             text-shadow: none;
                             font-weight: bold;
+                            @media (max-width: $breakpoint-tablet-high) {
+                                font-size: 20px;
+                            }
+                            @media (max-width: $breakpoint-mobile-medium) {
+                                font-size: 15px;
+                            }
                         }
 
                         .planHashtag{
@@ -895,6 +880,13 @@ $breakpoint-browser-medium: 1200px;
                             position: absolute;
                             right: 5px;
                             font-weight: bold;
+                            @media (max-width: $breakpoint-tablet-high) {
+                                font-size: 12px;
+                            }
+                            @media (max-width: $breakpoint-mobile-medium) {
+                                font-size: 10px;
+                                padding: 3px;
+                            }
                         }
 
                         .orange{
@@ -909,10 +901,6 @@ $breakpoint-browser-medium: 1200px;
                             background-color: rgba(255, 0, 0, 0.356);
                         }
 
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            width: 100%;
-                        }   
                     }
 
 
@@ -931,20 +919,14 @@ $breakpoint-browser-medium: 1200px;
                         font-size: 13px;
                         line-height: 1.6;
                         text-shadow: none;
-
-                        //■■■■ 창 반응형 설정 ■■■■//
-                        @media (max-width: 1480px) {
-                            width: 95.2%;
-                            font-size: 12;
-                            word-break: keep-all;
-                            line-height: 2;
-                        }
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
+                        @media (max-width: $breakpoint-tablet-high) {
                             width: 100%;
-                            padding-left:0px;
+                            padding-left: 0px;
                             text-align: center;
-                        }   
+                        }
+                        @media (max-width: $breakpoint-mobile-medium) {
+                            font-size: 10px;
+                        }
                     }
 
 
@@ -968,10 +950,25 @@ $breakpoint-browser-medium: 1200px;
 
 
 
-        //■■■■ 창 반응형 설정 ■■■■//
-        @media (max-width: 1480px) {
-            width: 95vw;
+
+        @media (max-width: $breakpoint-tablet-high) {
+            width: 88vw;
             height: 700px;
+            background-color: yellow;
+        }
+
+        @media (max-width: $breakpoint-tablet-medium) {
+            background-color: green;
+        }
+
+        @media (max-width: $breakpoint-mobile-medium) {
+            width: 85vw;
+            background-color: red;
+        }
+
+        @media (max-width: $breakpoint-mobile-small) {
+            width: 80vw;
+            background-color: blue;
         }
         
 
@@ -1032,7 +1029,7 @@ $breakpoint-browser-medium: 1200px;
             font-family: "Gamja Flower";
             z-index: 1;
 
-            @media (max-width: $breakpoint-browser-medium) {
+            @media (max-width: $breakpoint-tablet-high) {
                 display: none;
             }
 
@@ -1066,8 +1063,11 @@ $breakpoint-browser-medium: 1200px;
             height: 93%;
             border-radius: 0px 0px 10px 10px;
 
-            @media (max-width: $breakpoint-browser-medium) {
+            @media (max-width: $breakpoint-tablet-small) {
                 grid-template-columns: repeat(2, 250px);
+            }
+            @media (max-width: $breakpoint-mobile-small) {
+                grid-template-columns: repeat(1, 250px);
             }
             &::-webkit-scrollbar{
                 display: none;
@@ -1109,6 +1109,12 @@ $breakpoint-browser-medium: 1200px;
                     z-index: 1.5;
                     transition: opacity 1s;
                     opacity: 0;
+
+
+                    @media (max-width: $breakpoint-tablet-high) {
+                        width: 35px;
+                        height: 35px;
+                    }
 
                     .gridCardButtonImage{
                         position: relative;
@@ -1188,19 +1194,17 @@ $breakpoint-browser-medium: 1200px;
                     display: flex;
                     align-items: center;
                     gap:20px;
-                    /*테스트*/
                     overflow: hidden;
                     opacity: 0;
                     pointer-events: none;
                     transition: all 1s;
 
-                    @media (max-width: $breakpoint-browser-medium) {
+                    @media (max-width: $breakpoint-tablet-medium) {
                         flex-direction: column;
                         overflow-y: scroll;
 
-                        /*테스트*/
                         &::-webkit-scrollbar{
-                            display: "";
+                            display: none;
                         }
                     }
 
@@ -1215,16 +1219,24 @@ $breakpoint-browser-medium: 1200px;
                         height: 600px;
 
 
-                        @media (max-width: $breakpoint-browser-medium) {
-                            width: 100vw;
+                        @media (max-width: $breakpoint-tablet-medium) {
+                            width: 100%;
+                            height: 100%;
+                            border-right: none;
+                            border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
                         }
+
                         
                         .projectCardImage{
                             margin-top: 20px;
                             border-radius: 10px;
                             width: 280px;
                             height: 280px;
+                            @media (max-width: $breakpoint-tablet-medium) {
+                                margin-bottom: 20px;
+                            }
                         }
+                        
                         .projectCardLink{
                             margin-top: 20px;
                             display: flex;
@@ -1233,6 +1245,11 @@ $breakpoint-browser-medium: 1200px;
                             gap: 10px;
                             width: 200px;
                             height: 50px;
+                            
+                            @media (max-width: $breakpoint-tablet-medium) {
+                                margin-top: 40px;
+                            }
+                            
 
                             .projectCardLinkBox{
                                 position: relative;
@@ -1279,6 +1296,10 @@ $breakpoint-browser-medium: 1200px;
                             margin-top: 15px;
                             font-family: "kalam";
                             color: rgb(0, 70, 0);
+                            
+                            @media (max-width: $breakpoint-tablet-medium) {
+                                margin-bottom: 30px;
+                            }
                         }
                     }
                     .container{
@@ -1286,11 +1307,13 @@ $breakpoint-browser-medium: 1200px;
                         width: 920px;
                         height: 600px;
 
-                        //■■■■ 테스트 ■■■■//
-                        @media (max-width: $breakpoint-tablet) {
-                            width: 90%;
-                        } 
+                        @media (max-width: $breakpoint-tablet-high) {
+                            width: 60%;
+                        }
 
+                        @media (max-width: $breakpoint-tablet-medium) {
+                            width: 95%;
+                        }                        
 
                         .descriptionSliderButton{
                             position: absolute;
@@ -1309,6 +1332,15 @@ $breakpoint-browser-medium: 1200px;
                             height: 200px;
                             border-radius: 50px;
 
+                            @media (max-width: $breakpoint-tablet-high) {
+                                gap:10px;
+                                right: -20px;
+                            }
+
+                            @media (max-width: $breakpoint-mobile-small) {
+                                right: -5px;
+                            }
+
                             button{
                                 position: relative;
                                 width: 20px;
@@ -1318,6 +1350,10 @@ $breakpoint-browser-medium: 1200px;
                                 border: none;
                                 background-color: orange;
                                 box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.439);
+                                @media (max-width: $breakpoint-tablet-high) {
+                                    width: 15px;
+                                    height: 15px;
+                                }
                                 div{
                                     font-family: "Kalam";
                                     position: absolute;
@@ -1341,6 +1377,7 @@ $breakpoint-browser-medium: 1200px;
                                         opacity: 1;
                                     }
                                 }
+
                             }
                         }
 
@@ -1349,11 +1386,12 @@ $breakpoint-browser-medium: 1200px;
                             overscroll-behavior: contain;
                             width: 100%;
                             height: 100%;
-                            
-                            //■■■■ 테스트 ■■■■//
-                            @media (max-width: $breakpoint-tablet) {
+
+
+                            @media (max-width: $breakpoint-tablet-medium) {
                                 height: 650px;
                                 width: 100%;
+                                overscroll-behavior: auto;
                             } 
 
                             &::-webkit-scrollbar{
@@ -1368,6 +1406,11 @@ $breakpoint-browser-medium: 1200px;
                                 .green{
                                     color: green;
                                 }
+                                @media (max-width: $breakpoint-tablet-medium) {
+                                    text-align: center;
+                                    margin-top: 10px;
+                                    padding-left: 0px;
+                                } 
                             }
 
                             .descriptionReview{
@@ -1380,10 +1423,15 @@ $breakpoint-browser-medium: 1200px;
                                 color: #313131;
                                 font-family: "Gamja Flower";
 
-                                //■■■■ 테스트 ■■■■//
-                                @media (max-width: $breakpoint-tablet) {
+                                @media (max-width: $breakpoint-tablet-high) {
                                     width: 90%;
                                 } 
+
+                                @media (max-width: $breakpoint-tablet-medium) {
+                                    width: 80%;
+                                    text-align: center;
+                                    word-break: keep-all;
+                                }
                             }
 
                             .descriptionFeature{
@@ -1395,11 +1443,16 @@ $breakpoint-browser-medium: 1200px;
                                 margin-bottom: 80px;
                                 width: 800px;
 
-                                //■■■■ 테스트 ■■■■//
-                                @media (max-width: $breakpoint-tablet) {
-                                    grid-template-columns: repeat(2,260px);
-                                    width: 90%;
+                                @media (max-width: $breakpoint-tablet-high) {
+                                    grid-template-columns: repeat(2,250px);
+                                    justify-content: center;
+                                    width: 100%;
                                 } 
+                                @media (max-width: $breakpoint-mobile-small) {
+                                    grid-template-columns: repeat(1,200px);
+                                    gap:15px;
+                                } 
+
 
                                 .descriptionFeatureStickyNote{
                                     position: relative;
@@ -1436,11 +1489,10 @@ $breakpoint-browser-medium: 1200px;
                                 margin-bottom: 80px;
                                 width: 800px;
 
-                                //■■■■ 테스트 ■■■■//
-                                @media (max-width: $breakpoint-tablet) {
-                                    grid-template-columns: repeat(2,260px);
-                                    width: 85%;
-                                } 
+                                @media (max-width: $breakpoint-tablet-high) {
+                                    width: 95%;
+                                }
+
 
                                 .descriptionViewTitle{
                                     margin-bottom: 40px;
@@ -1454,10 +1506,18 @@ $breakpoint-browser-medium: 1200px;
                                     box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.099);
                                     
                                     
-                                    @media (max-width: $breakpoint-tablet) {
-                                        text-align: center;
-                                        margin-left:0;
+                                    @media (max-width: $breakpoint-tablet-high) {
+                                        margin-left: 10px;
                                     } 
+                                    @media (max-width: $breakpoint-tablet-medium) {
+                                        display: block;
+                                        width: 60%;
+                                        text-align: center;
+                                        left:0; right:0;
+                                        margin: auto;
+                                        margin-bottom: 10px;
+                                    }
+
                                 
                                 }
 
@@ -1465,10 +1525,10 @@ $breakpoint-browser-medium: 1200px;
                                     display: flex;
                                     margin-bottom: 100px;
 
-                                    //■■■■ 테스트 ■■■■//
-                                    @media (max-width: $breakpoint-tablet) {
+                                    @media (max-width: $breakpoint-tablet-medium) {
                                         flex-direction: column;
-                                    } 
+                                        align-items: center;
+                                    }
 
                                     .descriptionViewBoxImage{
                                         cursor: pointer;
@@ -1481,25 +1541,35 @@ $breakpoint-browser-medium: 1200px;
                                         scale: 0.9;
                                         background-color: rgb(100, 99, 94);
 
+
+                                        @media (min-width: $breakpoint-tablet-high) {
+                                            &:active{
+                                                transform: translateX(200px)
+                                                scale(2.0);
+                                            }
+                                        }
+
+                                        @media (max-width: $breakpoint-tablet-high) {
+                                            width: 45%;
+                                            height: 270px;
+                                        }
                                         
-                                        //■■■■ 테스트 ■■■■//
-                                        @media (max-width: $breakpoint-tablet) {
-                                            width: 100%;
-                                            height: 400px;
+                                        @media (max-width: $breakpoint-tablet-medium) {
+                                            width: 60%;
+                                        }
+                                        @media (max-width: $breakpoint-mobile-small) {
+                                            width: 90%;
                                         } 
+
+                                                                            
                                         img{
                                             width: 100%;
                                             height: 100%;
                                         }
                                         transition: transform 0.2s ease;
+
                                         
-                                        //■■■■ 테스트 ■■■■//
-                                        @media (min-width: $breakpoint-tablet) {
-                                            &:active{
-                                                transform: translateX(200px)
-                                                scale(2.0);
-                                            }
-                                        } 
+                                        
 
                                     }
 
@@ -1510,13 +1580,11 @@ $breakpoint-browser-medium: 1200px;
                                         padding-left: 20px;
                                         overflow: hidden;
 
-                                                                                //■■■■ 테스트 ■■■■//
-                                        @media (max-width: $breakpoint-tablet) {
-                                            width: 90%;
+                                        @media (max-width: $breakpoint-tablet-medium) {
                                             text-align: center;
-                                            gap:20px;
-                                        } 
-                                        
+                                            width: 80%;
+                                            padding-left: 0px;
+                                        }
                                     
                                         .descriptionViewBoxDescriptionSubtitle{
                                             font-family: "Gamja Flower";
@@ -1525,6 +1593,10 @@ $breakpoint-browser-medium: 1200px;
                                             span{
                                                 color: orange;
                                             }
+                                            @media (max-width: $breakpoint-tablet-high) {
+                                                margin-top: 20px;
+                                                font-size: 26px;
+                                            } 
                                         }
                                         .descriptionViewBoxDescriptionTitleDescription{
                                             width: 100%;
@@ -1537,23 +1609,35 @@ $breakpoint-browser-medium: 1200px;
                                             word-wrap: break-word;
                                             word-break: keep-all;
                                             font-family: "Gamja Flower";
+                                            @media (max-width: $breakpoint-tablet-high) {
+                                                font-size: 16px;
+                                                padding-left: 0px;
+                                                width: 100%;
+                                            }
+                                            @media (max-width: $breakpoint-tablet-medium) {
+                                                text-align: center;
+                                                padding-left: 0px;
+                                                margin-top: 10px;
+                                            }
                                         }
                                     }
+
+                                    
                                     
 
                                     &:nth-child(2n+1){
                                         flex-direction: row-reverse;
 
-                                        @media (max-width: $breakpoint-tablet) {
+                                        @media (max-width: $breakpoint-tablet-medium) {
                                             flex-direction: column;
-                                        } 
+                                            align-items: center;
+                                        }
 
                                         .descriptionViewBoxDescriptionSubtitle{
                                             text-align: right;
                                             padding-right: 20px;
-                                            @media (max-width: $breakpoint-tablet) {
+                                            @media (max-width: $breakpoint-tablet-medium) {
                                                 text-align: center;
-                                                padding-right: 0px;
                                             }
                                         }
 
@@ -1561,25 +1645,27 @@ $breakpoint-browser-medium: 1200px;
                                             text-align: right;
                                             padding-left: 0px;
                                             padding-right: 20px;
-                                            @media (max-width: $breakpoint-tablet) {
+
+                                            @media (max-width: $breakpoint-tablet-high) {
+                                                margin-left: 5px;
+                                            }
+                                            @media (max-width: $breakpoint-tablet-medium) {
                                                 text-align: center;
+                                                margin-left: 0px;
                                                 padding-right: 0px;
                                             }
-                                        }
-
 
                                         }
-
-                                        //■■■■ 테스트 ■■■■//
-                                        @media (min-width: $breakpoint-tablet) {
-                                        .descriptionViewBoxImage{
-                                            &:active{
-                                                transform: translateX(-270px)
-                                                scale(2.0);
+                                        @media (min-width: $breakpoint-tablet-high) {
+                                            .descriptionViewBoxImage{
+                                                &:active{
+                                                    transform: translateX(-270px)
+                                                    scale(2.0);
+                                                }
                                             }
                                         }
-
                                     }
+
                                 }
 
 
@@ -1596,6 +1682,21 @@ $breakpoint-browser-medium: 1200px;
                                 padding: 5px;
                                 gap: 20px 0px;
 
+                                @media (max-width: $breakpoint-tablet-high) {
+                                    width: 80%;
+                                    grid-template-columns: repeat(6,90px);
+                                }
+
+                                @media (max-width: $breakpoint-tablet-medium) {
+                                    margin-top: 10px;
+                                    justify-content: center;
+                                    width: 100%;
+                                } 
+
+                                @media (max-width: $breakpoint-mobile-small) {
+                                    grid-template-columns: repeat(3,90px);
+                                } 
+
                                 .descriptionTitleSkillStackIcon{
                                     position: relative;
                                     padding: 2px;
@@ -1604,7 +1705,11 @@ $breakpoint-browser-medium: 1200px;
                                     width: 70px;
                                     background-color:white;
                                     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-                                    
+
+                                    @media (max-width: $breakpoint-tablet-high) {
+                                        height: 60px;
+                                        width: 60px;
+                                    }
                                     &:hover{
                                         .descriptionTitleSkillStackIconName{
                                             opacity: 1;
@@ -1635,6 +1740,9 @@ $breakpoint-browser-medium: 1200px;
                                         pointer-events: none;
                                         user-select: none;
                                         opacity: 0;
+                                        @media (max-width: $breakpoint-tablet-high) {
+                                            font-size: 12px;
+                                        }
                                     }
                                 }
                             }

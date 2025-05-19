@@ -21,7 +21,7 @@ export const SKILLS_VARIABLE:SkillSubject={
         skillIcon:"./icons/css-icon.png",
         hashtag:"Front-end",
         skillDescription:[
-            "● SCSS를 이용한 CSS제작이 간으합니다.",
+            "● SCSS를 이용한 CSS제작이 가능합니다.",
             "● Grid, Flex를 이용한 최적의 레이아웃을 구상하려고 노력합니다."
         ]
     },

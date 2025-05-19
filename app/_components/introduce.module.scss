@@ -207,6 +207,8 @@ $breakpoint-browser-medium: 1200px;
                 width: 80vw;
                 margin-left:0px;
                 flex-direction: column;
+                height: 1000px;
+                margin-bottom: 20px;
             }
 
 
@@ -260,6 +262,9 @@ $breakpoint-browser-medium: 1200px;
                 }
                 &:nth-child(2):hover{
                     .descriptionSkills{
+                        opacity: 1;
+                    }
+                    .descriptionSkillsButton{
                         opacity: 1;
                     }
                     .cardImage{
@@ -378,6 +383,12 @@ $breakpoint-browser-medium: 1200px;
                     width: 50px;
                     height: 150px;
 
+                    
+                    
+                    @media (max-width: $breakpoint-browser-medium) {
+                        transition: all 0.5s;
+                        opacity: 0;
+                    }
                     
                     &:hover{
                         button{

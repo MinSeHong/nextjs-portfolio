@@ -6,8 +6,6 @@ $titleNumberLineRight: 0;
 $titleNumberLineBottom: 50;
 $breakpoint-mobile-medium: 800px;
 $breakpoint-mobile-small: 720px;
-
-
 $breakpoint-tablet-high: 1480px;
 $breakpoint-tablet-medium: 1280px;
 $breakpoint-tablet-small: 1000px;
@@ -24,6 +22,11 @@ $breakpoint-tablet-small: 1000px;
         font-size: 50px;
         font-family: "Alfa Slab One";
         margin-top: 450px;
+
+        @media (max-width: $breakpoint-mobile-small) {
+            font-size: 30px;
+        } 
+
     }
     .containerFirst{
         position: relative;
@@ -40,13 +43,11 @@ $breakpoint-tablet-small: 1000px;
         @media (max-width: $breakpoint-tablet-high) {
             width: 88vw;
             height: 700px;
-            background-color: yellow;
         }
 
         @media (max-width: $breakpoint-tablet-medium) {
             width: 88vw;
             height: 700px;
-            background-color: green;
         }
 
         @media (max-width: $breakpoint-mobile-medium) {
@@ -54,13 +55,11 @@ $breakpoint-tablet-small: 1000px;
             flex-direction: column;
             height: 1350px;
             align-items: center;
-            background-color: red;
         }
 
         @media (max-width: $breakpoint-mobile-small) {
             flex-direction: column;
-            width: 80vw;
-            background-color: blue;
+            width: 95vw;
         }
     
 
@@ -79,12 +78,20 @@ $breakpoint-tablet-small: 1000px;
             font-family: "Kalam";
             color: white;
 
+            @media (max-width: $breakpoint-mobile-small) {
+                height: 38px;
+            }
+
             span{
                 display: block;
                 position: absolute;
                 left:20px;
 
                 font-size:20px;
+                @media (max-width: $breakpoint-mobile-small) {
+                    font-size: 15px;
+                }
+
             }
 
             div{
@@ -104,6 +111,10 @@ $breakpoint-tablet-small: 1000px;
                 &:hover{
                     box-shadow: inset 2px 2px 5px 2px rgba(0, 0, 0, 0.399);
                     transition: all 0.3s;
+                }
+                @media (max-width: $breakpoint-mobile-small) {
+                    height: 20px;
+                    width: 20px;
                 }
             }
         }
@@ -954,21 +965,17 @@ $breakpoint-tablet-small: 1000px;
         @media (max-width: $breakpoint-tablet-high) {
             width: 88vw;
             height: 700px;
-            background-color: yellow;
         }
 
         @media (max-width: $breakpoint-tablet-medium) {
-            background-color: green;
         }
 
         @media (max-width: $breakpoint-mobile-medium) {
             width: 85vw;
-            background-color: red;
         }
 
         @media (max-width: $breakpoint-mobile-small) {
-            width: 80vw;
-            background-color: blue;
+            width: 95vw;
         }
         
 
@@ -985,12 +992,19 @@ $breakpoint-tablet-small: 1000px;
             background-color: #191b22;
             font-family: "Kalam";
             color: white;
+
+            @media (max-width: $breakpoint-mobile-small) {
+                height: 38px;
+            }
             
             span{
                 display: block;
                 position: absolute;
                 left:20px;
                 font-size:20px;
+                @media (max-width: $breakpoint-mobile-small) {
+                    font-size: 15px;
+                }
             }
 
             div{
@@ -1011,6 +1025,10 @@ $breakpoint-tablet-small: 1000px;
                 &:hover{
                     box-shadow: inset 2px 2px 5px 2px rgba(0, 0, 0, 0.399);
                     transition: all 0.3s;
+                }
+                @media (max-width: $breakpoint-mobile-small) {
+                    height: 20px;
+                    width: 20px;
                 }
             }
         }
@@ -1223,7 +1241,7 @@ $breakpoint-tablet-small: 1000px;
                             width: 100%;
                             height: 100%;
                             border-right: none;
-                            border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+                            border-bottom: 50px dashed rgba(0, 0, 0, 0);
                         }
 
                         
@@ -1246,9 +1264,6 @@ $breakpoint-tablet-small: 1000px;
                             width: 200px;
                             height: 50px;
                             
-                            @media (max-width: $breakpoint-tablet-medium) {
-                                margin-top: 40px;
-                            }
                             
 
                             .projectCardLinkBox{
@@ -1558,7 +1573,7 @@ $breakpoint-tablet-small: 1000px;
                                             width: 60%;
                                         }
                                         @media (max-width: $breakpoint-mobile-small) {
-                                            width: 90%;
+                                            width: 95%;
                                         } 
 
                                                                             

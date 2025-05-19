@@ -174,6 +174,8 @@ $breakpoint-desktop: 1480px;
             left:0px;
             text-align: center;
         }
+
+
     }
 
 
@@ -192,14 +194,17 @@ $breakpoint-desktop: 1480px;
             right:($titleNumberLineRight+120+px);
             font-size:13px;
         }
+
         @media (max-width: $breakpoint-mobile-medium) {
             right:0px;
             left:0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
             font-size:12px;
+            width: 100%;
+            right: 0px;
         }
+
+
 
         .yellow{
             color:orange;
@@ -251,10 +256,11 @@ $breakpoint-desktop: 1480px;
         @media (max-width: $breakpoint-mobile-medium) {
             right:0px;
             left:0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
+            right: 0px;
+            text-align: center;
             font-size:12px;
+
         }
     }
 

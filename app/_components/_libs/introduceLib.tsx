@@ -197,7 +197,7 @@ export const PLANS_VARIABLE:SkillSubject={
         ]
     },
     "MATTER.JS":{
-        skillIcon:"./icons/matterjs-icon.png",
+        skillIcon:"./icons/matterjs-icon.svg",
         hashtag:"Library",
         skillDescription:[
             "● Matter JS를 이용한 Collision 공부",

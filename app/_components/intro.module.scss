@@ -284,7 +284,6 @@ $breakpoint-desktop: 1480px;
             animation: star 0.5s ease-in-out infinite alternate both;
         }
 
-        //■■■■ 반응형 설정 ■■■■//
         @media (max-width: $breakpoint-tablet) {
             bottom: 10px;
             right: 10px;

@@ -1778,8 +1778,6 @@ $breakpoint-tablet-small: 1000px;
         background-color: gold;
         overflow: hidden;
 
-
-
         
         .subTitle{
             position: absolute;
@@ -1790,6 +1788,13 @@ $breakpoint-tablet-small: 1000px;
             font-family: "Alfa Slab One";
             z-index: 1;
             text-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            @media (max-width: $breakpoint-tablet-high) {
+                font-size: 45px;
+            }
+            @media (max-width: $breakpoint-mobile-medium) {
+                margin-top: 50px;
+                font-size:35px;
+            }
         }
 
         .subTitleSubject{
@@ -1801,6 +1806,13 @@ $breakpoint-tablet-small: 1000px;
             background-color: orange;
             padding: 10px 20px;
             box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.202);
+            @media (max-width: $breakpoint-tablet-high) {
+                font-size: 35px;
+            }
+            @media (max-width: $breakpoint-mobile-medium) {
+                margin-top: 110px;
+                font-size:20px;
+            }
         }
         .subTitleDescription{
             position: absolute;
@@ -1813,6 +1825,18 @@ $breakpoint-tablet-small: 1000px;
             font-family: "Gamja Flower";
             line-height: 2;
             text-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.116);
+            @media (max-width: $breakpoint-tablet-high) {
+                font-size: 20px;
+            }
+            @media (max-width: $breakpoint-mobile-medium) {
+                margin-top: 170px;
+                font-size:13px;
+                width: 80%;
+            }
+            @media (max-width: $breakpoint-mobile-small) {
+                margin-top: 190px;
+                width: 70%;
+            }
         }
 
         .cardRotationAxis{
@@ -1823,7 +1847,23 @@ $breakpoint-tablet-small: 1000px;
             width: $axis+px;
             height: $axis+px;
 
-             
+            @media (max-width: $breakpoint-tablet-high) {
+                scale: 0.8;
+            }
+
+            @media (max-width: $breakpoint-tablet-medium) {
+                scale: 0.7;
+            }
+            @media (max-width: $breakpoint-mobile-medium) {
+                scale: 0.5;
+            }
+
+            @media (max-width: $breakpoint-mobile-small) {
+                scale: 0.4;
+                bottom: 0%;
+            }
+
+        
             .cardRotationSubAxis{  
                 position: absolute;
                 width: $axis+px;
@@ -1834,6 +1874,21 @@ $breakpoint-tablet-small: 1000px;
                 left:0px;
                 right: 0px;
                 margin: auto;
+
+                @media (max-width: $breakpoint-tablet-high) {
+                    scale: 0.8;
+                }
+                @media (max-width: $breakpoint-tablet-medium) {
+                    scale: 0.7;
+                }
+                @media (max-width: $breakpoint-mobile-medium) {
+                    scale: 0.5;
+                }
+
+                @media (max-width: $breakpoint-mobile-small) {
+                    right: -300px;
+                }
+
 
                 .cardRotationSubAxisBox{
                     position: absolute;

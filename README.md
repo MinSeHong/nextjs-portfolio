@@ -3,8 +3,6 @@
   <img src= "https://capsule-render.vercel.app/api?type=soft&color=auto&text=Web%20Portfolio%20Project&fontSize=50&animation=twinkling"/>
 </p>
 
-*****
-
 <h3 align='center'>
   SKILL STACKS <br/>
 </h3>

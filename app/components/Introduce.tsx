@@ -207,9 +207,9 @@ export default function Introduce() {
     useEffect(()=>{
         gsap.from(".skillAnimation", {
             opacity: 0,
-            duration: 0.5,
+            duration: 0.2,
             ease: "ease",
-            stagger:0.3,
+            stagger:0.2,
             onComplete:()=>{
                 setSkillsLibraryActiveClick(false);
             }
@@ -255,70 +255,70 @@ export default function Introduce() {
 
             cardTimeLine.from(profileImageRef.current, {
                 opacity: 0,
-                duration: 1, 
+                duration: 0.5, 
                 ease: "bounce"
             });
             cardTimeLine.from(profileGithubIconRef.current, {
                 opacity: 0,
-                duration: 0.7,
+                duration: 0.35,
                 ease: "bounce"
             });
             cardTimeLine.from(profileMailIconRef.current, {
                 opacity: 0,
-                duration: 0.7,
+                duration: 0.35,
                 ease: "bounce"
             });
             cardTimeLine.from(profileFirstDetail.current, {
                 opacity: 0,
-                duration: 0.4,
+                duration: 0.2,
                 scale:0,
                 ease: "bounce"
             });
             cardTimeLine.from(profileSecondDetail.current, {
                 opacity: 0,
-                duration: 0.4,
+                duration: 0.2,
                 scale:0,
                 ease: "bounce"
             });
 
             cardTimeLine.from(profileThirdDetail.current, {
                 opacity: 0,
-                duration: 0.4,
+                duration: 0.2,
                 scale:0,
                 ease: "bounce"
             });
 
             cardTimeLine.from(`.${stylesIntroduce.card}`, {
                 opacity: 0,
-                duration: 0.4,
+                duration: 0.2,
                 scale:0,
                 ease: "ease",
-                stagger:0.4
+                stagger:0.2
             });
 
 
 
             cardTimeLine.from(cardFirstTitleRefSplit.chars, {
                 opacity: 0,
-                duration: 0.2, 
+                duration: 0.1, 
                 ease: "bounce",
                 stagger: 0.05
             });
             cardTimeLine.from(cardSecondTitleRefSplit.chars, {
                 opacity: 0,
-                duration: 0.2, 
+                duration: 0.1, 
                 ease: "bounce",
                 stagger: 0.05
             });
             cardTimeLine.from(cardThirdTitleRefSplit.chars, {
                 opacity: 0,
-                duration: 0.2, 
+                duration: 0.1, 
                 ease: "bounce",
                 stagger: 0.05
             });
             cardTimeLine.from(cardFourthTitleRefSplit.chars, {
                 opacity: 0,
-                duration: 0.2, 
+                duration: 0.1, 
                 ease: "bounce",
                 stagger: 0.05,
                 onComplete:()=>{
@@ -335,7 +335,7 @@ export default function Introduce() {
                 start:'top center',
             },
             opacity: 0,
-            duration: 2, 
+            duration: 1, 
             y:-10,
             x:-10,
             ease: "ease",

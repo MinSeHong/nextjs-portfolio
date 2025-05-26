@@ -1,7 +1,6 @@
 'use client';
-import Intro from "./_components/intro";
-import Introduce from "./_components/introduce";
-
+import Introduce from "./components/Introduce";
+import Intro from "./components/Intro";
 
 export default function Home() {
   return (

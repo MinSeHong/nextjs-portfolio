@@ -1,7 +1,7 @@
 'use client';
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import stylesInrto from "./intro.module.scss";
+import stylesIntro from "./intro.module.scss";
 import { useRef, useEffect} from "react";
 
 
@@ -171,7 +171,7 @@ export default function Intro() {
                             ease: "ease.out"
                         });
                     });
-                    char.classList.add(`${stylesInrto.char}`);
+                    char.classList.add(`${stylesIntro.char}`);
                 });
             }
         });
@@ -254,40 +254,40 @@ export default function Intro() {
 
 
     return (
-        <div className={stylesInrto.layout} onMouseMove={(e)=>{handlerMouseMove(e)}} ref={layoutRef}>
-            <canvas className={stylesInrto.canvas} ref={layoutCanvasRef}/>
+        <div className={stylesIntro.layout} onMouseMove={(e)=>{handlerMouseMove(e)}} ref={layoutRef}>
+            <canvas className={stylesIntro.canvas} ref={layoutCanvasRef}/>
 
-            <div className={stylesInrto.titleFirstLine} ref={titleFirstLineRef}>
+            <div className={stylesIntro.titleFirstLine} ref={titleFirstLineRef}>
                 <span>&lt;</span>DEVELOPER<span>&gt;</span>
-                <div className={stylesInrto.titleReactIcon} ref={titleReactIconRef}>
+                <div className={stylesIntro.titleReactIcon} ref={titleReactIconRef}>
                     <img src="./icons/react-logo.svg"/>
                 </div>
             </div>
 
-            <div className={stylesInrto.titleSecondLine} ref={titleSecondLineRef}>
+            <div className={stylesIntro.titleSecondLine} ref={titleSecondLineRef}>
                 안녕하세요. 저는 <span>민세홍</span>입니다.
             </div>
 
-            <div className={stylesInrto.titleThirdLine} ref={titleThirdLineRef}>
+            <div className={stylesIntro.titleThirdLine} ref={titleThirdLineRef}>
                 마우스를 통해 환상을 추구합니다.
             </div>
 
-            <div className={stylesInrto.titleThirdLineDescription} ref={titleThirdLineRefDescription}>
+            <div className={stylesIntro.titleThirdLineDescription} ref={titleThirdLineRefDescription}>
                 사용자에게 최고의 경험을 주는 것을 지향합니다.<br/>
-                이 웹은 <span className={stylesInrto.yellow}>SCSS</span>와 <span className={stylesInrto.green}>GSAP</span>을 이용하여 제작했습니다.<br/> 
+                이 웹은 <span className={stylesIntro.yellow}>SCSS</span>와 <span className={stylesIntro.green}>GSAP</span>을 이용하여 제작했습니다.<br/> 
             </div>
 
-            <div className={stylesInrto.titleFourthLine} ref={titleFourthLineRef}>
+            <div className={stylesIntro.titleFourthLine} ref={titleFourthLineRef}>
                 앞과 뒤를 모두 추구하는 개발자입니다.
             </div>
 
-            <div className={stylesInrto.titleFourthLineDescription} ref={titleForuthLineRefDescription}>
+            <div className={stylesIntro.titleFourthLineDescription} ref={titleForuthLineRefDescription}>
                 프론트엔드 뿐만 아니라 백엔드에서도 무한한 성장을 추구합니다.<br/>
                 보이는 것에 그치지 않고, 
                 <br/>보이지 않는 기능까지 책임지는 개발자가 되고자 합니다.
             </div>
 
-            <div className={stylesInrto.button}>
+            <div className={stylesIntro.button}>
                 NEXT
             </div>
 

@@ -11,12 +11,9 @@ type GridCardTitle ={
     gridCardGroup:string;
     projectCardLink:ProjectCardLinkBox[];
     descriptionTitleSkillStack:DescriptionTitleSkillStackIcon[];
-    
-    
     descriptionReview:string;
     descriptionViewTitle:DescriptionViewTitle[];
 }
-
 
 type ProjectCardLinkBox ={
     url:string;
@@ -40,7 +37,6 @@ type DescriptionViewBoxDescription = {
     descriptionViewBoxDescriptionTitleDescription:string;
 }
 
-
 const path0:string = "./images/projects/깃허브 웹 포토폴리오/";
 const path:string = "./images/projects/JSP 게시판 홈페이지/";
 const path1:string = "./images/projects/네이버 속보 기사 크롤링/";
@@ -48,14 +44,13 @@ const path2:string = "./images/projects/마스크 착용 객체 탐지/";
 const path3:string = "./images/projects/학생 교사 저장 프로그래밍/";
 const path4:string = "./images/projects/FITME 팀프로젝트/";
 
-export const GRID_CARD_ID_VARIABLE:GridCardId={
+export const MOCK_GRID_CARDS:GridCardId={
     1:{
         gridCardTitle:"깃허브 웹 포토폴리오",
-        gridCardTitleSummary:"NextJS와 TypeScript를 이용하여 웹 포토폴리오를 제작했습니다. 여러가지의 인터렉티브를 제작했으며 계속 업데이트 할 예정입니다.",
+        gridCardTitleSummary:"웹 포토폴리오를 제작했습니다. 여러가지의 인터렉티브를 제작했으며 계속 업데이트 할 예정입니다.",
         gridCardGroup:"개인 프로젝트",
         gridCardDescription:
-            `공부한 지식을 이용하여 깃허브 포토폴리오를 제작했습니다.
-            추가 정보를 넣을 수 있도록 모듈 라이브러리 제작을 했고, AppRouter기능을 이용하여 깃허브 블로그를 제작해 나아갈 예정입니다.`
+            `GitHub Page에 게시하기 위한 웹 포토폴리오 프로젝트입니다. 결과물은 현재 사용 중인 웹사이트이며, 사이트에 대한 설명과 제작 과정을 함께 담고 있습니다.`
         ,
         gridCardImage:path0+"main.gif"
         ,
@@ -66,7 +61,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/people-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/NextJS-Portfolio",
+                url:"https://github.com/minsehong/nextjs-portfolio",
                 icon:"./icons/github-icon.svg"
             },
             {
@@ -103,9 +98,12 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
  
         ],
         descriptionReview:
-            `웹 포토폴리오를 처음으로 완성해보았습니다.
-            예전에 웹 포토폴리오 제작을 여러번 시도했지만 원하는 기능을 자유롭게 만들지 못했습니다.
-            수 많은 실패를 발판 삼아 웹 제작 툴 없이 웹 포토폴리오를 완성하게 됐습니다.`
+            `
+            유지보수를 용이하게 하기 위해 디렉토리 구조를 설계했습니다.
+            데이터 기반 렌더링(Data-driven Rendering) 방식으로 DOM을 동적으로 생성하였으며,
+            TypeScript로 Mock Data를 설계하여 컴포넌트에 주입하는 형태로 구성했습니다.
+            또한 애니메이션 라이브러리인 GSAP을 활용해 다양한 인터랙티브를 구현했습니다.
+            `
         ,
         descriptionViewTitle:[
             {
@@ -116,28 +114,33 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"디렉토리 설계",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        여러 페이지를 생성하기 위해 다음과 같이 디렉토리를 설계 했습니다.
-                        Public 폴더에는 정적 이미지와 폰트를 저장하는 용도,
-                        값을 저장하기 위한 객체 라이브러리, 컴포넌트, css는 app에 넣기로 했습니다.
+                        다양한 페이지를 구현하기 위해 디렉토리를 다음과 같이 구조화하였습니다.
+                        정적 리소스(이미지, 폰트)는 public 폴더에 저장하고,
+                        데이터 객체, 컴포넌트, CSS 파일은 app 디렉토리 내에 정리하여 관리했습니다.
+                        개인적으로 사용하는 프로젝트여서, 해당 페이지의 컴포넌트와 데이터를 한 곳에서 관리하도록 구현했습니다.
                         `
                     },
 
                     {   
                         descriptionViewBoxImage:path0+"1_1.png",
-                        descriptionViewBoxDescriptionSubtitle:"임시 라이브러리 제작",
+                        descriptionViewBoxDescriptionSubtitle:"데이터 기반 렌더링",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        TypeScript를 이용해 객체를 생성하고 수정, 추가, 삭제를 쉽게 하도록 했습니다.
-                        그리고 객체를 이용해 DOM을 생성합니다.
+                        "data"폴더는 Mock Data를 저장하는 곳입니다.
+                        TypeScript로 객체를 생성하여 수정, 추가, 삭제가 용이하도록 구현했습니다.
+                        이 Mock Data 기반으로 DOM을 동적으로 생성합니다.
+                        TypeScript를 사용한 이유는 타입을 명확히 지정해 오류를 사전에 방지하기 위해 사용했습니다.
                         `
                     },
 
                     {   
                         descriptionViewBoxImage:path0+"1_2.gif",
-                        descriptionViewBoxDescriptionSubtitle:"저장된 데이터",
+                        descriptionViewBoxDescriptionSubtitle:"Mock Data 예시",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        프로젝트에 관련된 데이터를 저장한 모습입니다.
+                        프로젝트 소개에서 사용되는 Mock Data의 예시입니다.
+                        Mock Data를 별도로 관리하여 반복적인 DOM 생성을 최소화했고,
+                        프로젝트 관련 내용을 쉽게 추가하거나 삭제할 수 있도록 설계했습니다.
                         `
                     }
                 ]
@@ -150,16 +153,19 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"진행 설명",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        GSAP의 SplitText를 이용하여 글자 애니메이션 효과를 주었습니다.
+                        사용자가 방문하자마자 관심을 끌 수 있도록 인터랙티브 요소를 제작했습니다.
+                        이를 구현하기 위해 GSAP을 사용했는데, 그 이유 중 하나는 CSS 애니메이션으로 연속적인 동작을 구현할 경우
+                        delay를 사용해 이전 애니메이션의 duration을 직접 계산해야 했습니다.
+                        GSAP에서 제공하는 timeline()는 위와 같은 계산 없이 A 애니메이션이 끝난 후 B 애니메이션이 이어지도록 효율적으로 구현할 수 있습니다.
                         `
                     },
                     {   
                         descriptionViewBoxImage:path0+"2_1.gif",
-                        descriptionViewBoxDescriptionSubtitle:"마우스 위치에 따른 배경 이동",
+                        descriptionViewBoxDescriptionSubtitle:"배경 이동",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        시작 화면에 마우스가 있을 시 마우스의 위치를 계산하고
-                        마우스의 위치의 변화에 따라 배경이 움직이도록 제작했습니다.
+                        시작 화면에서 마우스 이동 방향으로 배경이 움직이도록 구현했습니다.
+                        패턴 형식의 이미지를 제작해 배경화면으로 제작했고, 마우스 이동 방향에 따라 background position을 변경합니다.
                         `
                     },
                 ]
@@ -172,17 +178,16 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"진행 설명",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        Gsap의 ScrollTriger와 Timeline을 이용하여 소개화면을 제작했습니다.
-                        소개 부분은 창 형태로 제작했습니다.
+                        운영체제의 애플리케이션 창처럼 보이도록 인터페이스를 구성했습니다.
+                        스크롤 위치에 따라 애니메이션이 실행되는 GSAP ScrollTrigger를 사용했습니다.
                         `
                     },
                     {   
                         descriptionViewBoxImage:path0+"3_1.gif",
-                        descriptionViewBoxDescriptionSubtitle:"CSS, JS를 사용한 애니메이션",
+                        descriptionViewBoxDescriptionSubtitle:"Hover Expand",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        CSS, JS를 이용하여 플립 형태의 애니메이션 기능을 넣었습니다.
-
+                        마우스를 올렸을 때 요소가 확대되고, 관련 내용이 자연스럽게 나타나도록 CSS와 JavaScript로 구현했습니다.
                         `
                     },
                 ]
@@ -195,16 +200,19 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"진행 설명",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        프로젝트 목록은 카드 형태로 볼 수 있게 했습니다.
-                        Gsap을 이용해서 특정 부분만 분류하는 애니메이션을 제작했습니다.
+                        자기소개 화면과 동일한 방식으로, 운영체제의 애플리케이션 창 형태로 구성했습니다.
+                        프로젝트 목록은 카드 갤러리 형태로 제작하였으며,
+                        추후 다른 프로젝트를 추가할 수 있도록 확장성을 고려해 구현했습니다.
                         `
                     },
                     {   
                         descriptionViewBoxImage:path0+"4_1.gif",
-                        descriptionViewBoxDescriptionSubtitle:"플립",
+                        descriptionViewBoxDescriptionSubtitle:"GSAP Flip",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        프로젝트를 선택하면, 카드가 확대되면서 전체 화면을 감싸도록 제작했습니다. 
+                        GSAP을 사용한 이유 중 하나는 Flip 기능입니다.
+                        Flip은 요소의 위치, 크기, 상태 변화를 부드럽고 자연스럽게 애니메이션할 수 있는 기능입니다.
+                        이 기능을 활용해, 프로젝트를 클릭했을 때 해당 프로젝트가 전체화면으로 플립되도록 인터랙티브 애니메이션을 구현했습니다.
                         `
                     },
                     {   
@@ -212,8 +220,10 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"프로젝트 상세 화면",
                         descriptionViewBoxDescriptionTitleDescription:
                         `
-                        각 주제를 클릭하면 해당 주제로 이동하도록 scrollTo를 사용했습니다.
-                        그리고 Gsap을 이용하여 스크롤하면 설명이 나오도록 제작했습니다.
+                        Flip 애니메이션으로 전체 화면으로 전환되면, 해당 프로젝트에 대한 자세한 설명과 기획 과정을 확인할 수 있습니다.
+                        처음 화면에서는 주요 기능에 대한 설명을 볼 수 있도록 구성했고,
+                        스크롤을 내리면서 각 기능이 어떻게 제작되었고, 왜 사용되었는지에 대한 상세한 설명을 볼 수 있습니다.
+                        제목을 클릭하면 해당 제목으로 이동되도록 scrollTo를 사용했습니다.
                         `
                     },
                 ]
@@ -230,9 +240,10 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         ,
         gridCardGroup:"팀 프로젝트",
         gridCardDescription:
-            `기존에 있는 운동과 식단관리 서비스들이 부족하다고 느끼고 출발한 이 
-            프로젝트입니다. AI 기술로 사용자의 신체 조건과 식습관 분석하고, 이를 바탕으로 개인화된 식단과 운동 계획을 제공합니다.
-            또한, 사용자들이 게임을 통해 운동 할 수 있도록 제공합니다.
+            `
+            AI 활용한 팀 프로젝트를 기획하면서, 식단과 운동을 동시에 관리해주는 서비스가 부족하다는 점을 발견했습니다.
+            식단과 운동 관리를 함께 제공할 뿐만 아니라 AI를 활용한 개인 맞춤형 피트니스 트레이너를 제공하는 서비스를 만들기로 했습니다.
+            또한 사용자들의 관심을 유도하기 위해 운동 게임 기능을 도입하고, 게임을 통해 획득한 포인트로 물건을 구매할 수 있는 시스템도 함께 설계했습니다..
             `
         ,
         gridCardImage:path4+"/main.gif"
@@ -244,11 +255,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/peoples-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/Team-Project-Fitme-Back-end",
-                icon:"./icons/github-icon.svg"
-            },
-            {
-                url:"https://github.com/MinSeHong/Team-Project-Fitme-React",
+                url:"https://github.com/MinSeHong/frontend-fitme-team-project",
                 icon:"./icons/github-icon.svg"
             }
         ],
@@ -347,7 +354,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"UML 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            팀원들의 요구 사항들을 종합하여 UML로 제작했습니다.
+                            팀원들이 필요하다고 생각하는 기능을 종합하여 UML을 설계하고 제작했습니다.
                             `
                     },
                     {   
@@ -355,9 +362,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"DB설계 담당",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            ERMASTER을 이용하여 데이터베이스를 설계 했습니다.
-                            회원 정보, 친구 추가, 채팅, 캘린더, 게시글, 소셜 로그인 등 테이블을 제작했으며,
-                            ORACLE을 이용해 데이터를 저장하고 관리했습니다.
+                            프로젝트의 데이터베이스 설계를 담당했습니다.
+                            회원 정보, 친구 추가, 채팅, 캘린더, 게시글, 소셜 로그인 등 다양한 기능에 대한 테이블을 직접 설계하고,
+                            프로젝트를 진행하면서 필요한 데이터베이스가 생기면 추가하고 수정했습니다.
                             `
                     },                    
                 ]
@@ -367,22 +374,23 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 descriptionViewBoxDescription:[
                     {   
                         descriptionViewBoxImage:path4+"2.png",
-                        descriptionViewBoxDescriptionSubtitle:"Notion 관리 담당",
+                        descriptionViewBoxDescriptionSubtitle:"Notion 사용",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            팀 프로젝트를 수월하게 진행할 수 있도록 Notion을 사용했습니다.
-                            노션의 페이지를 제작하고 관리했습니다.         
+                            협업에 도움이 되도록 Notion을 활용했습니다.
+                            Notion을 활용해 일정 관리와 회의록, 자료 정리 페이지를 만들었으며.
+                            팀원들이 함께 사용할 수 있도록 했습니다.
                             `
                     },
                     {   
                         descriptionViewBoxImage:path4+"2_1.png",
-                        descriptionViewBoxDescriptionSubtitle:"React 책임 담당",
+                        descriptionViewBoxDescriptionSubtitle:"React 담당",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
                             팀 프로젝트에서 리액트를 전반적으로 담당했습니다.
                             리액트 디렉토리 구조를 설계하고,
-                            프론트를 제작하는 팀원들이 문제가 생기면 해결해주었습니다.
-                            Github에 작업물을 합칠 때 충돌이 일어나지 않도록 관리 했습니다.
+                            프론트엔드 구현하는 팀원들이 겪는 문제를 해결해주며 개발을 지원했습니다.
+                            또한, GitHub를 관리하며 발생하는 오류를 수정하고 프로젝트의 전체적인 흐름을 조율했습니다.
                             `
                     },
                     {   
@@ -390,8 +398,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"팀원 멘토 담당",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            코드에 익숙하지 않은 팀원들을 위해 멘토 담당했습니다.
-                            정기적으로 멘토링을 하며, 팀원들이 팀 프로젝트를 수월하게 제작할 수 있도록 했습니다.
+                            코드에 익숙하지 않은 팀원들이 원활하게 작업할 수 있도록 멘토 역할을 맡았으며,
+                            정기적인 멘토링을 통해 팀원들의 능력 향상을 도와주었습니다.
                             `
                     }
                 ]
@@ -404,7 +412,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"페이지 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            운동과 식단관리 메인 페이지를 제작했습니다.
+                            운동과 식단관리 메인 페이지입니다.
+                            시작 화면에는 운동과 관련된 영상을 보여주며,
+                            어떤 서비스인지 간단하게 설명을 넣었습니다.
                             `
                     },
                     {   
@@ -412,9 +422,11 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"페이지 이동",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            Router을 이용하여 페이지를 이동하도록 제작했습니다.
-                            페이지 컴포넌트를 미리 만들어서 팀원들이 만든 컴포넌트 안에서
-                            작업을 할 수 있도록 지시했습니다.
+                            React DOM Router를 활용해 페이지 간 이동 기능을 구현했습니다.
+                            각 페이지마다 컴포넌트를 미리 구성해 두고,
+                            팀원들이 해당 컴포넌트 내부에서 작업을 진행할 수 있도록 했습니다.
+                            작업 간 충돌을 최소화할 수 있도록 구조를 설계하는데 노력했으며,
+                            덕분에 프론트엔드 개발 중 발생하는 에러를 쉽게 파악하고 해결할 수 있었습니다.
                             `
                     },
                     {   
@@ -422,9 +434,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"사이드 메뉴 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            사이드 메뉴 애니메이션을 제작했습니다.
-                            메뉴를 클릭해서 페이지 이동하며,
-                            로그인 해야 접속이 가능한 페이지는 접속이 안되도록 처리를 했습니다.
+                            사이드 메뉴에 애니메이션 효과를 적용해 사용자 경험을 개선했습니다.
+                            로그인 여부에 따라 접근 가능한 페이지를 제한하며, 비로그인 사용자는 접근할 수 없도록 처리했습니다.
                             `
                     } 
                 ]
@@ -437,9 +448,10 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"SMPT 이메일 인증",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            SMPT를 이용하여 회원가입 할 때, 이메일 인증하도록 했습니다.
-                            회원가입에서 이메일을 입력하고, 인증번호를 전송 하면 다음과 같이
-                            인증 번호가 보내집니다.
+                            회원가입 시 사용자가 이메일을 입력하면,
+                            SMTP를 이용해 인증번호를 발송하도록 구현했습니다.
+                            회원 가입하는 사용자는 이메일에 도착한 인증번호를 이용해
+                            이메일 인증을 합니다.
                             `
                     },
                 ]
@@ -452,9 +464,10 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"모달 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            실시간 채팅할 수 있는 챗봇 페이지를 제작했습니다.
-                            채팅을 입력해서 요청을 보내고
-                            결과 값을 말풍선으로 출력되도록 했습니다.
+                            실시간 채팅할 수 있는 챗봇 모달을 제작했습니다.
+                            채팅을 입력해서 요청을 보내고 결과 값을 출력되도록 했습니다.
+                            해당 챗봇은 GPT API를 이용해서 제작했으며,
+                            서비스에 관련된 정보를 넣어 해당 서비스에 대한 답변을 할 수 있도록 했습니다.
                             `
                     },
                     {   
@@ -462,8 +475,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"Web Speech Api",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            Web Speech Api을 이용하여 음성 인식으로 질문할 수 있도록 했습니다.
-                            또한 챗봇이 대답할 때 음성으로 알려 줄 수 있도록 기능을 제공합니다.
+                            Web Speech API를 활용해 음성 인식으로 질문할 수 있는 기능을 구현했습니다.
+                            또한, 챗봇의 답변을 음성으로 전달하는 기능도 함께 제공하여 사용자 경험을 향상시켰습니다.
                             `
                     },
                 ]
@@ -476,9 +489,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"페이지 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            당뇨병 진단할 수 있는 페이지가 필요해서
-                            제작하게 됐습니다. 사용자가 정보를 입력하면 입력한 정보에 따라
-                            진단할 수가 있습니다.
+                            당뇨병 진단이 가능한 페이지가 필요하여 제작하게 되었습니다.
+                            사용자가 정보를 입력하면, 해당 정보를 바탕으로 진단 결과를 제공하는 기능을 구현했습니다.
                             `
                     },
                     {   
@@ -486,9 +498,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"설문지 애니메이션",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            당뇨병 진단 설문지를 애니메이션 형태로 이동하도록 제작했습니다.
-                            설문지 진행에 따라 진행바가 나타나도록 했으며,
-                            설문 도중 이전 지문으로 돌아갈 수 있도록 했습니다.
+                            당뇨병 진단 설문지를 애니메이션 효과와 함께 단계별로 이동하도록 구현했습니다.
+                            설문 진행 상황에 따라 진행 바가 표시되며,
+                            사용자가 필요할 경우 이전 질문으로 돌아갈 수 있는 기능도 제공했습니다.
                             `
                     }
                 ]
@@ -501,9 +513,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"페이지 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            가지고 있는 포인트로 음식 구매할 수 있는 페이지입니다.
-                            홈쇼핑 스타일로 웹 페이지를 제작했으며
-                            최신 배너가 자동으로 이동하도록 했습니다.
+                            기획한 서비스에서 운동 게임을 통해 포인트를 획득하고, 이를 활용해 물건을 구매할 수 있는 페이지가 필요했습니다.
+                            이에 따라, 보유한 포인트로 음식을 구매할 수 있는 홈쇼핑 스타일의 웹 페이지를 제작했습니다.
+                            페이지는 최신 배너가 자동으로 슬라이드되도록 구현하여 사용자 경험을 향상 시키려고 노력했습니다.
                             `
                     },
                     {   
@@ -511,8 +523,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"상품 크롤링 기능",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            selenium을 이용해서 특정 홈페이지를 크롤링하고, 상품 구매 목록이 나타나도록 제작했습니다.
-                            상품을 찜할 수 있고, 부트페이를 이용하여 결제할 수 있도록 했습니다.
+                            Selenium을 활용해 특정 홈쇼핑 페이지를 크롤링하여 상품 구매 목록이 보이도록 했습니다.
+                            사용자가 상품을 찜할 수 있도록 기능을 추가했으며, 결제는 부트페이(Bootpay)를 연동하여 처리할 수 있도록 했습니다.
                             `
                     },
                     {   
@@ -520,8 +532,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"상품 구매/찜 페이지",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            데이터베이스에서 정보를 가져와
-                            내가 구매했던 상품과 찜했던 목록을 볼 수 있는 페이지를 제작했습니다.
+                            사용자가 구매한 상품과 찜한 목록을 확인할 수 있는 페이지를 제작했습니다.
                             `
                     },
 
@@ -535,9 +546,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"페이지 제작",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            운동 게임을 할 수 있는 페이지를 제작했습니다.
-                            운동 게임을 해서 포인트를 얻고, 포인트를 이용해서
-                            상품을 구매할 수 있습니다.
+                            운동 게임을 제공하여 사용자들이 서비스에 관심을 이끌 수 있도록 했습니다.
+                            게임을 통해 포인트를 획득하고, 획득한 포인트로 상품을 구매할 수 있도록 구현했습니다.
                             `
                     },
                     {   
@@ -545,8 +555,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"게임 방 목록 디자인",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            실시간으로 사람들끼리 게임할 수 있는 방을 보여줍니다.
-                            게임이 어느 정도 진행이 됐는지, 인원은 몇명인지 상세 정보를 나타냅니다.
+                            실시간으로 사용자들이 게임할 수 있는 방 목록을 제공합니다.
+                            각 방에 대한 진행 상황과 참여 인원 등 상세 정보를 실시간으로 표시합니다.
                             `
                     },
                     {   
@@ -554,8 +564,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"프로필 이미지 생성 AI",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            GPT API로 이미지를 생성하고 프로필로 적용할 수 있도록 제작했습니다.
-                            "귀여운 고양이"를 입력하면, 귀여운 고양이 이미지를 생성합니다.
+                            GPT API를 활용해 이미지를 생성하고, 생성된 이미지를 프로필 사진으로 설정할 수 있는 기능을 구현했습니다.
+                            예를 들어, "귀여운 고양이"라는 문구를 입력하면 귀여운 고양이 이미지를 생성합니다.
                             `
                     },
                     {   
@@ -563,7 +573,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"게임 방 생성 모달",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            다른 사람이 만든 게임 방을 들어가는 대신, 방을 만들 수 있는 모달을 제작했습니다.
+                            기존에 만든 게임 방에 참여하는 대신, 사용자가 직접 게임 방을 생성할 수 있도록 모달 창을 제작했습니다.
                             `
                     }
                 ]
@@ -576,10 +586,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"페이지 제작 및 기능 설계",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            사람들끼리 소통하는 게시판 입니다.
-                            스크롤로 내려가면, 예전에 올렸던 글을 새로 밑에 생성합니다.
-                            소셜 커뮤니티에 필요한 기능인 친구 추가, 친구 목록,
-                            게시판 CRUD, 팔로우, 팔로워, 좋아요 그리고 스크랩 기능을 설계했습니다.
+                            사람들이 소통할 수 있는 게시판을 구현했습니다
+                            스크롤을 내리면 이전에 작성된 글들이 자동으로 추가되어 계속해서 내용을 확인할 수 있도록 했습니다.
+                            소셜 커뮤니티에 필수적인 친구 추가, 친구 목록, 게시판 CRUD, 팔로우·팔로워, 좋아요, 그리고 스크랩 기능도 설계 및 구현했습니다.
                             `
                     },
                     {   
@@ -587,8 +596,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"친구 관련 기능",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            친구 추가, 친구 목록, 친구 삭제 그리고 친구 요청 등.
-                            소셜 커뮤니티에 필요한 기본적인 기능을 설계하고 제작했습니다.
+                            친구 추가, 친구 목록 조회, 친구 삭제, 친구 요청 등
+                            소셜 커뮤니티에서 필요한 친구 관련 기능들을 설계하고 구현했습니다.
                             `
                     },
                     {   
@@ -596,9 +605,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"게시판 기능",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            게시글의 이미지가 자동으로 횡 스크롤 하도록 제작했습니다.
-                            게시글 CRUD 뿐만 아니라. 좋아요, 스크랩, 게시글 신고, 보기같은
-                            여러가지 상호작용을 설계했습니다.
+                            게시글의 이미지를 횡 스크롤하며 여러 이미지를 볼 수 있도록 제작했습니다.
+                            게시글 CRUD뿐만 아니라 좋아요, 스크랩, 게시글 신고, 조회수 기능 등 다양한 상호작용을 설계하고 구현했습니다.
                             `
                     }
                 ]
@@ -631,7 +639,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/people-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/Object_Detection",
+                url:"https://github.com/MinSeHong/python-yolo-object-detection-project",
                 icon:"./icons/github-icon.svg"
             }
         ],
@@ -752,9 +760,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         gridCardGroup:"개인 프로젝트",
         gridCardDescription:
             `
-            Python의 Selenium 라이브러리를 이용해서 네이버 속보 기사를 크롤링 하도록 했습니다.
+            Python의 bs4 라이브러리를 이용해서 네이버 속보 기사를 크롤링 하도록 했습니다.
             크롤링한 부분 중에서 원하는 정보을 얻습니다.
-            그리고 CSS 라이브러리인 GSAP을 사용해서 카드 형태의 애니메이션으로 나타나도록 웹을 제작했습니다.
+            그리고 애니메이션 라이브러리인 GSAP을 사용해서 카드 형태의 애니메이션으로 나타나도록 웹을 제작했습니다.
             `
         ,
         gridCardImage:path1+"/main.gif"
@@ -766,7 +774,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/people-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/Python_Crawling",
+                url:"https://github.com/MinSeHong/python-crawling-project",
                 icon:"./icons/github-icon.svg"
             }
         ],
@@ -816,7 +824,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         descriptionReview:
             `Python의 Flask를 이용하여 백 서버를 구축했습니다.
             웹에서 Flask 서버에 요청을 보내면 크롤링 된 값을 가져옵니다.
-            크롤링 한 데이터를 재밌게 표현하기 위해 GSAP Library를 이용해 보았습니다.
+            크롤링 한 데이터를 인터랙티브로 보여주기 위해 GSAP Library를 이용해 보았습니다.
             `
         ,
         descriptionViewTitle:[
@@ -828,8 +836,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"네이버 기사 크롤링",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            네이버 기사의 특정 부분을 크롤링 하기 위해 Selenium을 사용했습니다.
-                            크롤링을 하는 부분은 Module로 제작을 했습니다.
+                            네이버 기사의 특정 부분을 크롤링 하기 위해 bs4를를 사용했습니다.
+                            크롤링을 하는 부분은 Python에서 Module 형태로 제작했습니다.
                             `
                     },
                     {   
@@ -924,8 +932,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         gridCardGroup:"개인 프로젝트",
         gridCardDescription:
             `교육 기관에서 게시판 홈페이지 제작 프로젝트를 수행했습니다.
-            프로젝트 기간은 4주의 기간으로 DataBase 구축, Tomcat 서버 구축,
-            JSP를 이용한 회원 로그인, 게시글 CRUD를 제작하는 것이였습니다.
+            프로젝트는 4주의 기간동안 진행했으며 DataBase 구축, Tomcat 서버 구축,
+            JSP를 이용한 회원 로그인, 게시글 CRUD를 제작했습니다.
             `
         ,
         gridCardImage:path+"/main.gif"
@@ -937,7 +945,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                 icon:"./icons/people-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/Board_Homepage",
+                url:"https://github.com/MinSeHong/jsp-homepage-project",
                 icon:"./icons/github-icon.svg"
             }
         ],
@@ -1084,9 +1092,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionSubtitle:"게시글 CRUD",
                         descriptionViewBoxDescriptionTitleDescription:
                             `
-                            게시글 작성할 때, 텍스트를 편집할 수 있는 기능을 만들어 보았습니다.
-                            글자의 속성을 변경할 수 있도록 execCommand를 이용했습니다.
-                            웹 프로그램을 깊게 이해하고 싶어 API 대신 직접 만들어보았습니다.
+                            웹 프로그램에 대한 이해를 높이고자 직접 텍스트 에디터를 제작해보았습니다.
+                            execCommand 기능을 이용하여 글자의 속성을 변경을 할 수 있도록 했습니다.
                             `
                     },
                     {   
@@ -1139,7 +1146,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         `
                         이미지를 올릴수 있는 게시판입니다.
                         글 보기 부분은 CSS Grid 기능을 이용하여 제작했습니다.
-                        처음부터 올린 이미지가 썸네일로 보이도록 했습니다.
+                        처음에 올린 이미지가 썸네일로 보이도록 했습니다.
                         `
                     },
                     {   
@@ -1148,8 +1155,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionTitleDescription:
                         `
                         이미지를 여러개 첨부해서 글을 작성할 수 있도록 했습니다.
-                        게시글 작성 완료하면 서버에 요청을 보내 이미지를 저장합니다.
-                        또한 이미지를 저장할 때 파일 이름이 중복되지 않도록 했습니다.
+                        게시글 작성을 완료하면, 서버에 요청을 보내 이미지를 저장합니다.
+                        또한 이미지를 저장할 때 파일 이름이 중복되지 않도록 파일 네이밍 시퀀싱을 제작했습니다.
                         `
                     },
                 ]
@@ -1190,8 +1197,8 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionTitleDescription:
                             `
                             DB를 제작할 때 ERMASTER를 사용하여 설계했습니다.
-                            DB는 ORACLE을 사용을 했습니다.
-                            테이블은 회원, 게시글, 게시글 댓글 그리고 이미지 등을 만들었습니다.
+                            DB는 ORACLE을 사용했으며
+                            회원, 게시글, 게시글 댓글 그리고 이미지 테이블 등을 만들었습니다.
                             `
                     }
                 ]
@@ -1204,16 +1211,14 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         gridCardTitle:"컬렉션 저장 프로그래밍",
         gridCardTitleSummary:
             `
-            Eclipse의 Console을 이용하여 학생과 교사를 JAVA Collection으로 저장하고 불러오는 기능.
+            학생과 교사를 JAVA Collection으로 저장하고 불러오는 기능을 제작했습니다.
             `
         ,
         gridCardGroup:"개인 프로젝트",
         gridCardDescription:
             `
             교육 기관에서 처음으로 진행했던 개인 프로젝트입니다.
-            Eclipse의 콘솔을 이용하여 학생과 교사를 저장할 수 있는 콘솔 프로그램을 제작했습니다.
-            색상 Code를 넣어서 GUI형태로 출력하도록 했습니다. 또한 한글과 글자가 혼합 사용할 시 padding을 이용한
-            글자 정렬이 제대로 되지 않았습니다. 기본으로 사용하고 있는 Font를 기준으로 padding과 같은 기능을 하는 Method를 만들어 정렬이 잘 나오도록 시도했습니다.
+            Eclipse를 이용하여 학생과 교사를 저장할 수 있는 콘솔을 제작했습니다.
             `
         ,
         gridCardImage:path3+"/main.gif"
@@ -1244,7 +1249,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
         descriptionReview:
             `
             부모 클래스(Person)를 만들고 자식 클래스(학생, 교사)로 부모를 상속합니다.
-            학생과 교사를 Console에서 Execel 형태로 출력하도록 했습니다.
+            Console에서 학생과 교사를 Execel 형태로 출력하도록 했습니다.
             Console에 출력되는 글자 색상을 다르게 할 수 있다는 것을 알게 되어
             여러개의 색상 코드를 이용하여 GUI 형태로 제작했습니다.
             `
@@ -1294,7 +1299,7 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                             `
                             Eclipse의 기본 폰트인 "Consolas"는 한글과 영어 글자의 너비가 다르기 때문에
                             padding을 활용해도 열이 일정하게 정렬되지 않습니다. 한글과 영어의 글자 갯수를 계산하고
-                            여백을 추가로 채워 열이 일정하게 출력되도록 Mothod를 작성 했습니다.
+                            여백을 추가로 채워 열이 일정하게 출력되도록 Method를 작성 했습니다.
                             `
                     }
                 ]
@@ -1346,9 +1351,9 @@ export const GRID_CARD_ID_VARIABLE:GridCardId={
                         descriptionViewBoxDescriptionTitleDescription:
                             `
                             저장된 학생과 교사를 원하는 방식으로 출력할 수 있습니다.
-                            이름, 나이, 주소, 전화번호에 따라 정렬 출력을 할 수 있습니다.
-                            또한 정렬이 고르게 되도록 메소드를 제작 했기 때문에 
-                            열이 깨짐 없이 출력됩니다.
+                            이름, 나이, 주소, 전화번호에 따라 정렬 출력할 수 있으며
+                            정렬이 고르게 되도록 메소드를 제작 했기 때문에 
+                            열 깨짐 없이 출력됩니다.
                             `
                     },
                     {   

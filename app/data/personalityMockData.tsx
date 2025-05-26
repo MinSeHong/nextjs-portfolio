@@ -8,7 +8,7 @@ type PersonalityDescription ={
     description:string[];
 }
 
-export const PERSONALITY_VARIABLE:PersonalityCardId={
+export const MOCK_PERSONALITY:PersonalityCardId={
     1:{
         title:"융합적인 사고",
         image:"1.jpg",

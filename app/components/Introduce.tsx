@@ -8,11 +8,11 @@ import { SplitText } from "gsap/SplitText";
 import { Flip } from "gsap/all";
 
 /* INTRODUCE 라이브러리 */
-import { SKILLS_VARIABLE, HOBBYS_VARIABLE, PLANS_VARIABLE } from "./_libs/introduceLib";
+import { MOCK_SKILLS, MOCK_HOBBYS, MOCK_PLANS} from "../data/introduceMockData";
 /* 프로젝트 카드 라이브러리 */
-import { GRID_CARD_ID_VARIABLE} from "./_libs/introductionLib";
+import {MOCK_GRID_CARDS} from "../data/introductionMockData";
 /* PERSONALITY 라이브러리 */
-import { PERSONALITY_VARIABLE } from "./_libs/personalityLib";
+import {MOCK_PERSONALITY} from "../data/personalityMockData";
 
 
 export default function Introduce() {
@@ -52,49 +52,49 @@ export default function Introduce() {
         setSkillsLibraryActiveClick(true);
         skillsView.current = [];
 
-        let SKILLS_VARIABLES:any = null;
+        let MOCK_SKILLSS:any = null;
 
         if(name == "NORMAL"){
-            SKILLS_VARIABLES = SKILLS_VARIABLE;
+            MOCK_SKILLSS = MOCK_SKILLS;
         }
         else if(name =="FRONTEND"){
-            SKILLS_VARIABLES = Object.fromEntries(Object.entries(SKILLS_VARIABLE).filter(([_,value]) => value.hashtag == "Front-end"));
+            MOCK_SKILLSS = Object.fromEntries(Object.entries(MOCK_SKILLS).filter(([_,value]) => value.hashtag == "Front-end"));
         }
         else if(name =="BACKEND"){
-            SKILLS_VARIABLES = Object.fromEntries(Object.entries(SKILLS_VARIABLE).filter(([_,value]) => value.hashtag == "Back-end"));
+            MOCK_SKILLSS = Object.fromEntries(Object.entries(MOCK_SKILLS).filter(([_,value]) => value.hashtag == "Back-end"));
         }
         else if(name =="LIBRARY"){
-            SKILLS_VARIABLES = Object.fromEntries(Object.entries(SKILLS_VARIABLE).filter(([_,value]) => value.hashtag == "Library"));
+            MOCK_SKILLSS = Object.fromEntries(Object.entries(MOCK_SKILLS).filter(([_,value]) => value.hashtag == "Library"));
         }
 
 
-        for(const subject in SKILLS_VARIABLES){
+        for(const subject in MOCK_SKILLSS){
             const descriptions:any[] = [];
             const hastag:any[] = [];
 
-            SKILLS_VARIABLES[subject]['skillDescription'].map((item:string, index:number)=>(
+            MOCK_SKILLSS[subject]['skillDescription'].map((item:string, index:number)=>(
                     descriptions.push(<div key={index}>{item}<br/></div>)
                 )
             );
             
-            if(SKILLS_VARIABLES[subject]['hashtag']=="Front-end"){
+            if(MOCK_SKILLSS[subject]['hashtag']=="Front-end"){
                 hastag.push(
                     <div key="hastag" className={`${stylesIntroduce.skillHashtag} ${stylesIntroduce.orange}`}>
-                        {SKILLS_VARIABLES[subject]['hashtag']}
+                        {MOCK_SKILLSS[subject]['hashtag']}
                     </div>
                 )
             }
-            else if(SKILLS_VARIABLES[subject]['hashtag']=="Back-end"){
+            else if(MOCK_SKILLSS[subject]['hashtag']=="Back-end"){
                 hastag.push(
                     <div key="hastag" className={`${stylesIntroduce.skillHashtag} ${stylesIntroduce.red}`}>
-                        {SKILLS_VARIABLES[subject]['hashtag']}
+                        {MOCK_SKILLSS[subject]['hashtag']}
                     </div>
                 )
             }
-            else if(SKILLS_VARIABLES[subject]['hashtag']=="Library"){
+            else if(MOCK_SKILLSS[subject]['hashtag']=="Library"){
                 hastag.push(
                     <div key="hastag" className={`${stylesIntroduce.skillHashtag} ${stylesIntroduce.green}`}>
-                        {SKILLS_VARIABLES[subject]['hashtag']}
+                        {MOCK_SKILLSS[subject]['hashtag']}
                     </div>
                 )
             };
@@ -103,7 +103,7 @@ export default function Introduce() {
                 <div className="skillAnimation" key={subject}>
                     <div className={stylesIntroduce.skillBox}>
                         <div className={stylesIntroduce.skillicon}>
-                            <img src={SKILLS_VARIABLES[subject]['skillIcon']}/>
+                            <img src={MOCK_SKILLSS[subject]['skillIcon']}/>
                         </div>
                         <div className={stylesIntroduce.skillSubject}>
                             {subject}
@@ -126,18 +126,18 @@ export default function Introduce() {
     function hobbysLibraryActive(){
         hobbysView.current = [];
 
-        for(const subject in HOBBYS_VARIABLE){
+        for(const subject in MOCK_HOBBYS){
             const descriptions:any[] = [];
             const hastag:any[] = [];
 
-            HOBBYS_VARIABLE[subject]['skillDescription'].map((item:string, index:number)=>(
+            MOCK_HOBBYS[subject]['skillDescription'].map((item:string, index:number)=>(
                     descriptions.push(<div key={index}>{item}<br/></div>)
                 )
             );
             
             hastag.push(
                 <div key="hastag" className={`${stylesIntroduce.hobbyHashtag} ${stylesIntroduce.orange}`}>
-                    {HOBBYS_VARIABLE[subject]['hashtag']}
+                    {MOCK_HOBBYS[subject]['hashtag']}
                 </div>
             )
 
@@ -145,7 +145,7 @@ export default function Introduce() {
                 <div className="hobbyAnimation" key={subject}>
                     <div className={stylesIntroduce.hobbyBox}>
                         <div className={stylesIntroduce.hobbyicon}>
-                            <img src={HOBBYS_VARIABLE[subject]['skillIcon']}/>
+                            <img src={MOCK_HOBBYS[subject]['skillIcon']}/>
                         </div>
                         <div className={stylesIntroduce.hobbySubject}>
                             {subject}
@@ -170,18 +170,18 @@ export default function Introduce() {
     function plansLibraryActive(){
         plansView.current = [];
 
-        for(const subject in PLANS_VARIABLE){
+        for(const subject in MOCK_PLANS){
             const descriptions:any[] = [];
             const hastag:any[] = [];
 
-            PLANS_VARIABLE[subject]['skillDescription'].map((item:string, index:number)=>(
+            MOCK_PLANS[subject]['skillDescription'].map((item:string, index:number)=>(
                     descriptions.push(<div key={index}>{item}<br/></div>)
                 )
             );
             
             hastag.push(
                 <div key="hastag" className={`${stylesIntroduce.planHashtag} ${stylesIntroduce.orange}`}>
-                    {PLANS_VARIABLE[subject]['hashtag']}
+                    {MOCK_PLANS[subject]['hashtag']}
                 </div>
             )
 
@@ -189,7 +189,7 @@ export default function Introduce() {
                 <div className="planAnimation" key={subject}>
                     <div className={stylesIntroduce.planBox}>
                         <div className={stylesIntroduce.planIcon}>
-                            <img src={PLANS_VARIABLE[subject]['skillIcon']}/>
+                            <img src={MOCK_PLANS[subject]['skillIcon']}/>
                         </div>
                         <div className={stylesIntroduce.planSubject}>
                             {subject}
@@ -366,7 +366,7 @@ export default function Introduce() {
 
 
     function projectCardLibraryActive(){
-        const GRID_CARD_ID_VARIABLES:any = GRID_CARD_ID_VARIABLE;
+        const GRID_CARD_ID_VARIABLES:any = MOCK_GRID_CARDS;
         projectView.current = [];
 
         let indexNumber:number = 0;
@@ -411,8 +411,7 @@ export default function Introduce() {
                 )
             };
 
-            
-
+    
             /* 포스트잇 스크롤 기능 제작 */
             for(const key in GRID_CARD_ID_VARIABLES[index]['descriptionViewTitle']){
                 indexNumber++;
@@ -895,12 +894,12 @@ export default function Introduce() {
 
         if(subTitleSubjectRef.current){
             subTitleSubjectRef.current.innerText =
-            PERSONALITY_VARIABLE[index]['title'];
+            MOCK_PERSONALITY[index]['title'];
         }
         if(subTitleDescriptionRef.current){
             subTitleDescriptionRef.current.innerHTML='';
-            for(const array in PERSONALITY_VARIABLE[index]['description']){
-                subTitleDescriptionRef.current.innerHTML += PERSONALITY_VARIABLE[index]['description'][array];
+            for(const array in MOCK_PERSONALITY[index]['description']){
+                subTitleDescriptionRef.current.innerHTML += MOCK_PERSONALITY[index]['description'][array];
                 subTitleDescriptionRef.current.innerHTML += "<br/><br/>";
             }
         }
@@ -930,19 +929,12 @@ export default function Introduce() {
         
     }
 
-
-
-
-
     return (
         <div className={stylesIntroduce.layout}>
             {/* Project 소개용 창 */}
             <span className={stylesIntroduce.mainTitle}>INTRODUCE</span>
             <div className={stylesIntroduce.containerFirst} ref={containerFirstRef}>
                 <div className={stylesIntroduce.statusbar}>
-                    <div/>
-                    <div/>
-                    <div/>
                     <span>INTRODUCE.EXE</span>
                 </div>
 
@@ -1049,9 +1041,6 @@ export default function Introduce() {
             <span className={stylesIntroduce.mainTitle}>PROJECTS</span>
             <div className={stylesIntroduce.containerSecond} ref={containerSecondRef}>
                 <div className={stylesIntroduce.statusbar}>
-                    <div/>
-                    <div/>
-                    <div/>
                     <span>PROJECTS.EXE</span>
                 </div>
 
@@ -1085,7 +1074,7 @@ export default function Introduce() {
 
                     <div className={stylesIntroduce.cardRotationAxis}>
                         {
-                            Object.entries(PERSONALITY_VARIABLE).map(([id, {title, image}])=>(
+                            Object.entries(MOCK_PERSONALITY).map(([id, {title, image}])=>(
                                 <div className={stylesIntroduce.cardRotationSubAxis} key={id} onClick={()=>personalityHandler(id)}>
                                     <div className={stylesIntroduce.cardRotationSubAxisBox}>
                                         <img src={`./images/personality/${image}`}/>

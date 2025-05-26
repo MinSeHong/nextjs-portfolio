@@ -8,7 +8,7 @@ type SkillDescription ={
     skillDescription:string[];
 }
 
-export const SKILLS_VARIABLE:SkillSubject={
+export const MOCK_SKILLS:SkillSubject={
     WEB:{
         skillIcon:"./icons/html-icon.png",
         hashtag:"Front-end",
@@ -128,8 +128,7 @@ export const SKILLS_VARIABLE:SkillSubject={
     },
 }
 
-
-export const HOBBYS_VARIABLE:SkillSubject={
+export const MOCK_HOBBYS:SkillSubject={
     JAPANESE:{
         skillIcon:"./icons/jlpt-logo.png",
         hashtag:"Language",
@@ -175,10 +174,7 @@ export const HOBBYS_VARIABLE:SkillSubject={
     },
 }
 
-
-
-
-export const PLANS_VARIABLE:SkillSubject={
+export const MOCK_PLANS:SkillSubject={
     "WEB PORTFOLIO":{
         skillIcon:"./icons/css-icon.png",
         hashtag:"Working",

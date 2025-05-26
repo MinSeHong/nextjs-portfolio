@@ -614,7 +614,7 @@ export default function Introduce() {
                         }
                     }
                 },
-                duration:1.5,
+                duration:0.5,
                 ease:"power1.inOut",
                 onComplete:()=>{
                     handlerFlipFitAfter(index);
@@ -644,13 +644,12 @@ export default function Introduce() {
             });
 
             filpOpenTimeLine.to([`.cardFilp${index} .${stylesIntroduce.gridCardImage}`,`.cardFilp${index} .${stylesIntroduce.gridCardTitle}`,`.cardFilp${index} .${stylesIntroduce.gridCardDescription}`,`.cardFilp${index} .${stylesIntroduce.gridCardDate}`],{
-                    delay:1,
                     opacity:1,
                     duration:0.8,
                     stagger:0.3,
                     onComplete:()=>{
                         Flip.fit(`.cardFilp${index}`, originalStateRef.current, {
-                            duration:1,
+                            duration:0.3,
                             ease: "power1.inOut",
                             onComplete:()=>{
                                 const card = document.getElementsByClassName(`cardFilp${index}`)[0] as HTMLElement | undefined;
@@ -715,7 +714,7 @@ export default function Introduce() {
         );    
 
         filpOpenTimeLine.from([`.cardFilp${index} .${stylesIntroduce.container}`],{
-                delay:1,
+                delay:0.3,
                 opacity:0,
                 duration:0.3,
                 ease:"ease"
@@ -723,7 +722,7 @@ export default function Introduce() {
         );
 
         filpOpenTimeLine.to([`.cardFilp${index} .${stylesIntroduce.gridCardButton}`],{
-                delay:1,
+                delay:0.3,
                 opacity:1,
                 duration:0.3,
                 ease:"ease",

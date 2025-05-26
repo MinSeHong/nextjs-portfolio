@@ -216,7 +216,7 @@ $breakpoint-tablet-small: 1000px;
                 border-radius: 15px;
                 box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.59);
                 width: 25%;
-                transition: flex 1s ease-in-out;
+                transition: flex 0.3s ease-in-out;
 
                 @media (max-width: $breakpoint-tablet-high) {
                     width: 100%;
@@ -230,7 +230,7 @@ $breakpoint-tablet-small: 1000px;
                     top:-5%;
                     left:-5%;
                     height: 110%;
-                    transition: filter 1s;
+                    transition: filter 0.3s;
 
                     @media (max-width: $breakpoint-tablet-high) {
                         width: 1000px;

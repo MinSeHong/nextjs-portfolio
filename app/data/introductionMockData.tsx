@@ -254,7 +254,7 @@ export const MOCK_GRID_CARDS:GridCardId={
                 icon:"./icons/peoples-icon.png"
             },
             {
-                url:"https://github.com/MinSeHong/frontend-fitme-team-project",
+                url:"https://github.com/MinSeHong/team-project-fitme",
                 icon:"./icons/github-icon.svg"
             }
         ],

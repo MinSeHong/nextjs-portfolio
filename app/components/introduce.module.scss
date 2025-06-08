@@ -75,7 +75,7 @@ $breakpoint-tablet-small: 1000px;
             height: 50px;
             border-radius: 10px 10px 0px 0px;
             background-color: #191b22;
-            font-family: "Kalam";
+            font-family: "MaruBuri";
             color: white;
 
             @media (max-width: $breakpoint-mobile-small) {
@@ -130,7 +130,7 @@ $breakpoint-tablet-small: 1000px;
             height: 600px;
             width: 300px;
             border-radius: 10px;
-            font-family: "Kalam";
+            font-family: "MaruBuri";
 
             img{
                 margin-top: 10px;
@@ -337,7 +337,7 @@ $breakpoint-tablet-small: 1000px;
                         .timeline{
                             font-weight: bold;
                             font-size: 18px;
-                            font-family: "Kalam";
+                            font-family: "MaruBuri";
                         }
                         .sub{
                             font-size:10px;
@@ -407,7 +407,7 @@ $breakpoint-tablet-small: 1000px;
                         text-align: left;
                         transform-origin: center right;
                         color: rgba(0, 0, 0, 0);
-                        font-family: "Kalam";
+                        font-family: "MaruBuri";
                         font-size: 13px;
                         cursor: pointer;
                         opacity: 0;
@@ -454,7 +454,7 @@ $breakpoint-tablet-small: 1000px;
                     height: 540px;
                     background-color: rgba(245, 245, 245, 0.9);         
                     border-radius: 10px;
-                    font-family: "Kalam";
+                    font-family: "MaruBuri";
                     text-shadow: 2px 2px 2px black;
                     font-size: 20px;
                     transition: all 2s;
@@ -626,7 +626,7 @@ $breakpoint-tablet-small: 1000px;
                     height: 540px;
                     background-color: rgba(245, 245, 245, 0.9);         
                     border-radius: 10px;
-                    font-family: "Kalam";
+                    font-family: "MaruBuri";
                     text-shadow: 2px 2px 2px black;
                     font-size: 20px;
                     transition: all 2s;
@@ -791,7 +791,7 @@ $breakpoint-tablet-small: 1000px;
                     height: 540px;
                     background-color: rgba(245, 245, 245, 0.9);         
                     border-radius: 10px;
-                    font-family: "Kalam";
+                    font-family: "MaruBuri";
                     text-shadow: 2px 2px 2px black;
                     font-size: 20px;
                     transition: all 2s;
@@ -990,7 +990,7 @@ $breakpoint-tablet-small: 1000px;
             height: 7%;
             border-radius: 10px 10px 0px 0px;
             background-color: #191b22;
-            font-family: "Kalam";
+            font-family: "MaruBuri";
             color: white;
 
             @media (max-width: $breakpoint-mobile-small) {
@@ -1044,7 +1044,7 @@ $breakpoint-tablet-small: 1000px;
             height: 200px;
             border-radius: 10px;
             background-size: 100% 100%;
-            font-family: "Gamja Flower";
+            font-family: "MaruBuri";
             z-index: 1;
 
             @media (max-width: $breakpoint-tablet-high) {
@@ -1055,9 +1055,10 @@ $breakpoint-tablet-small: 1000px;
             div{
                 box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.278);
                 color:black;
-                font-size: 30px;
+                font-size: 20px;
                 text-align: center;
                 border-radius: 50px;
+                padding: 5px;
                 cursor: pointer;
                 transition: background-color 0.4s;
                 background-color: rgb(255, 255, 255);
@@ -1153,10 +1154,11 @@ $breakpoint-tablet-small: 1000px;
 
                 .gridCardTitle{
                     margin-top: 20px;
-                    font-family: "Gamja Flower";
-                    font-size: 24px;
+                    font-family: "MaruBuri";
+                    font-size: 20px;
                     width: 220px;
                     text-align: center;
+                    font-weight: bold;
                 }
 
                 .gridCardDescription{
@@ -1165,12 +1167,13 @@ $breakpoint-tablet-small: 1000px;
                     width: 180px;
                     height: 140px;
                     overflow-y:scroll;
-                    font-size: 12.5px;
+                    font-size: 12px;
                     text-align: center;
                     line-height: 2;
                     overscroll-behavior: contain;
                     word-wrap: break-word;
                     word-break: keep-all;
+                    font-family: "MaruBuri";
 
                     &::-webkit-scrollbar{
                         display: none;
@@ -1187,6 +1190,7 @@ $breakpoint-tablet-small: 1000px;
                     background-color: rgba(0, 0, 0, 0.035);
                     padding: 3px;
                     border-radius: 5px;
+                    font-family: "MaruBuri";
                 }
 
                 .gridCardGroup{
@@ -1198,6 +1202,7 @@ $breakpoint-tablet-small: 1000px;
                     background-color: rgba(0, 0, 0, 0.035);
                     padding: 3px;
                     border-radius: 5px;
+                    font-family: "MaruBuri";
                 }
 
 
@@ -1205,8 +1210,6 @@ $breakpoint-tablet-small: 1000px;
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    background-image: url(../../public/images/backgrounds/nordwood.jpg);
-                    background-size: 100% 100%;
                     display: flex;
                     align-items: center;
                     gap:20px;
@@ -1248,6 +1251,7 @@ $breakpoint-tablet-small: 1000px;
                             border-radius: 10px;
                             width: 280px;
                             height: 280px;
+                            border: 2px solid rgba(0, 0, 0, 0.202);
                             @media (max-width: $breakpoint-tablet-medium) {
                                 margin-bottom: 20px;
                             }
@@ -1293,26 +1297,28 @@ $breakpoint-tablet-small: 1000px;
                         
                         .projectCardTitle{
                             margin-top: 15px;
-                            font-family: "Gamja Flower";
-                            font-size:30px;
+                            font-family: "MaruBuri";
+                            font-size:25px;
                             text-align: center;
                             width: 350px;
                             text-shadow: 2 2 5 rgba(0, 0, 0, 0.3);
+                            font-weight: bold;
                         }
                         .projectCardDescription{
                             margin-top: 20px;
                             margin-bottom: 15px;
-                            font-size:16px;
+                            font-size:14px;
                             text-align: center;
                             width: 300px;
                             line-height: 2;
-                            font-family: "Gamja Flower";
+                            font-family: "MaruBuri";
                             word-break: keep-all;
                             width: 85%;
+                            text-shadow: 2 2 5 rgba(0, 0, 0, 0.3);
                         }
                         .projectCardDate{
-                            margin-top: 15px;
-                            font-family: "kalam";
+                            margin-top: 20px;
+                            font-family: "MaruBuri";
                             font-size: 17px;
                             color: rgb(0, 70, 0);
                             text-shadow: 2 2 5 rgba(0, 0, 0, 0.4);
@@ -1375,7 +1381,7 @@ $breakpoint-tablet-small: 1000px;
                                     height: 15px;
                                 }
                                 div{
-                                    font-family: "Kalam";
+                                    font-family: "MaruBuri";
                                     position: absolute;
                                     right: 30px;
                                     top:0px;
@@ -1421,6 +1427,7 @@ $breakpoint-tablet-small: 1000px;
                             .descriptionTitle{
                                 font-size: 40px;
                                 font-family: "Gamja Flower";
+                                font-weight: bold;
                                 padding-left: 20px;
                                 height:55px;
                                 .green{
@@ -1438,13 +1445,14 @@ $breakpoint-tablet-small: 1000px;
                                 margin-bottom: 40px;
                                 padding: 5px 0px 5px 0px;
                                 width: 800px;
-                                font-size:19px;
+                                font-size:15px;
                                 font-weight: lighter;
                                 color: #313131;
-                                font-family: "Gamja Flower";
+                                font-family: "MaruBuri";
                                 word-break: keep-all;
                                 word-wrap: break-word;
-                                line-height: 1.7;
+                                line-height: 2;
+                                font-weight: bold;
 
                                 @media (max-width: $breakpoint-tablet-high) {
                                     width: 90%;
@@ -1631,13 +1639,13 @@ $breakpoint-tablet-small: 1000px;
                                             width: 95%;
                                             padding-top: 10px;
                                             padding-left: 10px;
-                                            font-size: 18px;
-                                            line-height:1.8;
+                                            font-size: 14px;
+                                            line-height:2.5;
                                             white-space: wrap;
                                             overflow-wrap: break-word;
                                             word-wrap: break-word;
                                             word-break: keep-all;
-                                            font-family: "Gamja Flower";
+                                            font-family: "MaruBuri";
                                             @media (max-width: $breakpoint-tablet-high) {
                                                 font-size: 16px;
                                                 padding-left: 0px;

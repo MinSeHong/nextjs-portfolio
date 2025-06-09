@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
@@ -8,298 +8,165 @@ $breakpoint-tablet: 1280px;
 $breakpoint-desktop: 1480px;
 
 .layout {
-    $titleNumberLineRight: 0;
-    $titleNumberLineBottom: 50;
+  $titleNumberLineRight: 90;
+  $titleNumberLineBottom: 20;
 
+  position: relative;
+  user-select: none;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url(/images/backgrounds/intro.png);
+  background-attachment: fixed;
+  background-size: 300px 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /*Developer 제목*/
+  .titleFirstLine {
     position: relative;
-    user-select: none;
-    width: 100%;
-    height: 100vh;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-top: 30px;
+    display: inline-block;
+    padding: 0px 100px;
 
-    background-image: url(/images/backgrounds/intro.png);
-    background-attachment: fixed;
-    background-size: 300px 300px;
-    overflow: hidden;
+    font-size: 80px;
+    font-weight: bolder;
+    background-color: #323228;
+    color: whitesmoke;
+    span {
+      color: rgb(0, 96, 0);
+    }
+  }
 
-
-    .canvas {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+  @keyframes rotate {
+    15% {
+      transform: rotate(90deg);
+    }
+    25% {
+      transform: rotate(90deg);
     }
 
-
-    .titleFirstLine{
-        position: relative;
-        top:80px;
-        left:60px;
-        display: inline-block;
-        padding:0px 10px;
-
-        font-size:80px;
-        font-weight: bolder;
-        border: 10px solid black;
-        color:black;
-        background-color: white;
-        
-        @media (max-width: $breakpoint-tablet) {
-            font-size:60px;
-            border: 6px solid black;
-            margin: auto;
-        }
-        @media (max-width: $breakpoint-mobile-medium) {
-            position: absolute;
-            text-align: center;
-            left:0px;
-            right: 0px;
-            margin: auto;
-            width: 62vw;
-            font-size: 7vw;
-        }
-        @media (max-width: $breakpoint-mobile-small) {
-            font-size: 7vw;
-            width: 55vw;
-        }
-
-        span{
-            color:orange;
-        }
-
-        /*React Icon 설정*/
-        .titleReactIcon{
-            position: absolute;
-            left:-60px;
-            top:-80px;
-
-            width: 130px;
-            height: 130px;
-            z-index: 1;
-
-            @media (max-width: $breakpoint-tablet) {
-                top:-70px;
-            }
-            @media (max-width: $breakpoint-mobile-medium) {
-                top:-60px;
-                left:-120px;
-            }
-            @media (max-width: $breakpoint-mobile-small) {
-                top:-50px;
-                left:-110px;
-                width: 110px;
-                height: 110px;
-            }
-
-            img{
-                transform-origin: 50% 50%;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                scale: 1.6;
-                animation: rotate 12s ease-in 3s infinite normal both;
-              
-                @media (max-width: $breakpoint-tablet) {
-                    scale: 1.1;
-                }
-            }
-        }
+    35% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(180deg);
     }
 
-    @keyframes rotate {
-        15%{transform: rotate(90deg);}
-        25%{transform: rotate(90deg);}
-
-        35%{transform: rotate(180deg);}
-        50%{transform: rotate(180deg);}
-
-        60%{transform: rotate(270deg);}
-        75%{transform: rotate(270deg);}
-
-        85%{transform: rotate(360deg);}
-        100%{transform: rotate(360deg);}
+    60% {
+      transform: rotate(270deg);
+    }
+    75% {
+      transform: rotate(270deg);
     }
 
-    .titleSecondLine{
-        position: relative;
-        top:80px;
-        left: 280px;
-        font-weight: bold;
-        font-size:30px;
-        color:black;
+    85% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
-        @media (max-width: $breakpoint-tablet) {
-            left: 220px;
-            top:85px;
-            font-size:23px;
-        }
+  .titleSecondLine {
+    position: relative;
+    font-weight: bolder;
+    font-size: 33px;
+    color: #313131;
+    margin-top: 10px;
+    padding: 5px;
+    width: 750px;
+    text-align: center;
+    border-top: 7px double #323228;
+    border-bottom: 7px double #323228;
 
-        @media (max-width: $breakpoint-mobile-medium) {
-            position: absolute;
-            top:180px;
-            left:0px;
-            right: 0px;
-            text-align: center;
-            font-size: 4vw;
-        }
-        @media (max-width: $breakpoint-mobile-small) {
-            top:160px;
-        }
+    span:hover {
+      transition: all 0.3s;
+      display: inline;
+      box-shadow: inset 0 -10 0 #ffc40076;
+    }
+  }
 
+  .titleThirdLine {
+    position: absolute;
+    bottom: 415px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #323228;
+  }
 
-        span:hover{
-            transition: all 0.3s;
-            display: inline;
-            box-shadow: inset 0 -10 0 #ffc40076;
-        }
+  .titleThirdLineDescription {
+    position: absolute;
+    bottom: 330px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+    color: #323228;
+
+    .yellow {
+      color: orange;
+      font-weight: bold;
+    }
+    .green {
+      color: rgb(0, 96, 0);
+      font-weight: bold;
+    }
+  }
+
+  .titleFourthLine {
+    position: absolute;
+    bottom: 220px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #323228;
+  }
+
+  .titleFourthLineDescription {
+    position: absolute;
+    bottom: 140px;
+    font-size: 14px;
+    line-height: 2;
+    color: #323228;
+    text-align: center;
+  }
+
+  .button {
+    position: absolute;
+    bottom: 25px;
+
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 2.5;
+
+    border-radius: 50px;
+    width: 80px;
+    height: 35px;
+    border: 2px solid #323228;
+    color: #323228;
+
+    cursor: pointer;
+    &:hover {
+      animation: star 0.5s ease-in-out infinite alternate both;
     }
 
-
-    .titleThirdLine{
-        position: absolute;
-        bottom:($titleNumberLineBottom+280+px);
-        right:($titleNumberLineRight+180+px);
-
-        font-size:25px;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-
-        @media (max-width: $breakpoint-tablet) {
-            bottom:($titleNumberLineBottom+230+px);
-            right:($titleNumberLineRight+120+px);
-            font-size:20px;
-        }
-
-        @media (max-width: $breakpoint-mobile-medium) {
-            right:0px;
-            left:0px;
-            text-align: center;
-        }
-
-
+    @media (max-width: $breakpoint-tablet) {
+      bottom: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      line-height: 4;
+      font-size: 10px;
     }
+  }
 
-
-    .titleThirdLineDescription{
-        position: absolute;
-        bottom:($titleNumberLineBottom+210+px);
-        right:($titleNumberLineRight+180+px);
-
-        font-size:15px;
-        line-height: 1.7;
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-
-        @media (max-width: $breakpoint-tablet) {
-            bottom:($titleNumberLineBottom+170+px);
-            right:($titleNumberLineRight+120+px);
-            font-size:13px;
-        }
-
-        @media (max-width: $breakpoint-mobile-medium) {
-            right:0px;
-            left:0px;
-            text-align: center;
-            font-size:12px;
-            width: 100%;
-            right: 0px;
-        }
-
-
-
-        .yellow{
-            color:orange;
-            font-weight: bold;
-        }
-        .green{
-            color:green;
-            font-weight: bold;
-        }
+  @keyframes star {
+    from {
     }
-
-
-    .titleFourthLine{
-        position: absolute;
-        bottom:($titleNumberLineBottom+120+px);
-        right:($titleNumberLineRight+130+px);
-
-        font-size:25px;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-
-        @media (max-width: $breakpoint-tablet) {
-            bottom:($titleNumberLineBottom+100+px);
-            right:($titleNumberLineRight+80+px);
-            font-size:20px;
-        }
-        @media (max-width: $breakpoint-mobile-medium) {
-            right:0px;
-            left:0px;
-            text-align: center;
-        }
+    to {
+      border: 2px solid rgb(0, 96, 0);
     }
-
-    .titleFourthLineDescription{
-        position: absolute;
-        bottom:($titleNumberLineBottom+20+px);
-        right:($titleNumberLineRight+90+px);
-        font-size:15px;
-        line-height: 1.7;
-        color: black;
-        font-weight: bold;
-
-        //■■■■ 반응형 설정 ■■■■//
-        @media (max-width: $breakpoint-tablet) {
-            bottom:($titleNumberLineBottom+20+px);
-            right:($titleNumberLineRight+40+px);
-            font-size:13px;
-        }
-        @media (max-width: $breakpoint-mobile-medium) {
-            right:0px;
-            left:0px;
-            width: 100%;
-            right: 0px;
-            text-align: center;
-            font-size:12px;
-
-        }
-    }
-
-    .button{
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
-
-        text-align: center;
-        font-size:12px;
-        line-height:4;
-
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        border: 2px solid gray;
-        color: black;
-
-        cursor: pointer;
-        &:hover{
-            animation: star 0.5s ease-in-out infinite alternate both;
-        }
-
-        @media (max-width: $breakpoint-tablet) {
-            bottom: 10px;
-            right: 10px;
-            width: 40px;
-            height: 40px;
-            line-height:4;
-            font-size:10px;
-        }
-    }
-
-
-    @keyframes star {
-        from{}
-        to{
-            border: 2px solid #FFFCE1;
-        }
-        
-    }
+  }
 }

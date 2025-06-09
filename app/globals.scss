@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 @font-face {
-  font-family: "MaruBuri";
-  src: url("./../public/fonts/MaruBuri-Regular.ttf") format("truetype");
+  font-family: 'MaruBuri';
+  src: url('./../public/fonts/MaruBuri-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
-
-body{
-    &::-webkit-scrollbar{
-        display: none;
-    }
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

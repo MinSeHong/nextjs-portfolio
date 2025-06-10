@@ -4,7 +4,11 @@ import { SplitText } from 'gsap/SplitText';
 import stylesIntro from './intro.module.scss';
 import { useRef, useEffect } from 'react';
 
-export default function Intro() {
+type HeaderProps = {
+  onMenuClick: (section: string) => void;
+};
+
+export default function Intro({ onMenuClick }: HeaderProps) {
   /* Introduce Start: Gsap 애니메이션 시작 */
   const titleFirstLineRef = useRef<HTMLDivElement>(null);
 
@@ -217,7 +221,11 @@ export default function Intro() {
         되고자 합니다.
       </div>
 
-      <div className={stylesIntro.button} ref={buttonRef}>
+      <div
+        className={stylesIntro.button}
+        ref={buttonRef}
+        onClick={() => onMenuClick('introduce')}
+      >
         시작하기
       </div>
     </div>

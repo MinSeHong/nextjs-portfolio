@@ -19,6 +19,7 @@
   justify-content: center;
   gap: 20px;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.511);
+  transition: all 0.2s ease-in-out;
 
   nav {
     cursor: pointer;
@@ -28,6 +29,12 @@
     color: #323228;
     background-color: white;
     background-image: url(/images/pattern/noise.png);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: orange;
+      background-image: url(/images/pattern/noise.png);
+    }
   }
 
   .iconBox {

@@ -18,11 +18,20 @@ import { MOCK_GRID_CARDS } from '../data/introductionMockData';
 /* PERSONALITY 라이브러리 */
 import { MOCK_PERSONALITY } from '../data/personalityMockData';
 
-export default function Introduce() {
-  /* Introduction Start: Gsap 애니메이션 시작 */
-  const containerFirstRef = useRef<HTMLDivElement>(null);
-  const containerSecondRef = useRef<HTMLDivElement>(null);
+import { forwardRef } from 'react';
 
+type HeaderScollProps = {
+  /* Introduction Start: Gsap 애니메이션 시작 */
+  containerFirstRef?: React.RefObject<HTMLDivElement>;
+  containerSecondRef?: React.RefObject<HTMLDivElement>;
+  containerThirdRef?: React.RefObject<HTMLDivElement>;
+};
+
+export default function Introduce({
+  containerFirstRef,
+  containerSecondRef,
+  containerThirdRef,
+}: HeaderScollProps) {
   /* Introduction Start: Gsap Profile 애니메이션 */
   const profileImageRef = useRef<HTMLImageElement>(null);
   const profileGithubIconRef = useRef<HTMLImageElement>(null);
@@ -1317,7 +1326,7 @@ export default function Introduce() {
         </div>
       </div>
 
-      <div className={stylesIntroduce.containerThird}>
+      <div className={stylesIntroduce.containerThird} ref={containerThirdRef}>
         <div className={stylesIntroduce.containerThirdContainer}>
           <span className={stylesIntroduce.subTitle}>PERSONALITY</span>
 

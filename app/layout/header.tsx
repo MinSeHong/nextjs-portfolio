@@ -1,13 +1,46 @@
 'use clinet';
+import { useEffect, useRef } from 'react';
 import styles from './header.module.scss';
 
-export default function Header() {
+type HeaderProps = {
+  onMenuClick: (section: string) => void;
+};
+
+export default function Header({ onMenuClick }: HeaderProps) {
+  const scrollPosition = useRef<number>(0);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > scrollPosition.current + 100) {
+        headerRef.current.style.transform = 'scale(1,0)';
+        scrollPosition.current = currentScrollY;
+      } else if (currentScrollY < scrollPosition.current - 10) {
+        headerRef.current.style.transform = 'scale(1,1)';
+        scrollPosition.current = currentScrollY;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
-      <nav>Intro</nav>
-      <nav>Introduce</nav>
-      <nav>Project</nav>
-      <nav>Personality</nav>
+    <header className={styles.header} ref={headerRef}>
+      <nav
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        }}
+      >
+        Intro
+      </nav>
+      <nav onClick={() => onMenuClick('introduce')}>Introduce</nav>
+      <nav onClick={() => onMenuClick('project')}>Project</nav>
+      <nav onClick={() => onMenuClick('personality')}>Personality</nav>
 
       <div className={styles.iconBox}>
         <div>

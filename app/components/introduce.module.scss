@@ -14,7 +14,9 @@ $breakpoint-tablet-small: 1000px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-image: url(/images/pattern/noise.png);
   background-color: #f5f4f0;
+
   align-items: center;
 
   .mainTitle {
@@ -33,7 +35,7 @@ $breakpoint-tablet-small: 1000px;
     width: 1400px;
     height: 700px;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: white;
     background-image: url(/images/pattern/noise.png);
     border-radius: 10px;
     pointer-events: none;
@@ -689,7 +691,7 @@ $breakpoint-tablet-small: 1000px;
     width: 1350px;
     height: 700px;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
-    background-color: whitesmoke;
+    background-color: white;
     background-image: url(/images/pattern/noise.png);
     border-radius: 10px;
 
@@ -759,6 +761,7 @@ $breakpoint-tablet-small: 1000px;
         cursor: pointer;
         transition: background-color 0.4s;
         background-color: white;
+        border: 0.5px solid #3232282d;
         background-image: url(/images/pattern/noise.png);
         &:hover {
           background-color: gold;
@@ -797,7 +800,7 @@ $breakpoint-tablet-small: 1000px;
 
         height: 465px;
         color: #323228;
-        background-color: white;
+        background-color: whitesmoke;
         background-image: url(/images/pattern/noise.png);
 
         border-radius: 20px;

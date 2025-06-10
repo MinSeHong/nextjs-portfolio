@@ -187,19 +187,19 @@ export default function Intro() {
 
       <div className={stylesIntro.titleThirdLine}></div>
       <div className={stylesIntro.titleThirdLine} ref={titleThirdLineRef}>
-        웹이라는 무대를 설계하고 구현하는 개발자입니다.
+        인터랙티브 웹을 설계하는 개발자입니다.
       </div>
 
       <div
         className={stylesIntro.titleThirdLineDescription}
         ref={titleThirdLineRefDescription}
       >
-        웹을 하나의 무대로 보고, 사용자와 상호작용하는 인터랙티브 웹을
-        개발합니다.
+        다양한 인터랙티브 웹 개발을 추구합니다.
         <br />
         <span className={stylesIntro.yellow}>CSS</span>와
-        <span className={stylesIntro.green}> JAVASCRIPT</span>을 이용해 수많은
-        무대를 제작하는데 열정을 쏟고 있습니다.
+        <span className={stylesIntro.green}> JAVASCRIPT</span>를 통해 다양한
+        사용자 경험을 디자인하며, <br />
+        기술과 창의성을 조화롭게 이용하는데 열정을 가지고 있습니다.
         <br />
       </div>
 

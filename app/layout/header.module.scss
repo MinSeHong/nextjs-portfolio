@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: #f8efe5;
+  background-image: url(/images/pattern/noise.png);
+  height: 45px;
+  z-index: 9999;
+}

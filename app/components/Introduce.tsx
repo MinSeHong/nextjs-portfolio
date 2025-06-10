@@ -816,6 +816,7 @@ export default function Introduce() {
           `.cardFilp${index} .${stylesIntroduce.gridCardTitle}`,
           `.cardFilp${index} .${stylesIntroduce.gridCardDescription}`,
           `.cardFilp${index} .${stylesIntroduce.gridCardDate}`,
+          `.cardFilp${index} .${stylesIntroduce.gridCardGroup}`,
         ],
         {
           opacity: 1,
@@ -868,6 +869,7 @@ export default function Introduce() {
         `.cardFilp${index} .${stylesIntroduce.gridCardTitle}`,
         `.cardFilp${index} .${stylesIntroduce.gridCardDescription}`,
         `.cardFilp${index} .${stylesIntroduce.gridCardDate}`,
+        `.cardFilp${index} .${stylesIntroduce.gridCardGroup}`,
       ],
       {
         opacity: 0,

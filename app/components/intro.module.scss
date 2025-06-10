@@ -27,13 +27,14 @@ $breakpoint-desktop: 1480px;
   /*Developer 제목*/
   .titleFirstLine {
     position: relative;
-    margin-top: 30px;
+    margin-top: 50px;
     display: inline-block;
     padding: 0px 100px;
 
     font-size: 80px;
     font-weight: bolder;
     background-color: #323228;
+    background-image: url(/images/pattern/noise.png);
     color: whitesmoke;
     span {
       color: rgb(0, 96, 0);
@@ -99,7 +100,7 @@ $breakpoint-desktop: 1480px;
 
   .titleThirdLineDescription {
     position: absolute;
-    bottom: 330px;
+    bottom: 300px;
     text-align: center;
     font-size: 14px;
     line-height: 2;

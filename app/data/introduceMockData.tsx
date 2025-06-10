@@ -22,7 +22,8 @@ export const MOCK_SKILLS: SkillSubject = {
     hashtag: 'Front-end',
     skillDescription: [
       'SCSS를 이용한 CSS제작이 가능합니다.',
-      'Grid, Flex를 이용한 최적의 레이아웃을 구상하려고 노력합니다.',
+      'Grid, Flex를 이용해 최적의 레이아웃을 구상하려고 노력합니다.',
+      'CSS를 이용한 여러가지 인터랙티브를 제작할 수 있습니다.',
     ],
   },
   JavaScript: {
@@ -31,7 +32,7 @@ export const MOCK_SKILLS: SkillSubject = {
     skillDescription: [
       'DOM, BOM 객체를 자유롭게 다룰 수 있습니다',
       'TypeScript 문법을 사용할 줄 압니다.',
-      'GSAP, JQUERY를 이용한 애니메이션 구현이 가능합니다.',
+      'GSAP, MATTER, JQUERY를 이용한 애니메이션 구현이 가능합니다.',
       'ES Module을 적절하게 사용하려고 합니다.',
       'JS를 활용한 여러가지의 인터렉티브를 제작할 수 있습니다.',
     ],
@@ -44,8 +45,8 @@ export const MOCK_SKILLS: SkillSubject = {
       'Hook을 이용한 처리가 가능합니다.',
       '디렉토리 구조 최적화에 노력하고있습니다.',
       'Redux의 기능을 이용하여 state를 관리 할 수 있습니다.',
+      'React Query를 이용한 API 통신을 할 수 있습니다.',
       'Next js를 이용한 프로젝트 제작이 가능합니다.',
-      'Router를 이용한 페이지 이동을 체계적으로 설계하려고 노력하고 있습니다.',
     ],
   },
 
@@ -55,9 +56,17 @@ export const MOCK_SKILLS: SkillSubject = {
     skillDescription: [
       'CSS 라이브러리 GSAP을 사용할 줄 압니다.',
       'GSAP을 이용하여 인터렉티브를 만들 수 있습니다.',
-      'Matter.js 물리엔진을 공부하고 있습니다.',
       'GSAP을 이용한 웹 크롤링 프로젝트를 제작했습니다.',
       '웹 포토폴리오를 GSAP과 혼합하여 사용했습니다.',
+    ],
+  },
+
+  'MATTER.JS': {
+    skillIcon: './icons/matterjs-icon.svg',
+    hashtag: 'Library',
+    skillDescription: [
+      'Matter JS를 이용한 2D 물리엔진 제작이 가능합니다.',
+      'Cavans를 이용한 여러가지 게임을 제작할 수 있습니다.',
     ],
   },
 
@@ -78,6 +87,7 @@ export const MOCK_SKILLS: SkillSubject = {
       'SPRING BOOT와 RESTAPI에 대해 공부했습니다.',
       'JSP로 서버 구축을 할 줄 압니다.',
       '메이븐을 활용한 데이터베이스 연결을 할 줄 압니다.',
+      'REST API 통신 방식을 사용할 줄 압니다.',
     ],
   },
   Python: {
@@ -105,7 +115,7 @@ export const MOCK_SKILLS: SkillSubject = {
     skillDescription: [
       'Spring boot를 이용한 팀 프로젝트를 제작해보았습니다.',
       'Spring Boot를 이용한 어노테이션 개발이 가능합니다.',
-      'MyBatis를 이용한 데이터베이스 연결을 해보았습니다.',
+      'MyBatis를 이용한 데이터베이스 연결이 가능합니다.',
     ],
   },
 
@@ -154,9 +164,13 @@ export const MOCK_HOBBYS: SkillSubject = {
     skillIcon: './icons/matterjs-icon.svg',
     hashtag: 'Programming',
     skillDescription: [
-      '인터렉티브 웹을 색다르게 표현하기 위해 공부하고 있습니다.',
-      'MatterJS를 이용하여 물리엔진 구현을 해보았습니다.',
+      '인터렉티브 웹을 색다르게 표현하기 위해 여러 기능을 공부하고 있습니다.',
     ],
+  },
+  'THREE.JS': {
+    skillIcon: './icons/threejs-icon.png',
+    hashtag: 'Programming',
+    skillDescription: ['3D 모델링을 다루는 THREE JS를 공부하고 있습니다.'],
   },
 
   'STABBLE DIFFUSION': {
@@ -168,35 +182,27 @@ export const MOCK_HOBBYS: SkillSubject = {
       '구역 분리하여 이미지 생성하는 방법을 공부했습니다.',
     ],
   },
+  NOTION: {
+    skillIcon: './icons/notion-icon.png',
+    hashtag: 'Blogging',
+    skillDescription: ['개발, 알고리즘, CS등 여러가지 글을 작성하고 있습니다.'],
+  },
 };
 
 export const MOCK_PLANS: SkillSubject = {
-  'WEB PORTFOLIO': {
-    skillIcon: './icons/css-icon.png',
-    hashtag: 'Working',
-    skillDescription: [
-      '디바이스에 따른 반응형 웹으로 제작',
-      '마우스 효과 제작',
-      '추가의 인터렉티브 컴포넌트 구상',
-      'Matter JS를 이용한 인터렉티브 추가',
-    ],
-  },
   JAPANESE: {
     skillIcon: './icons/jlpt-logo.png',
     hashtag: 'Language',
-    skillDescription: ['● JLPT1 자격증 시험 준비'],
-  },
-  'MATTER.JS': {
-    skillIcon: './icons/matterjs-icon.svg',
-    hashtag: 'Library',
-    skillDescription: [
-      'Matter JS를 이용한 Collision 공부',
-      'Matter JS를 이용한 Constraints 공부',
-    ],
+    skillDescription: ['JLPT1 자격증 시험 준비'],
   },
   'Three.JS': {
     skillIcon: './icons/threejs-icon.png',
     hashtag: 'Library',
     skillDescription: ['Three JS를 이용한 3D 생성 공부'],
+  },
+  'Android Studio': {
+    skillIcon: './icons/android-studio-icon.png',
+    hashtag: 'Library',
+    skillDescription: ['Android Studio 개발 공부'],
   },
 };

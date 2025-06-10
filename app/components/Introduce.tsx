@@ -26,6 +26,7 @@ export default function Introduce() {
   /* Introduction Start: Gsap Profile 애니메이션 */
   const profileImageRef = useRef<HTMLImageElement>(null);
   const profileGithubIconRef = useRef<HTMLImageElement>(null);
+  const profileNotionIconRef = useRef<HTMLImageElement>(null);
   const profileMailIconRef = useRef<HTMLImageElement>(null);
   const profileFirstDetail = useRef<HTMLDivElement>(null);
   const profileSecondDetail = useRef<HTMLDivElement>(null);
@@ -290,6 +291,11 @@ export default function Introduce() {
         ease: 'bounce',
       });
       cardTimeLine.from(profileGithubIconRef.current, {
+        opacity: 0,
+        duration: 0.35,
+        ease: 'bounce',
+      });
+      cardTimeLine.from(profileNotionIconRef.current, {
         opacity: 0,
         duration: 0.35,
         ease: 'bounce',
@@ -1149,6 +1155,12 @@ export default function Introduce() {
           <div className={stylesIntroduce.link}>
             <a href="https://github.com/minsehong" target="_blank">
               <img src="./icons/github-icon.svg" ref={profileGithubIconRef} />
+            </a>
+            <a
+              href="https://www.notion.so/minsehong/Story-of-Minsehong-2044339956d080119278d19d365a900e?source=copy_link"
+              target="_blank"
+            >
+              <img src="./icons/notion-icon.png" ref={profileNotionIconRef} />
             </a>
             <a href="mailto:rebellia@naver.com" target="_blank">
               <img src="./icons/mail-icon.svg" ref={profileMailIconRef} />

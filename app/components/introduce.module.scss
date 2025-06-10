@@ -18,7 +18,7 @@ $breakpoint-tablet-small: 1000px;
   align-items: center;
 
   .mainTitle {
-    color: black;
+    color: #323228;
     font-size: 50px;
     font-family: 'Alfa Slab One';
     margin-top: 450px;
@@ -39,28 +39,6 @@ $breakpoint-tablet-small: 1000px;
     pointer-events: none;
     align-items: center;
 
-    @media (max-width: $breakpoint-tablet-high) {
-      width: 88vw;
-      height: 700px;
-    }
-
-    @media (max-width: $breakpoint-tablet-medium) {
-      width: 88vw;
-      height: 700px;
-    }
-
-    @media (max-width: $breakpoint-mobile-medium) {
-      width: 85vw;
-      flex-direction: column;
-      height: 1350px;
-      align-items: center;
-    }
-
-    @media (max-width: $breakpoint-mobile-small) {
-      flex-direction: column;
-      width: 95vw;
-    }
-
     .statusbar {
       display: flex;
       flex-direction: row-reverse;
@@ -72,9 +50,8 @@ $breakpoint-tablet-small: 1000px;
       width: 100%;
       height: 50px;
       border-radius: 10px 10px 0px 0px;
-      background-color: #191b22;
-      font-family: 'MaruBuri';
-      color: white;
+      background-color: #323228;
+      color: whitesmoke;
 
       @media (max-width: $breakpoint-mobile-small) {
         height: 38px;
@@ -127,26 +104,22 @@ $breakpoint-tablet-small: 1000px;
       height: 600px;
       width: 300px;
       border-radius: 10px;
-      font-family: 'MaruBuri';
 
       img {
         margin-top: 10px;
         width: 250px;
         border-radius: 5px;
-        @media (max-width: $breakpoint-mobile-medium) {
-          margin-top: 40px;
-        }
       }
 
       .link {
         transition: all 0.2s;
         display: flex;
-        gap: 10px;
+        gap: 12px;
         img {
-          width: 50px;
+          width: 40px;
           background-color: gold;
           border-radius: 50px;
-          padding: 2px;
+          padding: 5px;
           transition: transform 0.2s;
           &:hover {
             transform: translateY(-5);
@@ -158,16 +131,9 @@ $breakpoint-tablet-small: 1000px;
         font-size: 18px;
         color: black;
         span {
-          color: green;
+          color: rgb(0, 96, 0);
+          font-weight: bold;
         }
-      }
-
-      @media (max-width: $breakpoint-tablet-high) {
-        width: 24%;
-      }
-      @media (max-width: $breakpoint-mobile-medium) {
-        width: 100%;
-        margin-left: 0px;
       }
     }
 
@@ -182,24 +148,6 @@ $breakpoint-tablet-small: 1000px;
       height: 600px;
       border-radius: 20px;
 
-      @media (max-width: $breakpoint-tablet-high) {
-        width: 53vw;
-        flex-direction: column;
-      }
-
-      @media (max-width: $breakpoint-tablet-medium) {
-        width: 51vw;
-      }
-
-      @media (max-width: $breakpoint-tablet-small) {
-        width: 48vw;
-      }
-      @media (max-width: $breakpoint-mobile-medium) {
-        width: 90%;
-        margin-left: 0px;
-        margin-top: 60px;
-      }
-
       .card {
         position: relative;
         overflow: hidden;
@@ -208,7 +156,6 @@ $breakpoint-tablet-small: 1000px;
         height: 100%;
         background-size: cover;
         border-radius: 15px;
-        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.59);
         width: 25%;
         transition: flex 0.3s ease-in-out;
 
@@ -284,24 +231,12 @@ $breakpoint-tablet-small: 1000px;
           writing-mode: vertical-rl;
           text-orientation: upright;
           font-size: 65px;
-          color: rgb(255, 255, 255);
-          letter-spacing: -10px;
+          color: whitesmoke;
+          letter-spacing: 0px;
           font-weight: bold;
           display: none;
           text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
           user-select: none;
-
-          @media (max-width: $breakpoint-tablet-high) {
-            writing-mode: horizontal-tb;
-            letter-spacing: 10px;
-            margin-top: 2%;
-            margin-left: 0px;
-            text-align: center;
-          }
-
-          @media (max-width: $breakpoint-tablet-medium) {
-            font-size: 45px;
-          }
         }
 
         .descriptionTimeline {
@@ -309,8 +244,8 @@ $breakpoint-tablet-small: 1000px;
           display: flex;
           flex-direction: column;
           gap: 20px;
-          left: 90px;
-          top: 30px;
+          left: 100px;
+          top: 20px;
 
           width: 470px;
           height: 520px;
@@ -320,7 +255,7 @@ $breakpoint-tablet-small: 1000px;
           opacity: 0;
 
           .box {
-            background-color: rgba(245, 245, 245, 0.9);
+            background-color: rgba(245, 245, 245, 0.95);
             padding: 5px 5px 5px 10px;
             border-radius: 5px;
             color: black;
@@ -339,26 +274,6 @@ $breakpoint-tablet-small: 1000px;
             &:nth-last-child(1) {
               margin-bottom: 50px;
             }
-          }
-
-          @media (max-width: $breakpoint-tablet-high) {
-            left: 0px;
-            right: 0px;
-            margin: auto;
-            margin-top: 90px;
-            height: 76%;
-            width: 70%;
-            overflow-y: auto;
-            pointer-events: all;
-            overscroll-behavior: contain;
-
-            &::-webkit-scrollbar {
-              display: none;
-            }
-          }
-
-          @media (max-width: $breakpoint-tablet-medium) {
-            margin-top: 60px;
           }
         }
 
@@ -389,7 +304,7 @@ $breakpoint-tablet-small: 1000px;
             transition: all 0.5s ease;
 
             overflow: hidden;
-            width: 50px;
+            width: 70px;
             height: 45px;
             border: none;
 
@@ -440,25 +355,10 @@ $breakpoint-tablet-small: 1000px;
           height: 540px;
           background-color: rgba(245, 245, 245, 0.9);
           border-radius: 10px;
-          font-family: 'MaruBuri';
           text-shadow: 2px 2px 2px black;
           font-size: 20px;
           transition: all 2s;
           opacity: 0;
-
-          @media (max-width: $breakpoint-tablet-high) {
-            width: 73%;
-            height: 75%;
-            left: 0px;
-            right: 0px;
-            margin: auto;
-            margin-top: 90px;
-          }
-
-          @media (max-width: $breakpoint-tablet-medium) {
-            margin-top: 60px;
-            height: 80%;
-          }
 
           .container {
             display: flex;
@@ -475,10 +375,6 @@ $breakpoint-tablet-small: 1000px;
 
             &::-webkit-scrollbar {
               display: none;
-            }
-
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 90%;
             }
           }
 
@@ -497,11 +393,6 @@ $breakpoint-tablet-small: 1000px;
             border-left: 2px dashed rgba(0, 0, 0, 0.5);
             border-right: 2px dashed rgba(0, 0, 0, 0.5);
             margin-top: 10px;
-
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 100%;
-              height: 37px;
-            }
 
             .skillicon {
               position: relative;
@@ -526,12 +417,6 @@ $breakpoint-tablet-small: 1000px;
               font-size: 25px;
               text-shadow: none;
               font-weight: bold;
-              @media (max-width: $breakpoint-tablet-high) {
-                font-size: 20px;
-              }
-              @media (max-width: $breakpoint-mobile-medium) {
-                font-size: 15px;
-              }
             }
 
             .skillHashtag {
@@ -542,14 +427,6 @@ $breakpoint-tablet-small: 1000px;
               color: black;
               position: absolute;
               right: 5px;
-              font-weight: bold;
-              @media (max-width: $breakpoint-tablet-high) {
-                font-size: 12px;
-              }
-              @media (max-width: $breakpoint-mobile-medium) {
-                font-size: 10px;
-                padding: 3px;
-              }
             }
 
             .orange {
@@ -578,17 +455,8 @@ $breakpoint-tablet-small: 1000px;
             border-right: 2px dashed rgba(0, 0, 0, 0.5);
             border-radius: 0px 0px 2px 2px;
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.9;
             text-shadow: none;
-
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 100%;
-              padding-left: 0px;
-              text-align: center;
-            }
-            @media (max-width: $breakpoint-mobile-medium) {
-              font-size: 10px;
-            }
           }
         }
 
@@ -605,24 +473,10 @@ $breakpoint-tablet-small: 1000px;
           height: 540px;
           background-color: rgba(245, 245, 245, 0.9);
           border-radius: 10px;
-          font-family: 'MaruBuri';
           text-shadow: 2px 2px 2px black;
           font-size: 20px;
           transition: all 2s;
           opacity: 0;
-
-          @media (max-width: $breakpoint-tablet-high) {
-            width: 73%;
-            height: 75%;
-            left: 0px;
-            right: 0px;
-            margin: auto;
-            margin-top: 90px;
-          }
-          @media (max-width: $breakpoint-tablet-medium) {
-            margin-top: 60px;
-            height: 80%;
-          }
 
           .container {
             display: flex;
@@ -635,9 +489,6 @@ $breakpoint-tablet-small: 1000px;
             color: black;
             &::-webkit-scrollbar {
               display: none;
-            }
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 90%;
             }
           }
 
@@ -656,11 +507,6 @@ $breakpoint-tablet-small: 1000px;
             border-left: 2px dashed rgba(0, 0, 0, 0.5);
             border-right: 2px dashed rgba(0, 0, 0, 0.5);
             margin-top: 10px;
-
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 100%;
-              height: 37px;
-            }
 
             .hobbyicon {
               position: relative;
@@ -685,12 +531,6 @@ $breakpoint-tablet-small: 1000px;
               font-size: 25px;
               text-shadow: none;
               font-weight: bold;
-              @media (max-width: $breakpoint-tablet-high) {
-                font-size: 20px;
-              }
-              @media (max-width: $breakpoint-mobile-medium) {
-                font-size: 15px;
-              }
             }
 
             .hobbyHashtag {
@@ -701,14 +541,6 @@ $breakpoint-tablet-small: 1000px;
               color: black;
               position: absolute;
               right: 5px;
-              font-weight: bold;
-              @media (max-width: $breakpoint-tablet-high) {
-                font-size: 12px;
-              }
-              @media (max-width: $breakpoint-mobile-medium) {
-                font-size: 10px;
-                padding: 3px;
-              }
             }
 
             .orange {
@@ -739,15 +571,6 @@ $breakpoint-tablet-small: 1000px;
             font-size: 13px;
             line-height: 1.6;
             text-shadow: none;
-
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 100%;
-              padding-left: 0px;
-              text-align: center;
-            }
-            @media (max-width: $breakpoint-mobile-medium) {
-              font-size: 10px;
-            }
           }
         }
 
@@ -764,24 +587,10 @@ $breakpoint-tablet-small: 1000px;
           height: 540px;
           background-color: rgba(245, 245, 245, 0.9);
           border-radius: 10px;
-          font-family: 'MaruBuri';
           text-shadow: 2px 2px 2px black;
           font-size: 20px;
           transition: all 2s;
           opacity: 0;
-
-          @media (max-width: $breakpoint-tablet-high) {
-            width: 73%;
-            height: 75%;
-            left: 0px;
-            right: 0px;
-            margin: auto;
-            margin-top: 90px;
-          }
-          @media (max-width: $breakpoint-tablet-medium) {
-            margin-top: 60px;
-            height: 80%;
-          }
 
           .container {
             display: flex;
@@ -796,9 +605,6 @@ $breakpoint-tablet-small: 1000px;
             color: black;
             &::-webkit-scrollbar {
               display: none;
-            }
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 90%;
             }
           }
 
@@ -817,11 +623,6 @@ $breakpoint-tablet-small: 1000px;
             border-left: 2px dashed rgba(0, 0, 0, 0.5);
             border-right: 2px dashed rgba(0, 0, 0, 0.5);
             margin-top: 10px;
-
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 100%;
-              height: 37px;
-            }
 
             .planIcon {
               position: relative;
@@ -846,12 +647,6 @@ $breakpoint-tablet-small: 1000px;
               font-size: 25px;
               text-shadow: none;
               font-weight: bold;
-              @media (max-width: $breakpoint-tablet-high) {
-                font-size: 20px;
-              }
-              @media (max-width: $breakpoint-mobile-medium) {
-                font-size: 15px;
-              }
             }
 
             .planHashtag {
@@ -862,14 +657,6 @@ $breakpoint-tablet-small: 1000px;
               color: black;
               position: absolute;
               right: 5px;
-              font-weight: bold;
-              @media (max-width: $breakpoint-tablet-high) {
-                font-size: 12px;
-              }
-              @media (max-width: $breakpoint-mobile-medium) {
-                font-size: 10px;
-                padding: 3px;
-              }
             }
 
             .orange {
@@ -900,14 +687,6 @@ $breakpoint-tablet-small: 1000px;
             font-size: 13px;
             line-height: 1.6;
             text-shadow: none;
-            @media (max-width: $breakpoint-tablet-high) {
-              width: 100%;
-              padding-left: 0px;
-              text-align: center;
-            }
-            @media (max-width: $breakpoint-mobile-medium) {
-              font-size: 10px;
-            }
           }
         }
       }
@@ -927,22 +706,6 @@ $breakpoint-tablet-small: 1000px;
     background-color: whitesmoke;
     border-radius: 10px;
 
-    @media (max-width: $breakpoint-tablet-high) {
-      width: 88vw;
-      height: 700px;
-    }
-
-    @media (max-width: $breakpoint-tablet-medium) {
-    }
-
-    @media (max-width: $breakpoint-mobile-medium) {
-      width: 85vw;
-    }
-
-    @media (max-width: $breakpoint-mobile-small) {
-      width: 95vw;
-    }
-
     .statusbar {
       display: flex;
       flex-direction: row-reverse;
@@ -953,13 +716,8 @@ $breakpoint-tablet-small: 1000px;
       width: 100%;
       height: 7%;
       border-radius: 10px 10px 0px 0px;
-      background-color: #191b22;
-      font-family: 'MaruBuri';
+      background-color: #323228;
       color: white;
-
-      @media (max-width: $breakpoint-mobile-small) {
-        height: 38px;
-      }
 
       span {
         display: block;
@@ -1011,10 +769,6 @@ $breakpoint-tablet-small: 1000px;
       font-family: 'MaruBuri';
       z-index: 1;
 
-      @media (max-width: $breakpoint-tablet-high) {
-        display: none;
-      }
-
       div {
         box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.278);
         color: black;
@@ -1045,12 +799,6 @@ $breakpoint-tablet-small: 1000px;
       height: 93%;
       border-radius: 0px 0px 10px 10px;
 
-      @media (max-width: $breakpoint-tablet-small) {
-        grid-template-columns: repeat(2, 250px);
-      }
-      @media (max-width: $breakpoint-mobile-small) {
-        grid-template-columns: repeat(1, 250px);
-      }
       &::-webkit-scrollbar {
         display: none;
       }
@@ -1090,11 +838,6 @@ $breakpoint-tablet-small: 1000px;
           z-index: 1.5;
           transition: opacity 1s;
           opacity: 0;
-
-          @media (max-width: $breakpoint-tablet-high) {
-            width: 35px;
-            height: 35px;
-          }
 
           .gridCardButtonImage {
             position: relative;

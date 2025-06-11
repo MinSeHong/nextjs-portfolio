@@ -28,6 +28,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
 
   return (
     <header className={styles.header} ref={headerRef}>
+      <nav className={styles.mobile}>Menu</nav>
       <nav
         onClick={() => {
           window.scrollTo({

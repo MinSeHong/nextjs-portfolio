@@ -1,17 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import './breakpoints';
 
 .layout {
-  $titleNumberLineRight: 90;
-  $titleNumberLineBottom: 20;
-
   position: relative;
   user-select: none;
   width: 100%;
   height: 100vh;
-
-  background-image: url(/images/backgrounds/intro.png);
+  background-image: url('/images/backgrounds/intro.png');
   background-attachment: fixed;
   background-size: 300px 300px;
   overflow: hidden;
@@ -33,6 +29,19 @@
     color: whitesmoke;
     span {
       color: rgb(0, 96, 0);
+    }
+
+    @include respond-max(mobile-h) {
+      width: 85%;
+      padding: 0;
+      text-align: center;
+      font-size: 70px;
+    }
+    @include respond-max(mobile-m) {
+      font-size: 65px;
+    }
+    @include respond-max(mobile-s) {
+      font-size: 50px;
     }
   }
 
@@ -77,6 +86,23 @@
     text-align: center;
     border-top: 7px double #323228;
     border-bottom: 7px double #323228;
+    transition: font-size 0.5s ease;
+
+    @include respond-max(mobile-h) {
+      border-top: 5px double #323228;
+      border-bottom: 5px double #323228;
+      width: 85%;
+      padding: 5px 0px;
+    }
+    @include respond-max(mobile-m) {
+      font-size: 28px;
+      padding: 6px 0px;
+    }
+    @include respond-max(mobile-s) {
+      font-size: 24px;
+      border-top: 5px double #323228;
+      border-bottom: 5px double #323228;
+    }
 
     span:hover {
       transition: all 0.3s;
@@ -86,20 +112,42 @@
   }
 
   .titleThirdLine {
-    position: absolute;
-    bottom: 415px;
-    font-size: 25px;
+    margin-top: 30px;
+    font-size: 23px;
     font-weight: bold;
     color: #323228;
+    transition: font-size 0.5s ease-in-out;
+
+    @include respond-max(mobile-h) {
+      margin-top: 25px;
+      font-size: 22px;
+    }
+    @include respond-max(mobile-m) {
+      font-size: 21px;
+    }
+    @include respond-max(mobile-s) {
+      margin-top: 50px;
+      font-size: 19px;
+    }
   }
 
   .titleThirdLineDescription {
-    position: absolute;
-    bottom: 300px;
+    margin-top: 20px;
     text-align: center;
     font-size: 14px;
     line-height: 2;
     color: #323228;
+    transition: font-size 0.5s ease-in-out;
+
+    @include respond-max(mobile-h) {
+      font-size: 13px;
+    }
+    @include respond-max(mobile-m) {
+      font-size: 12px;
+    }
+    @include respond-max(mobile-s) {
+      font-size: 11px;
+    }
 
     .yellow {
       color: orange;
@@ -112,20 +160,41 @@
   }
 
   .titleFourthLine {
-    position: absolute;
-    bottom: 220px;
+    margin-top: 70px;
     font-size: 25px;
     font-weight: bold;
     color: #323228;
+
+    @include respond-max(mobile-h) {
+      margin-top: 80px;
+      font-size: 22px;
+    }
+    @include respond-max(mobile-m) {
+      font-size: 21px;
+    }
+    @include respond-max(mobile-s) {
+      margin-top: 90px;
+      font-size: 19px;
+    }
   }
 
   .titleFourthLineDescription {
-    position: absolute;
+    margin-top: 20px;
     bottom: 140px;
     font-size: 14px;
     line-height: 2;
     color: #323228;
     text-align: center;
+
+    @include respond-max(mobile-h) {
+      font-size: 13px;
+    }
+    @include respond-max(mobile-m) {
+      font-size: 12px;
+    }
+    @include respond-max(mobile-s) {
+      font-size: 11px;
+    }
   }
 
   .button {
@@ -144,6 +213,12 @@
     color: #323228;
     background: whitesmoke;
     background-image: url(/images/backgrounds/intro.png);
+
+    @include respond-max(mobile-s) {
+      font-size: 11px;
+      width: 60px;
+      height: 30px;
+    }
 
     cursor: pointer;
     &:hover {

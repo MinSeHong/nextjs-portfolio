@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import '../components/breakpoints';
 
 .header {
   width: 60%;
@@ -21,6 +22,35 @@
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.511);
   transition: all 0.2s ease-in-out;
 
+  .mobile {
+    display: none;
+    @include respond-max(tablet) {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  @include respond-max(desktop) {
+    gap: 15px;
+  }
+  @include respond-max(laptop) {
+    height: 40px;
+    margin-top: 10px;
+  }
+  @include respond-max(tablet) {
+    width: 300px;
+    flex-direction: column;
+    height: 45px;
+    border-radius: 10px;
+    justify-content: flex-start;
+    overflow: hidden;
+    gap: 20px;
+
+    &:hover {
+      height: 230px;
+    }
+  }
+
   nav {
     cursor: pointer;
     display: inline-block;
@@ -30,6 +60,17 @@
     background-color: white;
     background-image: url(/images/pattern/noise.png);
     transition: all 0.2s ease-in-out;
+
+    @include respond-max(desktop) {
+      font-size: 14px;
+    }
+    @include respond-max(laptop) {
+      font-size: 11px;
+    }
+    @include respond-max(tablet) {
+      width: 60px;
+      text-align: center;
+    }
 
     &:hover {
       background-color: orange;
@@ -44,7 +85,17 @@
     height: 70%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
+
+    @include respond-max(desktop) {
+      gap: 7px;
+    }
+    @include respond-max(tablet) {
+      height: 45px;
+      right: 8px;
+      top: 0px;
+    }
 
     div {
       position: relative;
@@ -54,6 +105,21 @@
       width: 35px;
       height: 35px;
       transition: background-color 0.3s ease-in-out;
+
+      @include respond-max(desktop) {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include respond-max(laptop) {
+        width: 27px;
+        height: 27px;
+      }
+      @include respond-max(tablet) {
+        margin-top: 0px;
+        width: 28px;
+        height: 28px;
+      }
 
       &:hover {
         background-color: orange;

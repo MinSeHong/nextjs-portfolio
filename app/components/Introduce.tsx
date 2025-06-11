@@ -94,7 +94,7 @@ export default function Introduce({
       MOCK_SKILLSS[subject]['skillDescription'].map(
         (item: string, index: number) =>
           descriptions.push(
-            <div key={index}>
+            <div key={index} style={{ marginLeft: '20px' }}>
               {item}
               <br />
             </div>
@@ -159,7 +159,7 @@ export default function Introduce({
       MOCK_HOBBYS[subject]['skillDescription'].map(
         (item: string, index: number) =>
           descriptions.push(
-            <div key={index}>
+            <div key={index} style={{ marginLeft: '20px' }}>
               {item}
               <br />
             </div>
@@ -206,7 +206,7 @@ export default function Introduce({
       MOCK_PLANS[subject]['skillDescription'].map(
         (item: string, index: number) =>
           descriptions.push(
-            <div key={index}>
+            <div key={index} style={{ marginLeft: '20px' }}>
               {item}
               <br />
             </div>
@@ -1187,145 +1187,148 @@ export default function Introduce({
         <div className={stylesIntroduce.statusbar}>
           <span>INTRODUCE.EXE</span>
         </div>
-
-        <div className={stylesIntroduce.profile} ref={profileRef}>
-          <img src="./images/profile/profile.jpg" ref={profileImageRef} />
-          <div className={stylesIntroduce.link}>
-            <a href="https://github.com/minsehong" target="_blank">
-              <img src="./icons/github-icon.svg" ref={profileGithubIconRef} />
-            </a>
-            <a
-              href="https://www.notion.so/minsehong/Story-of-Minsehong-2044339956d080119278d19d365a900e?source=copy_link"
-              target="_blank"
-            >
-              <img src="./icons/notion-icon.png" ref={profileNotionIconRef} />
-            </a>
-            <a href="mailto:rebellia@naver.com" target="_blank">
-              <img src="./icons/mail-icon.svg" ref={profileMailIconRef} />
-            </a>
-          </div>
-          <div ref={profileFirstDetail}>
-            <span>&lt;</span>MinSeHong<span>/&gt;</span>
-          </div>
-          <div ref={profileSecondDetail}>
-            <span>&lt;</span>rebellia@gmail.com<span>/&gt;</span>
-          </div>
-          <div ref={profileThirdDetail}>
-            <span>&lt;</span>1997. 08. 30.<span>/&gt;</span>
-          </div>
-        </div>
-
-        <div className={stylesIntroduce.introduction} ref={introductionRef}>
-          <div className={stylesIntroduce.card}>
-            <img
-              src="./images/backgrounds/education.jpg"
-              className={stylesIntroduce.cardImage}
-            />
-            <div className={stylesIntroduce.title} ref={cardFirstTitleRef}>
-              TIMELINE
-            </div>
-            <div className={stylesIntroduce.descriptionTimeline}>
-              <div className={stylesIntroduce.box}>
-                <span className={stylesIntroduce.timeline}>2016.03</span>
-                <br />
-                수원대학교 입학
-                <span className={stylesIntroduce.sub}>미디어SW학과</span>
-              </div>
-              <div className={stylesIntroduce.box}>
-                <span className={stylesIntroduce.timeline}>
-                  2018.04 ~ 2020.01
-                </span>
-                <br />
-                해군 입대<span className={stylesIntroduce.sub}>전산병</span>
-              </div>
-              <div className={stylesIntroduce.box}>
-                <span className={stylesIntroduce.timeline}>2023.08</span>
-                <br />
-                수원대학교 졸업
-                <span className={stylesIntroduce.sub}>미디어SW학과</span>
-              </div>
-              <div className={stylesIntroduce.box}>
-                <span className={stylesIntroduce.timeline}>
-                  2023.08 ~ 2024.04
-                </span>
-                <br />
-                웹서비스 개발자 교육 수료
-                <span className={stylesIntroduce.sub}>한국ICT기술협회</span>
-              </div>
-              <div className={stylesIntroduce.box}>
-                <span className={stylesIntroduce.timeline}>
-                  2024.06 ~ 2024.12
-                </span>
-                <br />
-                작당연구소
-                <span className={stylesIntroduce.sub}>웹 개발 인턴</span>
-              </div>
-            </div>
-          </div>
-
-          <div className={stylesIntroduce.card}>
-            <img
-              src="./images/backgrounds/skills.jpg"
-              className={stylesIntroduce.cardImage}
-            />
-            <div className={stylesIntroduce.title} ref={cardSecondTitleRef}>
-              SKILLS
-            </div>
-
-            <div className={stylesIntroduce.descriptionSkillsButton}>
-              <button
-                onClick={() => {
-                  skillsLibraryActive('FRONTEND');
-                }}
+        <div className={stylesIntroduce.browser}>
+          <div className={stylesIntroduce.profile} ref={profileRef}>
+            <img src="./images/profile/profile.jpg" ref={profileImageRef} />
+            <div className={stylesIntroduce.link}>
+              <a href="https://github.com/minsehong" target="_blank">
+                <img src="./icons/github-icon.svg" ref={profileGithubIconRef} />
+              </a>
+              <a
+                href="https://www.notion.so/minsehong/Story-of-Minsehong-2044339956d080119278d19d365a900e?source=copy_link"
+                target="_blank"
               >
-                FRONTEND
-              </button>
-              <button
-                onClick={() => {
-                  skillsLibraryActive('BACKEND');
-                }}
-              >
-                BACKEND
-              </button>
-              <button
-                onClick={() => {
-                  skillsLibraryActive('LIBRARY');
-                }}
-              >
-                LIBRARY
-              </button>
+                <img src="./icons/notion-icon.png" ref={profileNotionIconRef} />
+              </a>
+              <a href="mailto:rebellia@naver.com" target="_blank">
+                <img src="./icons/mail-icon.svg" ref={profileMailIconRef} />
+              </a>
             </div>
-
-            <div className={stylesIntroduce.descriptionSkills}>
-              <div className={stylesIntroduce.container}>{skillsViewState}</div>
+            <div ref={profileFirstDetail}>
+              <span>&lt;</span>MinSeHong<span>/&gt;</span>
+            </div>
+            <div ref={profileSecondDetail}>
+              <span>&lt;</span>rebellia@gmail.com<span>/&gt;</span>
+            </div>
+            <div ref={profileThirdDetail}>
+              <span>&lt;</span>1997. 08. 30.<span>/&gt;</span>
             </div>
           </div>
 
-          <div className={stylesIntroduce.card}>
-            <img
-              src="./images/backgrounds/hobby.jpg"
-              className={stylesIntroduce.cardImage}
-            />
-            <div className={stylesIntroduce.title} ref={cardThirdTitleRef}>
-              HOBBY
-            </div>
-            <div className={stylesIntroduce.descriptionHobbys}>
-              <div className={stylesIntroduce.container}>
-                {hobbysView.current}
-              </div>
-            </div>
-          </div>
-          <div className={stylesIntroduce.card}>
-            <div className={stylesIntroduce.title} ref={cardFourthTitleRef}>
+          <div className={stylesIntroduce.introduction} ref={introductionRef}>
+            <div className={stylesIntroduce.card}>
               <img
-                src="./images/backgrounds/null.jpg"
+                src="./images/backgrounds/education.jpg"
                 className={stylesIntroduce.cardImage}
               />
-              PLANS
+              <div className={stylesIntroduce.title} ref={cardFirstTitleRef}>
+                TIMELINE
+              </div>
+              <div className={stylesIntroduce.descriptionTimeline}>
+                <div className={stylesIntroduce.box}>
+                  <span className={stylesIntroduce.timeline}>2016.03</span>
+                  <br />
+                  수원대학교 입학
+                  <span className={stylesIntroduce.sub}>미디어SW학과</span>
+                </div>
+                <div className={stylesIntroduce.box}>
+                  <span className={stylesIntroduce.timeline}>
+                    2018.04 ~ 2020.01
+                  </span>
+                  <br />
+                  해군 입대<span className={stylesIntroduce.sub}>전산병</span>
+                </div>
+                <div className={stylesIntroduce.box}>
+                  <span className={stylesIntroduce.timeline}>2023.08</span>
+                  <br />
+                  수원대학교 졸업
+                  <span className={stylesIntroduce.sub}>미디어SW학과</span>
+                </div>
+                <div className={stylesIntroduce.box}>
+                  <span className={stylesIntroduce.timeline}>
+                    2023.08 ~ 2024.04
+                  </span>
+                  <br />
+                  웹서비스 개발자 교육 수료
+                  <span className={stylesIntroduce.sub}>한국ICT기술협회</span>
+                </div>
+                <div className={stylesIntroduce.box}>
+                  <span className={stylesIntroduce.timeline}>
+                    2024.06 ~ 2024.12
+                  </span>
+                  <br />
+                  작당연구소
+                  <span className={stylesIntroduce.sub}>웹 개발 인턴</span>
+                </div>
+              </div>
             </div>
-            <div className={stylesIntroduce.descriptionPlans}>
-              <div className={stylesIntroduce.container}>
-                {plansView.current}
+
+            <div className={stylesIntroduce.card}>
+              <img
+                src="./images/backgrounds/skills.jpg"
+                className={stylesIntroduce.cardImage}
+              />
+              <div className={stylesIntroduce.title} ref={cardSecondTitleRef}>
+                SKILLS
+              </div>
+
+              <div className={stylesIntroduce.descriptionSkillsButton}>
+                <button
+                  onClick={() => {
+                    skillsLibraryActive('FRONTEND');
+                  }}
+                >
+                  FRONTEND
+                </button>
+                <button
+                  onClick={() => {
+                    skillsLibraryActive('BACKEND');
+                  }}
+                >
+                  BACKEND
+                </button>
+                <button
+                  onClick={() => {
+                    skillsLibraryActive('LIBRARY');
+                  }}
+                >
+                  LIBRARY
+                </button>
+              </div>
+
+              <div className={stylesIntroduce.descriptionSkills}>
+                <div className={stylesIntroduce.container}>
+                  {skillsViewState}
+                </div>
+              </div>
+            </div>
+
+            <div className={stylesIntroduce.card}>
+              <img
+                src="./images/backgrounds/hobby.jpg"
+                className={stylesIntroduce.cardImage}
+              />
+              <div className={stylesIntroduce.title} ref={cardThirdTitleRef}>
+                HOBBY
+              </div>
+              <div className={stylesIntroduce.descriptionHobbys}>
+                <div className={stylesIntroduce.container}>
+                  {hobbysView.current}
+                </div>
+              </div>
+            </div>
+            <div className={stylesIntroduce.card}>
+              <div className={stylesIntroduce.title} ref={cardFourthTitleRef}>
+                <img
+                  src="./images/backgrounds/null.jpg"
+                  className={stylesIntroduce.cardImage}
+                />
+                PLANS
+              </div>
+              <div className={stylesIntroduce.descriptionPlans}>
+                <div className={stylesIntroduce.container}>
+                  {plansView.current}
+                </div>
               </div>
             </div>
           </div>

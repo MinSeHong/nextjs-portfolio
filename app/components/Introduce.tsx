@@ -654,7 +654,7 @@ export default function Introduce({
                   data-scroll="skill-stack"
                 >
                   <span className={stylesIntroduce.green}>&lt;</span>SKILL
-                  STACKS<span className={stylesIntroduce.green}>/&gt;</span>
+                  STACKS<span className={stylesIntroduce.green}>&gt;</span>
                 </div>
                 <div className={stylesIntroduce.descriptionTitleSkillStack}>
                   {descriptionTitleSkillStack.current}
@@ -665,7 +665,7 @@ export default function Introduce({
                   data-scroll="review"
                 >
                   <span className={stylesIntroduce.green}>&lt;</span>REVIEW
-                  <span className={stylesIntroduce.green}>/&gt;</span>
+                  <span className={stylesIntroduce.green}>&gt;</span>
                 </div>
                 <div className={stylesIntroduce.descriptionReview}>
                   {GRID_CARD_ID_VARIABLES[index]['descriptionReview']}
@@ -676,7 +676,7 @@ export default function Introduce({
                   data-scroll="feature"
                 >
                   <span className={stylesIntroduce.green}>&lt;</span>FEATURES
-                  <span className={stylesIntroduce.green}>/&gt;</span>
+                  <span className={stylesIntroduce.green}>&gt;</span>
                 </div>
                 <div className={stylesIntroduce.descriptionFeature}>
                   {descriptionViewTitle.current}

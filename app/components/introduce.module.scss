@@ -994,17 +994,6 @@
       width: 95vw;
     }
 
-    @include respond-max(application-h) {
-      background-color: green;
-    }
-    @include respond-max(application-m) {
-      background-color: rebeccapurple;
-    }
-
-    @include respond-max(laptop) {
-      background-color: yellowgreen;
-    }
-
     .statusbar {
       display: flex;
       flex-direction: row-reverse;
@@ -1024,6 +1013,9 @@
         position: absolute;
         left: 20px;
         font-size: 20px;
+        @include respond-max(mobile-m) {
+          font-size: 17px;
+        }
       }
 
       div {
@@ -1061,6 +1053,10 @@
       background-size: 100% 100%;
       z-index: 1;
 
+      @include respond-max(tablet) {
+        width: 120px;
+      }
+
       div {
         box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.278);
         color: #323228;
@@ -1073,6 +1069,10 @@
         background-color: white;
         border: 0.5px solid #3232282d;
         background-image: url(/images/pattern/noise.png);
+
+        @include respond-max(tablet) {
+          display: none;
+        }
         &:hover {
           background-color: gold;
         }
@@ -1130,8 +1130,9 @@
         transition: box-shadow 0.2s ease-in-out;
 
         @include respond-max(laptop) {
-          height: 270px;
+          height: 290px;
           flex-direction: row;
+          gap: 20px;
         }
 
         &:hover {
@@ -1148,6 +1149,11 @@
           z-index: 1.5;
           transition: opacity 1s;
           opacity: 0;
+
+          @include respond-max(mobile-s) {
+            width: 34px;
+            height: 34px;
+          }
 
           .gridCardButtonImage {
             position: relative;
@@ -1166,6 +1172,11 @@
           border-radius: 20px;
           width: 220px;
           height: 200px;
+          @include respond-max(laptop) {
+            margin-top: 35px;
+            height: 200px;
+            width: 200px;
+          }
         }
 
         .gridCardTitle {
@@ -1174,6 +1185,16 @@
           width: 220px;
           text-align: center;
           font-weight: bold;
+          @include respond-max(laptop) {
+            top: 0;
+            margin-top: 0px;
+            border-radius: 20px 20px 0px 0px;
+            padding: 5px 0px;
+            width: 100%;
+            position: absolute;
+            background-color: gold;
+            background-image: url(/images/pattern/noise.png);
+          }
         }
 
         .gridCardDescription {
@@ -1188,6 +1209,10 @@
           overscroll-behavior: contain;
           word-wrap: break-word;
           word-break: keep-all;
+
+          @include respond-max(laptop) {
+            margin-top: 10px;
+          }
 
           &::-webkit-scrollbar {
             display: none;
@@ -1204,6 +1229,13 @@
           background-image: url(/images/pattern/noise.png);
           padding: 7px;
           border-radius: 50px;
+
+          @include respond-max(laptop) {
+            border: 1px solid rgba(0, 0, 0, 0.178);
+            margin-bottom: 4px;
+            font-size: 11px;
+            right: 15px;
+          }
         }
 
         .gridCardGroup {
@@ -1216,6 +1248,13 @@
           background-image: url(/images/pattern/noise.png);
           padding: 7px;
           border-radius: 50px;
+
+          @include respond-max(laptop) {
+            border: 1px solid rgba(0, 0, 0, 0.178);
+            margin-bottom: 4px;
+            font-size: 11px;
+            left: 15px;
+          }
         }
 
         .projectBrowserStart {
@@ -1229,21 +1268,43 @@
           opacity: 0;
           pointer-events: none;
           transition: all 1s;
+          background-image: url(/images/pattern/noise.png);
+          background-color: white;
+
+          @include respond-max(laptop) {
+            flex-direction: column;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
 
           .projectCard {
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-right: 3px solid rgba(0, 0, 0, 0.2);
-            width: 400px;
-            height: 600px;
+            border-right: 2px dashed rgba(0, 0, 0, 0.4);
+            width: 30%;
+            height: 90%;
+
+            @include respond-max(laptop) {
+              width: 100%;
+              height: 100%;
+            }
 
             .projectCardImage {
               margin-top: 20px;
               border-radius: 10px;
               width: 280px;
               height: 280px;
-              border: 5px solid rgba(24, 24, 24, 0.3);
+              @include respond-max(application-s) {
+                width: 240px;
+                height: 240px;
+              }
+              @include respond-max(laptop) {
+                margin-top: 100px;
+              }
             }
 
             .projectCardLink {
@@ -1257,8 +1318,8 @@
 
               .projectCardLinkBox {
                 position: relative;
-                height: 45px;
-                width: 45px;
+                height: 30px;
+                width: 30px;
                 background-color: gold;
                 background-image: url(/images/pattern/noise.png);
                 padding: 5px;
@@ -1287,28 +1348,41 @@
               text-align: center;
               width: 350px;
               font-weight: bold;
+              @include respond-max(laptop) {
+                margin-top: 20px;
+              }
             }
             .projectCardDescription {
-              margin-top: 20px;
-              margin-bottom: 15px;
-              font-size: 14px;
+              margin-top: 30px;
+              margin-bottom: 20px;
+              font-size: 12px;
               text-align: center;
-              width: 300px;
               line-height: 2;
               word-break: keep-all;
-              width: 85%;
+              width: 75%;
+
+              @include respond-max(laptop) {
+                width: 50%;
+              }
             }
             .projectCardDate {
-              margin-top: 20px;
-              font-size: 17px;
+              margin-top: 10px;
+              font-size: 13px;
               color: rgb(0, 70, 0);
+              @include respond-max(laptop) {
+                margin-bottom: 60px;
+              }
             }
           }
           .container {
             position: relative;
-            width: 920px;
-            height: 600px;
+            width: 67%;
+            height: 95%;
 
+            @include respond-max(laptop) {
+              width: 100%;
+              height: 100%;
+            }
             .descriptionSliderButton {
               position: absolute;
               right: 5px;
@@ -1372,10 +1446,16 @@
               }
 
               .descriptionTitle {
-                font-size: 32px;
+                font-size: 35px;
                 font-weight: bold;
+                font-family: 'Gamja Flower';
                 padding-left: 20px;
                 height: 55px;
+
+                @include respond-max(laptop) {
+                  text-align: center;
+                }
+
                 .green {
                   color: green;
                 }
@@ -1385,29 +1465,72 @@
                 margin: auto;
                 margin-bottom: 40px;
                 padding: 5px 0px 5px 0px;
-                width: 800px;
+                width: 87%;
                 font-size: 15px;
-                font-weight: lighter;
                 color: #313131;
                 word-break: keep-all;
                 word-wrap: break-word;
-                line-height: 2;
-                font-weight: bold;
+                line-height: 2.2;
+
+                @include respond-max(application-m) {
+                  font-size: 14px;
+                }
+                @include respond-max(laptop) {
+                  margin-top: 10px;
+                }
+                @include respond-max(laptop) {
+                  text-align: center;
+                }
+                @include respond-max(laptop) {
+                  margin-bottom: 100px;
+                }
+
+                @include respond-max(mobile-s) {
+                  width: 77%;
+                  font-size: 13px;
+                }
               }
 
               .descriptionFeature {
                 display: grid;
                 grid-template-columns: repeat(3, 260px);
-                gap: 30px 20px;
+
+                @include respond-max(application-h) {
+                  grid-template-columns: repeat(3, 230px);
+                }
+
+                @include respond-max(desktop) {
+                  grid-template-columns: repeat(3, 210px);
+                }
+
+                @include respond-max(application-s) {
+                  grid-template-columns: repeat(2, 230px);
+                }
+
+                @include respond-max(laptop) {
+                  grid-template-columns: repeat(2, 200px);
+                  gap: 30px 20px;
+                }
+
+                gap: 30px 10px;
                 margin: auto;
                 margin-top: 15px;
                 margin-bottom: 80px;
-                width: 800px;
+                width: 85%;
+
+                @include respond-max(laptop) {
+                  justify-content: center;
+                }
 
                 .descriptionFeatureStickyNote {
                   position: relative;
-                  width: 240px;
+                  width: 230px;
                   height: 55px;
+                  @include respond-max(application-h) {
+                    width: 200px;
+                    height: 45px;
+                  }
+
                   img {
                     width: 100%;
                     height: 100%;
@@ -1425,6 +1548,11 @@
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     cursor: pointer;
+
+                    @include respond-max(application-m) {
+                      font-size: 17px;
+                      line-height: 1;
+                    }
                   }
                   &:hover {
                     animation: shake 1s ease-in infinite alternate both;
@@ -1457,21 +1585,51 @@
                   padding: 5px;
 
                   box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.099);
+
+                  @include respond-max(application-s) {
+                    font-size: 26px;
+                  }
+
+                  @include respond-max(laptop) {
+                    width: 40%;
+                    font-size: 23px;
+                  }
                 }
 
                 .descriptionViewBox {
                   display: flex;
                   margin-bottom: 100px;
 
+                  @include respond-max(laptop) {
+                    flex-direction: column;
+                    align-items: center;
+                  }
+
                   .descriptionViewBoxImage {
                     cursor: pointer;
-                    width: 45%;
+                    width: 300px;
                     height: 300px;
                     margin-bottom: 5px;
                     border-radius: 10px;
                     overflow: hidden;
+
                     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
                     scale: 0.9;
+
+                    @include respond-max(application-s) {
+                      width: 270px;
+                      height: 270px;
+                    }
+
+                    @include respond-max(laptop) {
+                      width: 370px;
+                      height: 370px;
+                    }
+
+                    @include respond-max(mobile-s) {
+                      width: 330px;
+                      height: 330px;
+                    }
 
                     img {
                       width: 100%;
@@ -1487,16 +1645,31 @@
                     padding-left: 20px;
                     overflow: hidden;
 
+                    @include respond-max(laptop) {
+                      text-align: center;
+                    }
+                    @include respond-max(mobile-s) {
+                      width: 70%;
+                    }
+
                     .descriptionViewBoxDescriptionSubtitle {
                       font-family: 'Gamja Flower';
                       font-size: 40px;
                       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.286);
+
+                      @include respond-max(application-s) {
+                        margin-top: 20px;
+                        font-size: 35px;
+                      }
+                      @include respond-max(mobile-s) {
+                        margin-bottom: 5px;
+                      }
                       span {
                         color: orange;
                       }
                     }
                     .descriptionViewBoxDescriptionTitleDescription {
-                      width: 95%;
+                      width: 90%;
                       padding-top: 10px;
                       padding-left: 10px;
                       font-size: 14px;
@@ -1505,21 +1678,29 @@
                       overflow-wrap: break-word;
                       word-wrap: break-word;
                       word-break: keep-all;
+
+                      @include respond-max(application-s) {
+                        font-size: 12px;
+                      }
                     }
                   }
 
-                  &:nth-child(2n + 1) {
-                    flex-direction: row-reverse;
+                  @include respond-min(laptop) {
+                    &:nth-child(2n + 1) {
+                      flex-direction: row-reverse;
 
-                    .descriptionViewBoxDescriptionSubtitle {
-                      text-align: right;
-                      padding-right: 20px;
-                    }
+                      .descriptionViewBoxDescriptionSubtitle {
+                        text-align: right;
+                        padding-right: 20px;
+                      }
 
-                    .descriptionViewBoxDescriptionTitleDescription {
-                      text-align: right;
-                      padding-left: 0px;
-                      padding-right: 20px;
+                      .descriptionViewBoxDescriptionTitleDescription {
+                        text-align: right;
+                        padding-left: 0px;
+                        padding-right: 10px;
+                        width: 90%;
+                        margin-left: 5%;
+                      }
                     }
                   }
                 }
@@ -1528,13 +1709,28 @@
               .descriptionTitleSkillStack {
                 margin: auto;
                 display: grid;
+                margin-top: 10px;
                 margin-bottom: 40px;
                 grid-template-columns: repeat(8, 90px);
                 place-items: center center;
                 overflow: hidden;
-                width: 800px;
+                width: 90%;
                 padding: 5px;
                 gap: 20px 0px;
+
+                @include respond-max(application-s) {
+                  grid-template-columns: repeat(6, 90px);
+                }
+
+                @include respond-max(laptop) {
+                  grid-template-columns: repeat(5, 100px);
+                  justify-content: center;
+                  margin-bottom: 100px;
+                }
+
+                @include respond-max(mobile-s) {
+                  grid-template-columns: repeat(4, 85px);
+                }
 
                 .descriptionTitleSkillStackIcon {
                   position: relative;
@@ -1544,6 +1740,11 @@
                   width: 70px;
                   background-color: white;
                   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+                  @include respond-max(mobile-s) {
+                    height: 60px;
+                    width: 60px;
+                  }
 
                   &:hover {
                     .descriptionTitleSkillStackIconName {

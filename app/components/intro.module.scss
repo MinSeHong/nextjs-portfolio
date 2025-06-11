@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-$breakpoint-mobile-medium: 800px;
-$breakpoint-mobile-small: 720px;
-$breakpoint-tablet: 1280px;
-$breakpoint-desktop: 1480px;
-
 .layout {
   $titleNumberLineRight: 90;
   $titleNumberLineBottom: 20;
@@ -27,7 +22,7 @@ $breakpoint-desktop: 1480px;
   /*Developer 제목*/
   .titleFirstLine {
     position: relative;
-    margin-top: 80px;
+    margin-top: 70px;
     display: inline-block;
     padding: 0px 100px;
 
@@ -147,19 +142,12 @@ $breakpoint-desktop: 1480px;
     height: 35px;
     border: 2px solid #323228;
     color: #323228;
+    background: whitesmoke;
+    background-image: url(/images/backgrounds/intro.png);
 
     cursor: pointer;
     &:hover {
       animation: star 0.5s ease-in-out infinite alternate both;
-    }
-
-    @media (max-width: $breakpoint-tablet) {
-      bottom: 10px;
-      right: 10px;
-      width: 40px;
-      height: 40px;
-      line-height: 4;
-      font-size: 10px;
     }
   }
 

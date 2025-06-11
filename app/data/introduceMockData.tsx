@@ -193,16 +193,16 @@ export const MOCK_PLANS: SkillSubject = {
   JAPANESE: {
     skillIcon: './icons/jlpt-logo.png',
     hashtag: 'Language',
-    skillDescription: ['JLPT1 자격증 시험 준비'],
+    skillDescription: ['JLPT1 자격증 시험 준비하고 있습니다.'],
   },
   'Three.JS': {
     skillIcon: './icons/threejs-icon.png',
     hashtag: 'Library',
-    skillDescription: ['Three JS를 이용한 3D 생성 공부'],
+    skillDescription: ['Three JS를 이용한 3D 생성을 공부하고 있습니다.'],
   },
   'Android Studio': {
     skillIcon: './icons/android-studio-icon.png',
     hashtag: 'Library',
-    skillDescription: ['Android Studio 개발 공부'],
+    skillDescription: ['Android Studio 개발을 공부하고 있습니다.'],
   },
 };

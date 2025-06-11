@@ -1152,10 +1152,37 @@ export default function Introduce({
     }
   }
 
+  const handleScroll = (section: string) => {
+    let topOffset = null;
+
+    if (section == 'containerFirstRef') {
+      topOffset =
+        containerFirstRef.current.getBoundingClientRect().top +
+        window.scrollY -
+        50;
+    } else if (section == 'containerSecondRef') {
+      topOffset =
+        containerSecondRef.current.getBoundingClientRect().top +
+        window.scrollY -
+        50;
+    }
+    window.scrollTo({
+      top: topOffset,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className={stylesIntroduce.layout}>
       {/* Project 소개용 창 */}
-      <span className={stylesIntroduce.mainTitle}>INTRODUCE</span>
+      <span
+        className={stylesIntroduce.mainTitle}
+        onClick={() => {
+          handleScroll('containerFirstRef');
+        }}
+      >
+        INTRODUCE
+      </span>
       <div className={stylesIntroduce.containerFirst} ref={containerFirstRef}>
         <div className={stylesIntroduce.statusbar}>
           <span>INTRODUCE.EXE</span>
@@ -1306,7 +1333,14 @@ export default function Introduce({
       </div>
 
       {/* Project 창 */}
-      <span className={stylesIntroduce.mainTitle}>PROJECTS</span>
+      <span
+        className={stylesIntroduce.mainTitle}
+        onClick={() => {
+          handleScroll('containerSecondRef');
+        }}
+      >
+        PROJECTS
+      </span>
       <div className={stylesIntroduce.containerSecond} ref={containerSecondRef}>
         <div className={stylesIntroduce.statusbar}>
           <span>PROJECTS.EXE</span>

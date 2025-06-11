@@ -3,6 +3,7 @@ import Introduce from './components/Introduce';
 import Intro from './components/Intro';
 import Header from './layout/header';
 import { useRef } from 'react';
+import Blog from './components/blog';
 
 export default function Home() {
   /* Header Scroll 설정 */

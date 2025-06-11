@@ -4,11 +4,6 @@
 
 $titleNumberLineRight: 0;
 $titleNumberLineBottom: 50;
-$breakpoint-mobile-medium: 800px;
-$breakpoint-mobile-small: 720px;
-$breakpoint-tablet-high: 1480px;
-$breakpoint-tablet-medium: 1280px;
-$breakpoint-tablet-small: 1000px;
 
 .layout {
   display: flex;
@@ -27,6 +22,7 @@ $breakpoint-tablet-small: 1000px;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 450px;
+    cursor: pointer;
   }
   .containerFirst {
     position: relative;
@@ -1288,6 +1284,7 @@ $breakpoint-tablet-small: 1000px;
       font-family: 'Gamja Flower';
       font-size: 40px;
       background-color: orange;
+      background-image: url(/images/backgrounds/noise.png);
       padding: 10px 20px;
       box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.202);
     }
@@ -1301,7 +1298,6 @@ $breakpoint-tablet-small: 1000px;
       font-size: 25px;
       font-family: 'Gamja Flower';
       line-height: 2;
-      text-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.116);
     }
 
     .cardRotationAxis {

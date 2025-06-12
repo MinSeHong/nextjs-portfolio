@@ -8,6 +8,7 @@ $breakpoints: (
   'mobile-h': 780px,
   'mobile-m': 700px,
   'mobile-s': 600px,
+  'smartphone': 480px,
 );
 
 @mixin respond-min($breakpoint) {

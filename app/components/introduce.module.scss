@@ -314,6 +314,10 @@
           font-size: 15px;
           transition: all 2s;
 
+          @include respond-max(smartphone) {
+            height: 75%;
+          }
+
           @include respond-max(laptop) {
             margin: auto;
             overflow-y: auto;
@@ -335,6 +339,9 @@
             @include respond-max(laptop) {
               text-align: center;
             }
+            @include respond-max(smartphone) {
+              font-size: 12px;
+            }
 
             .timeline {
               font-weight: bold;
@@ -342,12 +349,19 @@
               @include respond-max(laptop) {
                 font-size: 15px;
               }
+              @include respond-max(smartphone) {
+                font-size: 14px;
+              }
             }
             .sub {
               font-size: 10px;
               padding-left: 8px;
               @include respond-max(laptop) {
                 font-size: 11px;
+              }
+
+              @include respond-max(smartphone) {
+                font-size: 10px;
               }
             }
 
@@ -368,6 +382,10 @@
           left: 20px;
           width: 50px;
           height: 150px;
+
+          @include respond-max(smartphone) {
+            transform: translateX(-15px);
+          }
 
           &:hover {
             button {
@@ -395,6 +413,10 @@
 
             @include respond-max(laptop) {
               width: 30px;
+            }
+
+            @include respond-max(smartphone) {
+              width: 20px;
             }
 
             &:nth-child(1) {
@@ -1150,6 +1172,10 @@
         grid-template-columns: repeat(1, 450px);
       }
 
+      @include respond-max(smartphone) {
+        grid-template-columns: repeat(1, 330px);
+      }
+
       &::-webkit-scrollbar {
         display: none;
       }
@@ -1181,6 +1207,11 @@
           height: 290px;
           flex-direction: row;
           gap: 20px;
+        }
+
+        @include respond-max(smartphone) {
+          border-radius: 10px;
+          height: 240px;
         }
 
         &:hover {
@@ -1225,6 +1256,12 @@
             height: 200px;
             width: 200px;
           }
+
+          @include respond-max(smartphone) {
+            height: 170px;
+            width: 170px;
+            margin-left: 10px;
+          }
         }
 
         .gridCardTitle {
@@ -1243,6 +1280,10 @@
             background-color: gold;
             background-image: url(/images/pattern/noise.png);
           }
+
+          @include respond-max(smartphone) {
+            border-radius: 10px 10px 0px 0px;
+          }
         }
 
         .gridCardDescription {
@@ -1260,6 +1301,12 @@
 
           @include respond-max(laptop) {
             margin-top: 10px;
+          }
+          @include respond-max(smartphone) {
+            margin-top: 40px;
+            font-size: 10px;
+            width: 160px;
+            margin-right: 10px;
           }
 
           &::-webkit-scrollbar {
@@ -1284,6 +1331,12 @@
             font-size: 11px;
             right: 15px;
           }
+
+          @include respond-max(smartphone) {
+            margin-bottom: 0px;
+            font-size: 9px;
+            border-radius: 10px;
+          }
         }
 
         .gridCardGroup {
@@ -1302,6 +1355,11 @@
             margin-bottom: 4px;
             font-size: 11px;
             left: 15px;
+          }
+          @include respond-max(smartphone) {
+            margin-bottom: 0px;
+            font-size: 9px;
+            border-radius: 10px;
           }
         }
 
@@ -1352,6 +1410,9 @@
               }
               @include respond-max(laptop) {
                 margin-top: 100px;
+              }
+              @include respond-max(smartphone) {
+                margin-top: 50px;
               }
             }
 
@@ -1411,6 +1472,10 @@
 
               @include respond-max(laptop) {
                 width: 50%;
+              }
+
+              @include respond-max(smartphone) {
+                width: 70%;
               }
             }
             .projectCardDate {
@@ -1501,6 +1566,7 @@
                 height: 55px;
 
                 @include respond-max(laptop) {
+                  padding-left: 0px;
                   text-align: center;
                 }
 
@@ -1560,6 +1626,11 @@
                   gap: 30px 20px;
                 }
 
+                @include respond-max(smartphone) {
+                  grid-template-columns: repeat(2, 160px);
+                  gap: 10px 5px;
+                }
+
                 gap: 30px 10px;
                 margin: auto;
                 margin-top: 15px;
@@ -1577,6 +1648,10 @@
                   @include respond-max(application-h) {
                     width: 200px;
                     height: 45px;
+                  }
+
+                  @include respond-max(smartphone) {
+                    width: 150px;
                   }
 
                   img {
@@ -1600,6 +1675,11 @@
                     @include respond-max(application-m) {
                       font-size: 17px;
                       line-height: 1;
+                    }
+
+                    @include respond-max(smartphone) {
+                      font-size: 13px;
+                      line-height: 1.2;
                     }
                   }
                   &:hover {
@@ -1642,6 +1722,10 @@
                     width: 40%;
                     font-size: 23px;
                   }
+
+                  @include respond-max(smartphone) {
+                    width: 50%;
+                  }
                 }
 
                 .descriptionViewBox {
@@ -1679,6 +1763,11 @@
                       height: 330px;
                     }
 
+                    @include respond-max(smartphone) {
+                      width: 340px;
+                      height: 280px;
+                    }
+
                     img {
                       width: 100%;
                       height: 100%;
@@ -1698,6 +1787,9 @@
                     }
                     @include respond-max(mobile-s) {
                       width: 70%;
+                    }
+                    @include respond-max(smartphone) {
+                      width: 90%;
                     }
 
                     .descriptionViewBoxDescriptionSubtitle {
@@ -1780,6 +1872,10 @@
                   grid-template-columns: repeat(4, 85px);
                 }
 
+                @include respond-max(smartphone) {
+                  grid-template-columns: repeat(4, 70px);
+                }
+
                 .descriptionTitleSkillStackIcon {
                   position: relative;
                   padding: 2px;
@@ -1792,6 +1888,11 @@
                   @include respond-max(mobile-s) {
                     height: 60px;
                     width: 60px;
+                  }
+
+                  @include respond-max(smartphone) {
+                    height: 50px;
+                    width: 50px;
                   }
 
                   &:hover {
@@ -1824,6 +1925,10 @@
                     pointer-events: none;
                     user-select: none;
                     opacity: 0;
+
+                    @include respond-max(smartphone) {
+                      font-size: 13px;
+                    }
                   }
                 }
               }

@@ -45,6 +45,10 @@
     @include respond-max(mobile-s) {
       font-size: 50px;
     }
+    @include respond-max(smartphone) {
+      font-size: 38px;
+      padding: 5px;
+    }
   }
 
   @keyframes rotate {
@@ -104,6 +108,10 @@
       font-size: 24px;
       border-top: 5px double #323228;
       border-bottom: 5px double #323228;
+    }
+
+    @include respond-max(smartphone) {
+      font-size: 18px;
     }
 
     span:hover {
@@ -216,6 +224,7 @@
     background: whitesmoke;
     background-image: url(/images/backgrounds/intro.png);
     transition: all 0.5s ease-in-out;
+    opacity: 0;
     @include respond-max(mobile-s) {
       font-size: 11px;
       width: 60px;

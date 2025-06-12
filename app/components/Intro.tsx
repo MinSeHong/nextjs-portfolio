@@ -124,11 +124,10 @@ export default function Intro({ onMenuClick }: HeaderProps) {
       stagger: 0.05,
     });
 
-    titleTimeLine.from(buttonRef.current, {
-      opacity: 0,
+    titleTimeLine.set(buttonRef.current, {
+      opacity: 1,
       duration: 1,
       ease: 'bounce',
-      scale: 'random(2,3)',
     });
   });
 

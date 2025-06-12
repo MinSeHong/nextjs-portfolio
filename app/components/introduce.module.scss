@@ -298,6 +298,10 @@
             letter-spacing: 5px;
             font-size: 45px;
           }
+          @include respond-max(smartphone) {
+            margin-top: 10px;
+            font-size: 40px;
+          }
         }
 
         .descriptionTimeline {
@@ -557,6 +561,9 @@
               @include respond-max(laptop) {
                 font-size: 18px;
               }
+              @include respond-max(smartphone) {
+                font-size: 14px;
+              }
             }
 
             .skillHashtag {
@@ -574,6 +581,10 @@
               @include respond-max(laptop) {
                 font-size: 9px;
                 right: 10px;
+              }
+              @include respond-max(smartphone) {
+                right: 5px;
+                padding: 6px 3px;
               }
             }
 
@@ -757,6 +768,9 @@
               @include respond-max(laptop) {
                 font-size: 18px;
               }
+              @include respond-max(smartphone) {
+                font-size: 14px;
+              }
             }
 
             .hobbyHashtag {
@@ -775,6 +789,9 @@
               @include respond-max(laptop) {
                 font-size: 9px;
                 right: 10px;
+              }
+              @include respond-max(smartphone) {
+                display: none;
               }
             }
 
@@ -956,6 +973,9 @@
               @include respond-max(laptop) {
                 font-size: 18px;
               }
+              @include respond-max(smartphone) {
+                font-size: 14px;
+              }
             }
 
             .planHashtag {
@@ -974,6 +994,10 @@
               @include respond-max(laptop) {
                 font-size: 9px;
                 right: 10px;
+              }
+              @include respond-max(smartphone) {
+                right: 5px;
+                padding: 6px 3px;
               }
             }
 

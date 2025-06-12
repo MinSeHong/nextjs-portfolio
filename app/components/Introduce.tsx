@@ -94,7 +94,7 @@ export default function Introduce({
       MOCK_SKILLSS[subject]['skillDescription'].map(
         (item: string, index: number) =>
           descriptions.push(
-            <div key={index} style={{ marginLeft: '20px' }}>
+            <div key={index}>
               {item}
               <br />
             </div>
@@ -159,7 +159,7 @@ export default function Introduce({
       MOCK_HOBBYS[subject]['skillDescription'].map(
         (item: string, index: number) =>
           descriptions.push(
-            <div key={index} style={{ marginLeft: '20px' }}>
+            <div key={index}>
               {item}
               <br />
             </div>
@@ -206,7 +206,7 @@ export default function Introduce({
       MOCK_PLANS[subject]['skillDescription'].map(
         (item: string, index: number) =>
           descriptions.push(
-            <div key={index} style={{ marginLeft: '20px' }}>
+            <div key={index}>
               {item}
               <br />
             </div>
@@ -576,7 +576,7 @@ export default function Introduce({
                       'descriptionViewBoxDescription'
                     ][subKey]['descriptionViewBoxDescriptionSubtitle']
                   }
-                  <span>/&gt;</span>
+                  <span>&gt;</span>
                 </div>
                 <div
                   className={
@@ -687,7 +687,7 @@ export default function Introduce({
                   data-scroll="view"
                 >
                   <span className={stylesIntroduce.green}>&lt;</span>VIEWS
-                  <span className={stylesIntroduce.green}>/&gt;</span>
+                  <span className={stylesIntroduce.green}>&gt;</span>
                 </div>
 
                 <div className={stylesIntroduce.descriptionView}>
@@ -1100,7 +1100,7 @@ export default function Introduce({
       rotate: '+=360',
       ease: 'none',
       repeat: -1,
-      duration: card.length * 10,
+      duration: card.length * 7,
     });
   });
 
@@ -1377,7 +1377,7 @@ export default function Introduce({
             className={stylesIntroduce.subTitleDescription}
             ref={subTitleDescriptionRef}
           >
-            카드를 클릭하면 해당 성격에 대해서 설명이 나옵니다.
+            카드를 클릭하면 설명이 나옵니다.
           </div>
 
           <div className={stylesIntroduce.cardRotationAxis}>

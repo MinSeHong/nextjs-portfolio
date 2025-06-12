@@ -27,7 +27,9 @@
     background-color: #323228;
     background-image: url(/images/pattern/noise.png);
     color: whitesmoke;
+    transition: all 0.5s ease-in-out;
     span {
+      transition: all 0.5s ease-in-out;
       color: rgb(0, 96, 0);
     }
 
@@ -86,7 +88,7 @@
     text-align: center;
     border-top: 7px double #323228;
     border-bottom: 7px double #323228;
-    transition: font-size 0.5s ease;
+    transition: all 0.5s ease;
 
     @include respond-max(mobile-h) {
       border-top: 5px double #323228;
@@ -213,7 +215,7 @@
     color: #323228;
     background: whitesmoke;
     background-image: url(/images/backgrounds/intro.png);
-
+    transition: all 0.5s ease-in-out;
     @include respond-max(mobile-s) {
       font-size: 11px;
       width: 60px;

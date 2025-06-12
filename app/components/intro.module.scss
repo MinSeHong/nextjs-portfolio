@@ -139,6 +139,9 @@
       margin-top: 50px;
       font-size: 19px;
     }
+    @include respond-max(smartphone) {
+      font-size: 16px;
+    }
   }
 
   .titleThirdLineDescription {
@@ -158,7 +161,9 @@
     @include respond-max(mobile-s) {
       font-size: 11px;
     }
-
+    @include respond-max(smartphone) {
+      font-size: 10px;
+    }
     .yellow {
       color: orange;
       font-weight: bold;
@@ -186,6 +191,9 @@
       margin-top: 90px;
       font-size: 19px;
     }
+    @include respond-max(smartphone) {
+      font-size: 16px;
+    }
   }
 
   .titleFourthLineDescription {
@@ -204,6 +212,10 @@
     }
     @include respond-max(mobile-s) {
       font-size: 11px;
+    }
+    @include respond-max(smartphone) {
+      font-size: 10px;
+      width: 70%;
     }
   }
 

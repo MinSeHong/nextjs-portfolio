@@ -278,29 +278,41 @@
         }
 
         .title {
-          margin-top: 10px;
-          margin-left: 5px;
+          margin-top: 20px;
+          margin-left: 10px;
           writing-mode: vertical-rl;
           text-orientation: upright;
-          font-size: 65px;
+          font-size: 40px;
           color: whitesmoke;
-          letter-spacing: 0px;
           font-weight: bold;
           display: none;
-          text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
           user-select: none;
+          display: flex;
+
+          div {
+            width: 54px;
+            height: 50px;
+            background: url(/images/pattern/noise.png) rgb(0, 96, 0);
+            margin: 2px 0px;
+            border-radius: 10px;
+            text-align: center;
+          }
 
           @include respond-max(laptop) {
             writing-mode: horizontal-tb;
             margin-left: 10px;
-            margin-top: 0px;
+            margin-top: 20px;
             text-align: center;
-            letter-spacing: 5px;
-            font-size: 45px;
+            font-size: 30px;
+            div {
+              width: 44px;
+              height: 43px;
+              margin: 0px 2px;
+            }
           }
           @include respond-max(smartphone) {
             margin-top: 10px;
-            font-size: 40px;
+            font-size: 30px;
           }
         }
 
@@ -308,7 +320,7 @@
           opacity: 0;
           position: relative;
           margin-top: 20px;
-          margin-right: 10px;
+          margin-left: 15px;
           display: flex;
           flex-direction: column;
           text-wrap: nowrap;
@@ -316,7 +328,7 @@
           width: 80%;
           height: 90%;
           font-size: 15px;
-          transition: all 2s;
+          transition: all 0.2s;
 
           @include respond-max(smartphone) {
             height: 75%;
@@ -324,6 +336,7 @@
 
           @include respond-max(laptop) {
             margin: auto;
+            margin-top: 20px;
             overflow-y: auto;
             scroll-behavior: contain;
 
@@ -454,23 +467,23 @@
           flex-direction: column;
           overflow: hidden;
           top: 20px;
-          width: 80%;
-          margin-left: 10px;
+          width: 83%;
+          margin-left: 15px;
           height: 93%;
           background-color: rgba(245, 245, 245, 0.9);
           background-image: url(/images/pattern/noise.png);
           border-radius: 10px;
           text-shadow: 2px 2px 2px black;
           font-size: 20px;
-          transition: all 2s;
+          transition: all 0.2s;
           opacity: 0;
 
           @include respond-max(application-h) {
-            width: 77%;
+            width: 81%;
           }
 
           @include respond-max(desktop) {
-            width: 72%;
+            width: 77%;
           }
 
           @include respond-max(laptop) {
@@ -659,23 +672,23 @@
           flex-direction: column;
           overflow: hidden;
           top: 20px;
-          width: 80%;
-          margin-left: 10px;
+          width: 83%;
+          margin-left: 15px;
           height: 93%;
           background-color: rgba(245, 245, 245, 0.9);
           background-image: url(/images/pattern/noise.png);
           border-radius: 10px;
           text-shadow: 2px 2px 2px black;
           font-size: 20px;
-          transition: all 2s;
+          transition: all 0.2s;
           opacity: 0;
 
           @include respond-max(application-h) {
-            width: 77%;
+            width: 81%;
           }
 
           @include respond-max(desktop) {
-            width: 72%;
+            width: 77%;
           }
 
           @include respond-max(laptop) {
@@ -866,22 +879,23 @@
           flex-direction: column;
           overflow: hidden;
           top: 20px;
-          width: 80%;
-          margin-left: 10px;
+          width: 83%;
+          margin-left: 15px;
           height: 93%;
           background-color: rgba(245, 245, 245, 0.9);
           background-image: url(/images/pattern/noise.png);
           border-radius: 10px;
           text-shadow: 2px 2px 2px black;
           font-size: 20px;
-          transition: all 2s;
+          transition: all 0.2s;
           opacity: 0;
+
           @include respond-max(application-h) {
-            width: 77%;
+            width: 81%;
           }
 
           @include respond-max(desktop) {
-            width: 72%;
+            width: 77%;
           }
 
           @include respond-max(laptop) {
@@ -1522,7 +1536,7 @@
             }
             .descriptionSliderButton {
               position: absolute;
-              right: 5px;
+              right: -5px;
               top: 0px;
               bottom: 0px;
               margin: auto;
@@ -1537,6 +1551,15 @@
               height: 200px;
               border-radius: 50px;
 
+              @include respond-max(application-h) {
+                right: -5px;
+              }
+
+              @include respond-max(laptop) {
+                right: 5px;
+                gap: 13px;
+              }
+
               button {
                 position: relative;
                 width: 20px;
@@ -1546,6 +1569,11 @@
                 border: none;
                 background-color: orange;
                 box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.439);
+
+                @include respond-max(laptop) {
+                  width: 18px;
+                  height: 18px;
+                }
 
                 div {
                   font-family: 'MaruBuri';
@@ -1821,6 +1849,10 @@
                       font-size: 40px;
                       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.286);
 
+                      @include respond-max(application-h) {
+                        font-size: 35px;
+                        width: 100%;
+                      }
                       @include respond-max(application-s) {
                         margin-top: 20px;
                         font-size: 35px;
@@ -1882,7 +1914,11 @@
                 padding: 5px;
                 gap: 20px 0px;
 
-                @include respond-max(application-s) {
+                @include respond-max(application-m) {
+                  grid-template-columns: repeat(7, 90px);
+                }
+
+                @include respond-max(desktop) {
                   grid-template-columns: repeat(6, 90px);
                 }
 

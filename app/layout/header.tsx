@@ -42,7 +42,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
       <nav onClick={() => onMenuClick('introduce')}>Introduce</nav>
       <nav onClick={() => onMenuClick('project')}>Project</nav>
       <nav onClick={() => onMenuClick('personality')}>Personality</nav>
-
+      {/*<nav onClick={() => onMenuClick('footer')}>Footer</nav>*/}
       <div className={styles.iconBox}>
         <div>
           <a

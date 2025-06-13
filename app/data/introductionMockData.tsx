@@ -45,10 +45,10 @@ const path3: string = './images/projects/학생 교사 저장 프로그래밍/';
 const path4: string = './images/projects/FITME 팀프로젝트/';
 
 export const MOCK_GRID_CARDS: GridCardId = {
-  1: {
-    gridCardTitle: '초기 깃허브 웹 포토폴리오',
+  2: {
+    gridCardTitle: '깃허브 웹 포토폴리오',
     gridCardTitleSummary:
-      '웹 포토폴리오를 제작했습니다. CMS를 사용하지 않고 직접 구현해보았습니다.',
+      '별도의 CMS 없이 직접 코드를 작성해서 웹 포트폴리오를 제작했습니다.',
     gridCardGroup: '개인 프로젝트',
     gridCardDescription: `
         GitHub Pages에 게시하기 위한 웹 포트폴리오 프로젝트입니다.
@@ -83,11 +83,6 @@ export const MOCK_GRID_CARDS: GridCardId = {
       {
         icon: './icons/nextjs-icon.png',
         name: 'next.js',
-        group: 'frontend',
-      },
-      {
-        icon: './icons/react-icon.png',
-        name: 'react',
         group: 'frontend',
       },
       {
@@ -214,7 +209,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
       },
     ],
   },
-  2: {
+  3: {
     gridCardTitle: `FITME 팀 프로젝트`,
     gridCardTitleSummary: `
             교육기관에서 진행한 팀 프로젝트입니다. 
@@ -244,28 +239,8 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'frontend',
       },
       {
-        icon: './icons/bootstrap-icon.png',
-        name: 'bootstrap',
-        group: 'library',
-      },
-      {
-        icon: './icons/chartjs-icon.png',
-        name: 'chartjs',
-        group: 'library',
-      },
-      {
         icon: './icons/flask-icon.png',
         name: 'flask',
-        group: 'library',
-      },
-      {
-        icon: './icons/selenium-icon.png',
-        name: 'selenium',
-        group: 'library',
-      },
-      {
-        icon: './icons/yolo-icon.png',
-        name: 'yolo',
         group: 'library',
       },
       {
@@ -274,29 +249,9 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'backend',
       },
       {
-        icon: './icons/springsecurity-icon.png',
-        name: 'spring security',
-        group: 'library',
-      },
-      {
         icon: './icons/oracle-icon.png',
         name: 'oracle',
         group: 'dbms',
-      },
-      {
-        icon: './icons/kakao-icon.png',
-        name: 'kakako api',
-        group: 'api',
-      },
-      {
-        icon: './icons/youtube-icon.png',
-        name: 'youtube api',
-        group: 'api',
-      },
-      {
-        icon: './icons/googlecloud-icon.png',
-        name: 'google cloud api',
-        group: 'api',
       },
       {
         icon: './icons/github-icon.svg',
@@ -328,7 +283,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
             descriptionViewBoxImage: path4 + '1.png',
             descriptionViewBoxDescriptionSubtitle: 'UML 제작',
             descriptionViewBoxDescriptionTitleDescription: `
-                            팀원들이 필요로 하는 기능을 종합하여 UML을 설계하고 구현했습니다.
+                            서비스에 필요한 기능을 종합하여 UML을 설계하고 구현했습니다.
                             `,
           },
           {
@@ -349,7 +304,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
             descriptionViewBoxImage: path4 + '2.png',
             descriptionViewBoxDescriptionSubtitle: 'Notion 사용',
             descriptionViewBoxDescriptionTitleDescription: `
-                            협업 효율을 높이기 위해 Notion을 관리했습니다. 
+                            협업 효율을 높이기 위해 Notion을 이용했습니다.
                             일정 관리, 회의록 작성, 자료 정리 페이지를 만들어 팀원들이 함께 사용할 수 있도록 했습니다.
                             `,
           },
@@ -551,7 +506,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
       },
     ],
   },
-  3: {
+  4: {
     gridCardTitle: '마스크 착용 객체 탐지',
     gridCardTitleSummary: `
             YOLO v8 객체 탐지를 이용하여 마스크 착용한 사람들을 탐지하는 프로젝트를 제작했습니다.
@@ -581,34 +536,14 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'frontend',
       },
       {
-        icon: './icons/css-icon.png',
-        name: 'css',
-        group: 'frontend',
-      },
-      {
         icon: './icons/javascript-icon.png',
         name: 'javascript',
         group: 'frontend',
       },
       {
-        icon: './icons/jquery-icon.png',
-        name: 'jquery',
-        group: 'library',
-      },
-      {
         icon: './icons/python-icon.png',
         name: 'python',
         group: 'backend',
-      },
-      {
-        icon: './icons/yolo-icon.png',
-        name: 'yolo',
-        group: 'library',
-      },
-      {
-        icon: './icons/pycharm-icon.png',
-        name: 'pycharm',
-        group: 'tool',
       },
     ],
     descriptionReview: `
@@ -674,7 +609,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
       },
     ],
   },
-  4: {
+  5: {
     gridCardTitle: '네이버 속보 기사 크롤링',
     gridCardTitleSummary: `Python으로 네이버 속보 기사를 크롤링해 새로운 페이지에 출력되도록 했습니다.
             `,
@@ -702,11 +637,6 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'frontend',
       },
       {
-        icon: './icons/css-icon.png',
-        name: 'css',
-        group: 'frontend',
-      },
-      {
         icon: './icons/javascript-icon.png',
         name: 'javascript',
         group: 'frontend',
@@ -717,24 +647,9 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'library',
       },
       {
-        icon: './icons/jquery-icon.png',
-        name: 'jquery',
-        group: 'library',
-      },
-      {
         icon: './icons/python-icon.png',
         name: 'python',
         group: 'backend',
-      },
-      {
-        icon: './icons/selenium-icon.png',
-        name: 'selenium',
-        group: 'library',
-      },
-      {
-        icon: './icons/pycharm-icon.png',
-        name: 'pycharm',
-        group: 'tool',
       },
     ],
     descriptionReview: `
@@ -826,7 +741,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
       },
     ],
   },
-  5: {
+  6: {
     gridCardTitle: 'JSP 게시판 홈페이지',
     gridCardTitleSummary: `Java JSP 기반으로 게시판 홈페이지를 개발했습니다.
             `,
@@ -854,11 +769,6 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'frontend',
       },
       {
-        icon: './icons/css-icon.png',
-        name: 'css',
-        group: 'frontend',
-      },
-      {
         icon: './icons/javascript-icon.png',
         name: 'javascript',
         group: 'frontend',
@@ -869,19 +779,9 @@ export const MOCK_GRID_CARDS: GridCardId = {
         group: 'backend',
       },
       {
-        icon: './icons/eclipse-icon.png',
-        name: 'eclipse',
-        group: 'tool',
-      },
-      {
         icon: './icons/tomcat-icon.png',
         name: 'tomcat',
         group: 'backend',
-      },
-      {
-        icon: './icons/ermaster-icon.png',
-        name: 'ermaster',
-        group: 'library',
       },
     ],
     descriptionReview: ` 
@@ -1074,7 +974,7 @@ export const MOCK_GRID_CARDS: GridCardId = {
       },
     ],
   },
-  6: {
+  7: {
     gridCardTitle: '컬렉션 저장 프로그래밍',
     gridCardTitleSummary: `
             학생과 교사 데이터를 Java 컬렉션에 저장하고, 이를 불러오는 기능을 구현했습니다.

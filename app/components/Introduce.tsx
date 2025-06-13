@@ -829,8 +829,8 @@ export default function Introduce({
         ],
         {
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.3,
+          duration: 0.3,
+          stagger: 0.1,
           onComplete: () => {
             Flip.fit(`.cardFilp${index}`, originalStateRef.current, {
               duration: 0.3,
@@ -882,8 +882,7 @@ export default function Introduce({
       ],
       {
         opacity: 0,
-        duration: 1,
-        stagger: 0.3,
+        duration: 0.3,
       }
     );
 
@@ -895,8 +894,8 @@ export default function Introduce({
       ],
       {
         opacity: 0,
-        duration: 1,
-        stagger: 0.3,
+        duration: 0.3,
+        stagger: 0.1,
         ease: 'ease',
       }
     );
@@ -948,27 +947,24 @@ export default function Introduce({
       }
     );
 
-    if (filpOpenTimeLineScrollInitialSetting.current == false) {
-      document
-        .querySelectorAll(`.${stylesIntroduce.description}`)
-        .forEach((description) => {
-          description
-            .querySelectorAll(`.${stylesIntroduce.descriptionViewBox}`)
-            .forEach((element) => {
-              gsap.from(element, {
-                opacity: 0,
-                duration: 0.4,
-                scrollTrigger: {
-                  trigger: element,
-                  scroller: description,
-                  start: 'center bottom',
-                  toggleActions: 'play none none reverse',
-                },
-              });
+    document
+      .querySelectorAll(`.cardFilp${index} .${stylesIntroduce.description}`)
+      .forEach((description) => {
+        description
+          .querySelectorAll(`.${stylesIntroduce.descriptionViewBox}`)
+          .forEach((element) => {
+            gsap.from(element, {
+              opacity: 0,
+              duration: 0.4,
+              scrollTrigger: {
+                trigger: element,
+                scroller: description,
+                start: 'center bottom',
+                toggleActions: 'play none none reverse',
+              },
             });
-        });
-      filpOpenTimeLineScrollInitialSetting.current = true;
-    }
+          });
+      });
   }
 
   /* 스크롤용 함수 생성 */
@@ -1235,8 +1231,7 @@ export default function Introduce({
                   <span className={stylesIntroduce.timeline}>
                     2018.04 ~ 2020.01
                   </span>
-                  <br />
-                  해군 입대<span className={stylesIntroduce.sub}>전산병</span>
+                  <br />군 복무<span className={stylesIntroduce.sub}>해군</span>
                 </div>
                 <div className={stylesIntroduce.box}>
                   <span className={stylesIntroduce.timeline}>2023.08</span>

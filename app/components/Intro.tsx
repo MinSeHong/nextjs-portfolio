@@ -11,7 +11,6 @@ type HeaderProps = {
 export default function Intro({ onMenuClick }: HeaderProps) {
   /* Introduce Start: Gsap 애니메이션 시작 */
   const titleFirstLineRef = useRef<HTMLDivElement>(null);
-
   const titleSecondLineRef = useRef<HTMLDivElement>(null);
   const titleThirdLineRef = useRef<HTMLDivElement>(null);
   const titleThirdLineRefDescription = useRef<HTMLDivElement>(null);
@@ -190,7 +189,7 @@ export default function Intro({ onMenuClick }: HeaderProps) {
 
       <div className={stylesIntro.titleThirdLine}></div>
       <div className={stylesIntro.titleThirdLine} ref={titleThirdLineRef}>
-        인터랙티브 웹을 설계하는 개발자입니다.
+        인터랙티브 웹을 설계하는 개발자
       </div>
 
       <div
@@ -207,14 +206,14 @@ export default function Intro({ onMenuClick }: HeaderProps) {
       </div>
 
       <div className={stylesIntro.titleFourthLine} ref={titleFourthLineRef}>
-        앞과 뒤를 모두 추구하는 개발자입니다.
+        앞과 뒤를 모두 설계하는 개발자
       </div>
 
       <div
         className={stylesIntro.titleFourthLineDescription}
         ref={titleForuthLineRefDescription}
       >
-        프론트엔드뿐만 아니라 백엔드에서도 끊임없는 성장을 추구합니다.
+        프론트엔드뿐 아니라 백엔드에서도 꾸준히 성장하고 있습니다.
         <br />
         눈에 보이는 부분에 그치지 않고, 보이지 않는 기능까지 책임지는 개발자가
         되고자 합니다.

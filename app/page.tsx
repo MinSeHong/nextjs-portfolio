@@ -10,12 +10,14 @@ export default function Home() {
   const containerFirstRef = useRef<HTMLDivElement>(null);
   const containerSecondRef = useRef<HTMLDivElement>(null);
   const containerThirdRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (section: string) => {
     const sectionMap: Record<string, React.RefObject<HTMLDivElement>> = {
       introduce: containerFirstRef,
       project: containerSecondRef,
       personality: containerThirdRef,
+      footer: footerRef,
     };
 
     const targetRef = sectionMap[section];
@@ -43,6 +45,7 @@ export default function Home() {
         containerSecondRef={containerSecondRef}
         containerThirdRef={containerThirdRef}
       />
+      {/* <Blog footerRef={footerRef} /> */}
     </>
   );
 }

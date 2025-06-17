@@ -1130,14 +1130,14 @@ export default function Introduce({
 
       timeline.from(subTitleSubjectRef.current, {
         opacity: 0,
-        duration: 1,
+        duration: 0.4,
         ease: 'bounce',
         scale: 'random(1,0.5)',
       });
 
       timeline.from(words.words, {
         opacity: 0,
-        duration: 1,
+        duration: 0.4,
         ease: 'bounce',
         scale: 'random(2,0.5)',
         stagger: 0.05,
@@ -1177,7 +1177,7 @@ export default function Introduce({
           handleScroll('containerFirstRef');
         }}
       >
-        INTRODUCE
+        About Me
       </span>
       <div className={stylesIntroduce.containerFirst} ref={containerFirstRef}>
         <div className={stylesIntroduce.statusbar}>
@@ -1218,7 +1218,7 @@ export default function Introduce({
                 className={stylesIntroduce.cardImage}
               />
               <div className={stylesIntroduce.title} ref={cardFirstTitleRef}>
-                TIMELINE
+                타임라인
               </div>
               <div className={stylesIntroduce.descriptionTimeline}>
                 <div className={stylesIntroduce.box}>
@@ -1264,7 +1264,7 @@ export default function Introduce({
                 className={stylesIntroduce.cardImage}
               />
               <div className={stylesIntroduce.title} ref={cardSecondTitleRef}>
-                SKILLS
+                스킬
               </div>
 
               <div className={stylesIntroduce.descriptionSkillsButton}>
@@ -1304,7 +1304,7 @@ export default function Introduce({
                 className={stylesIntroduce.cardImage}
               />
               <div className={stylesIntroduce.title} ref={cardThirdTitleRef}>
-                HOBBY
+                취미
               </div>
               <div className={stylesIntroduce.descriptionHobbys}>
                 <div className={stylesIntroduce.container}>
@@ -1318,7 +1318,7 @@ export default function Introduce({
                   src="./images/backgrounds/null.jpg"
                   className={stylesIntroduce.cardImage}
                 />
-                PLANS
+                계획
               </div>
               <div className={stylesIntroduce.descriptionPlans}>
                 <div className={stylesIntroduce.container}>

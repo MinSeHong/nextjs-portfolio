@@ -21,6 +21,7 @@
   gap: 20px;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.511);
   transition: all 0.2s ease-in-out;
+  transform: scale(0);
   .mobile {
     display: none;
     @include respond-max(tablet) {

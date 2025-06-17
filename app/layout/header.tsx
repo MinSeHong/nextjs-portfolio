@@ -37,9 +37,9 @@ export default function Header({ onMenuClick }: HeaderProps) {
           });
         }}
       >
-        Intro
+        Introduce
       </nav>
-      <nav onClick={() => onMenuClick('introduce')}>Introduce</nav>
+      <nav onClick={() => onMenuClick('about-me')}>About Me</nav>
       <nav onClick={() => onMenuClick('project')}>Project</nav>
       <nav onClick={() => onMenuClick('personality')}>Personality</nav>
       {/*<nav onClick={() => onMenuClick('footer')}>Footer</nav>*/}

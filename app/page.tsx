@@ -3,7 +3,8 @@ import Introduce from './components/Introduce';
 import Intro from './components/Intro';
 import Header from './layout/header';
 import { useRef } from 'react';
-import Blog from './components/blog';
+import Blog from './components/Blog';
+import Utterances from './components/Utterances';
 
 export default function Home() {
   /* Header Scroll 설정 */
@@ -14,7 +15,7 @@ export default function Home() {
 
   const handleScroll = (section: string) => {
     const sectionMap: Record<string, React.RefObject<HTMLDivElement>> = {
-      introduce: containerFirstRef,
+      'about-me': containerFirstRef,
       project: containerSecondRef,
       personality: containerThirdRef,
       footer: footerRef,
@@ -26,7 +27,7 @@ export default function Home() {
     let topOffset =
       targetRef.current.getBoundingClientRect().top + window.scrollY;
 
-    if (section == 'introduce' || section == 'project') {
+    if (section == 'about-me' || section == 'project') {
       topOffset -= 50;
     }
 
@@ -45,6 +46,7 @@ export default function Home() {
         containerSecondRef={containerSecondRef}
         containerThirdRef={containerThirdRef}
       />
+      {/*<Utterances />*/}
       {/* <Blog footerRef={footerRef} /> */}
     </>
   );

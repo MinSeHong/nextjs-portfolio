@@ -1255,6 +1255,14 @@ export default function Introduce({
                   작당연구소
                   <span className={stylesIntroduce.sub}>웹 개발 인턴</span>
                 </div>
+                <div className={stylesIntroduce.box}>
+                  <span className={stylesIntroduce.timeline}>
+                    2025.07 ~ 현재
+                  </span>
+                  <br />
+                  비즈니스인사이트
+                  <span className={stylesIntroduce.sub}>SI사업팀</span>
+                </div>
               </div>
             </div>
 

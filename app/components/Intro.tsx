@@ -184,7 +184,7 @@ export default function Intro({ onMenuClick }: HeaderProps) {
       </div>
 
       <div className={stylesIntro.titleSecondLine} ref={titleSecondLineRef}>
-        Front-end <span>Developer</span> Minsehong
+        Full Stack <span>Developer</span> Minsehong
       </div>
 
       <div className={stylesIntro.titleThirdLine}></div>

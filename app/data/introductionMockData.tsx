@@ -1232,6 +1232,8 @@ export const MOCK_GRID_CARDS: GridCardId = {
       },
     ],
   },
+
+  
   /*
     sample:{
         gridCardTitle:"카드 제목",
